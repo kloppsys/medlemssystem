@@ -281,9 +281,25 @@ a { color: var(--accent-text); }
 .service-card-price p { margin: 0 0 var(--space-2); }
 .service-card-price p:last-child { margin-bottom: 0; }
 .service-card-price strong { color: var(--color-text); }
-.service-card-price p:first-child strong { font-size: 17px; }
+.price-headline strong { font-size: 17px; }
 .price-note { display: block; margin-top: 1px; font-size: 13px; }
-.price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.85; }
+.price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.85; margin-top: var(--space-3); }
+.price-table {
+  margin: var(--space-3) 0;
+  padding: var(--space-1) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.price-table > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+}
+.price-table > div + div { border-top: 1px solid var(--color-border); }
+.price-table dt { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
+.price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; }
 .service-card-link {
   display: flex;
   align-items: center;
