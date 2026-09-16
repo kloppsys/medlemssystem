@@ -278,8 +278,12 @@ a { color: var(--accent-text); }
   line-height: 1.5;
   color: var(--color-text-secondary);
 }
-.service-card-price strong { color: var(--color-text); font-size: 17px; }
-.service-card-price-sub { display: block; margin-top: 2px; }
+.service-card-price p { margin: 0 0 var(--space-2); }
+.service-card-price p:last-child { margin-bottom: 0; }
+.service-card-price strong { color: var(--color-text); }
+.service-card-price p:first-child strong { font-size: 17px; }
+.price-note { display: block; margin-top: 1px; font-size: 13px; }
+.price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.85; }
 .service-card-link {
   display: flex;
   align-items: center;
