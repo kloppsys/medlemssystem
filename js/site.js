@@ -15,15 +15,26 @@
       return prefersDark.matches ? "dark" : "light";
     }
 
-    function syncButton() {
+    function syncButton(animate) {
       var current = effectiveTheme();
       var isDark = current === "dark";
-      iconWrap.innerHTML = isDark ? ICON_SUN : ICON_MOON;
-      themeToggle.setAttribute("aria-pressed", String(isDark));
-      themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "Bytt til lyst utseende" : "Bytt til mørkt utseende"
-      );
+      var apply = function () {
+        iconWrap.innerHTML = isDark ? ICON_SUN : ICON_MOON;
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        themeToggle.setAttribute(
+          "aria-label",
+          isDark ? "Bytt til lyst utseende" : "Bytt til mørkt utseende"
+        );
+      };
+      if (!animate) {
+        apply();
+        return;
+      }
+      iconWrap.classList.add("is-swapping");
+      window.setTimeout(function () {
+        apply();
+        iconWrap.classList.remove("is-swapping");
+      }, 120);
     }
 
     themeToggle.addEventListener("click", function () {
@@ -32,13 +43,33 @@
       try {
         localStorage.setItem(THEME_KEY, next);
       } catch (e) {}
-      syncButton();
+      syncButton(true);
     });
 
     prefersDark.addEventListener("change", function () {
       if (!document.documentElement.hasAttribute("data-theme")) syncButton();
     });
 
-    syncButton();
+    syncButton(false);
+  }
+
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    var revealTargets = document.querySelectorAll(".callout, .service-entry, .sidebar-box, .contact-card");
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -80px 0px", threshold: 0.05 }
+    );
+    revealTargets.forEach(function (el) {
+      el.classList.add("js-reveal");
+      observer.observe(el);
+    });
   }
 })();
