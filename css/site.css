@@ -240,7 +240,10 @@ a { color: var(--accent-text); }
 .masthead-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 @media (max-width: 900px) {
   .masthead-card { grid-template-columns: 1fr; min-height: 0; }
-  .masthead-media { min-height: 240px; order: -1; }
+  /* Stacked layout is much wider than tall relative to the (near-square) source photo — a short
+     min-height here crops out his face entirely, leaving only hair. 320px keeps enough vertical
+     room that the face stays in frame at every width down to 375px. */
+  .masthead-media { min-height: 320px; order: -1; }
   .masthead-content { padding: var(--space-6) var(--space-5); }
 }
 
@@ -555,9 +558,7 @@ hr.divider { display: none; }
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
+  aspect-ratio: 2.3 / 1;
   box-shadow: var(--card-shadow);
 }
 .photo-frame img {
@@ -597,7 +598,6 @@ hr.divider { display: none; }
 .photo-card .chevron-link { color: var(--navy); }
 .photo-card .chevron-link:hover { color: var(--accent-blue); }
 @media (max-width: 767px) {
-  .photo-frame { min-height: 420px; }
   .photo-card { margin: var(--space-4); max-width: none; }
 }
 
