@@ -376,6 +376,20 @@ a { color: var(--accent-text); }
 /* Cards now provide their own separation/spacing, so the old <hr> divider between entries is hidden */
 hr.divider { display: none; }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#tjenester { scroll-margin-top: calc(var(--nav-height) + var(--space-5)); }
+
 /* Full service detail entries — Fluent-style floating white cards, replaces the old plain-flow + <hr> layout */
 .service-entry {
   scroll-margin-top: calc(var(--nav-height) + var(--space-5));
@@ -428,6 +442,12 @@ hr.divider { display: none; }
    customer-name badges (there shown as logos on case-study cards; here as named chips, since we
    have no verified logo assets for these organizations to reuse). */
 .trust-strip { margin-top: var(--space-5); }
+.trust-strip-sentence {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-3);
+}
 .trust-strip-label {
   font-size: 13px;
   font-weight: 600;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Medlemssystem — tre digitale verktøy fra Klopp AS for foreninger og organisasjoner: Regweb (medlemssystem), Medlem123 (fullservice medlemsadministrasjon) og Likepersonslogg (logging av frivillig arbeid)." />
+        <meta name="description" content="Regweb, Medlem123 og Likepersonslogg — tre medlemssystemer fra Klopp AS for foreninger i Norge. Kontingentinnkreving, medlemsregister og likepersonslogg." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/" />
         <meta property="og:type" content="website" />
@@ -35,6 +35,7 @@
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": "https://medlemssystem.no/#website",
             "name": "Medlemssystem",
             "url": "https://medlemssystem.no/",
             "publisher": { "@id": "https://medlemssystem.no/#organization" },
@@ -77,7 +78,13 @@
                         "description": "Skybasert medlemssystem foreningen driver selv — medlemsregister, betaling og kommunikasjon.",
                         "url": "https://regweb.no/",
                         "provider": { "@id": "https://medlemssystem.no/#organization" },
-                        "areaServed": { "@type": "Country", "name": "Norway" }
+                        "areaServed": { "@type": "Country", "name": "Norway" },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "7990",
+                            "priceCurrency": "NOK",
+                            "description": "Grunnlisens, kampanjepris (ordinær pris kr 24 990, engangsgebyr). Serviceavtale kommer i tillegg fra kr 990/mnd."
+                        }
                     }
                 },
                 {
@@ -89,7 +96,15 @@
                         "description": "Fullservice medlemsadministrasjon — Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen.",
                         "url": "https://medlem123.no/",
                         "provider": { "@id": "https://medlemssystem.no/#organization" },
-                        "areaServed": { "@type": "Country", "name": "Norway" }
+                        "areaServed": { "@type": "Country", "name": "Norway" },
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "priceCurrency": "NOK",
+                            "lowPrice": "299",
+                            "highPrice": "697",
+                            "offerCount": "3",
+                            "description": "Leie av medlemssystem fra kr 299/mnd. Din side og nettinnmelding er valgfrie tillegg til kr 199/mnd hver. Oppstart kr 10 000 (kr 0 for eksisterende Regweb-kunder)."
+                        }
                     }
                 },
                 {
@@ -101,7 +116,18 @@
                         "description": "Digitalt verktøy for registrering og rapportering av likepersonsarbeid (frivillig arbeid).",
                         "url": "https://likepersonslogg.com/",
                         "provider": { "@id": "https://medlemssystem.no/#organization" },
-                        "areaServed": { "@type": "Country", "name": "Norway" }
+                        "areaServed": { "@type": "Country", "name": "Norway" },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1290",
+                            "priceCurrency": "NOK",
+                            "description": "Serviceavtale kr 1290/mnd. Etableringsgebyr kr 19 990 (engangsgebyr, betales én gang pr. organisasjon)."
+                        },
+                        "mentions": [
+                            { "@type": "NGO", "name": "Norilco", "sameAs": "https://www.norilco.no/" },
+                            { "@type": "NGO", "name": "Brystkreftforeningen", "sameAs": "https://www.brystkreftforeningen.no/" },
+                            { "@type": "NGO", "name": "Norsk Revmatikerforbund", "sameAs": "https://www.revmatiker.no/" }
+                        ]
                     }
                 }
             ]
@@ -124,12 +150,12 @@
                     <div class="masthead-content">
                         <span class="eyebrow-dot"><span class="dot"></span>Klopp AS</span>
                         <h1 class="masthead-heading">Digitale verktøy for foreninger og organisasjoner</h1>
-                        <p class="masthead-subheading">Klopp AS utvikler og drifter tre spesialiserte tjenester som forenkler medlemsadministrasjon, kontingentinnkreving og frivillig arbeid.</p>
+                        <p class="masthead-subheading">Klopp AS utvikler og drifter tre spesialiserte tjenester som forenkler medlemsadministrasjon, kontingentinnkreving og frivillig arbeid for foreninger i Norge.</p>
                         <div class="masthead-cta">
                             <a class="btn" href="#tjenester">Se tjenestene <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M8 3.5a.75.75 0 0 1 .75.75v6.69l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0L3.72 9.53a.75.75 0 1 1 1.06-1.06l2.47 2.47V4.25A.75.75 0 0 1 8 3.5Z"/></svg></a>
                         </div>
                     </div>
-                    <div class="masthead-media"><img src="assets/img/hero-bg.jpg" alt="" /></div>
+                    <div class="masthead-media"><img src="assets/img/hero-bg-1200.jpg" srcset="assets/img/hero-bg-800.jpg 800w, assets/img/hero-bg-1200.jpg 1200w, assets/img/hero-bg-1800.jpg 1800w, assets/img/hero-bg.jpg 2400w" sizes="(max-width: 900px) 100vw, 50vw" alt="" fetchpriority="high" /></div>
                 </div>
             </div>
         </header>
@@ -159,7 +185,7 @@
                 </div>
                 <div class="teaser-grid">
                     <a class="teaser-card" href="#regweb">
-                        <div class="teaser-card-image"><img src="assets/img/products/regweb-visual.jpg" alt="Regweb" loading="lazy" /></div>
+                        <div class="teaser-card-image"><img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem — medlemsregister og betalingsoversikt" loading="lazy" /></div>
                         <div class="teaser-card-body">
                             <img class="teaser-card-logo" src="assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" />
                             <h3 class="teaser-card-title">Regweb</h3>
@@ -168,7 +194,7 @@
                         </div>
                     </a>
                     <a class="teaser-card" href="#likepersonslogg">
-                        <div class="teaser-card-image"><img src="assets/img/products/likepersonslogg-visual.jpg" alt="Likepersonslogg" loading="lazy" /></div>
+                        <div class="teaser-card-image"><img src="assets/img/products/likepersonslogg-visual.jpg" alt="Skjermbilde av Likepersonslogg — registrering av likepersonsarbeid" loading="lazy" /></div>
                         <div class="teaser-card-body">
                             <img class="teaser-card-logo" src="assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" />
                             <h3 class="teaser-card-title">Likepersonslogg</h3>
@@ -177,7 +203,7 @@
                         </div>
                     </a>
                     <a class="teaser-card" href="#medlem123">
-                        <div class="teaser-card-image"><img src="assets/img/products/medlem123-visual.jpg" alt="Medlem123" loading="lazy" /></div>
+                        <div class="teaser-card-image"><img src="assets/img/products/medlem123-visual.jpg" alt="Skjermbilde av Medlem123 — medlemsadministrasjon driftet av Klopp AS" loading="lazy" /></div>
                         <div class="teaser-card-body">
                             <img class="teaser-card-logo" src="assets/img/logos/medlem123-logo.png" alt="Medlem123" loading="lazy" />
                             <h3 class="teaser-card-title">Medlem123</h3>
@@ -203,6 +229,7 @@
 
         <section class="page-section page-section-alt">
             <div class="container">
+                <h2 class="sr-only">Tjenestene i detalj</h2>
                 <article class="service-entry" id="regweb">
                     <p class="service-card-eyebrow">Medlemssystem</p>
                     <div class="service-entry-head">
@@ -210,7 +237,7 @@
                         <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
                     </div>
                     <div class="service-entry-figure">
-                        <img src="assets/img/products/regweb-visual.jpg" alt="Regweb" width="1200" height="900" loading="lazy" />
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem — medlemsregister og betalingsoversikt" width="1200" height="900" loading="lazy" />
                     </div>
                     <p class="service-card-desc">Et komplett, skybasert medlemssystem foreningen driver selv — medlemsregister, betaling og kommunikasjon i én løsning.</p>
                     <ul class="service-card-facts">
@@ -244,11 +271,11 @@
                         <span class="service-entry-tagline">Digitalt verktøy for registrering og rapportering av likepersonsarbeid.</span>
                     </div>
                     <div class="service-entry-figure">
-                        <img src="assets/img/products/likepersonslogg-visual.jpg" alt="Likepersonslogg" width="1200" height="900" loading="lazy" />
+                        <img src="assets/img/products/likepersonslogg-visual.jpg" alt="Skjermbilde av Likepersonslogg — registrering av likepersonsarbeid" width="1200" height="900" loading="lazy" />
                     </div>
-                    <p class="service-card-desc">Digitalt verktøy for registrering og rapportering av likepersonsarbeid.</p>
+                    <p class="service-card-desc">Full oversikt over likepersonsarbeidet, uten regneark eller løse notater — dere velger selv hvilke felt som registreres, og henter ut rapportene når dere trenger dem.</p>
                     <div class="trust-strip">
-                        <p class="trust-strip-label">Utviklet i samarbeid med</p>
+                        <p class="trust-strip-sentence">Likepersonslogg ble utviklet i samarbeid med <strong>Norilco</strong>, <strong>Brystkreftforeningen</strong> og <strong>Norsk Revmatikerforbund</strong>.</p>
                         <div class="trust-strip-row">
                             <span class="trust-chip">Norilco</span>
                             <span class="trust-chip">Brystkreftforeningen</span>
@@ -266,7 +293,7 @@
                             <img src="assets/img/products/likepersonslogg-sentralt.jpg" alt="Innlogging for sentralt-ledd og distriktsavdelinger i Likepersonslogg" loading="lazy" />
                             <figcaption>
                                 <h4>Sentralt og distrikt</h4>
-                                <p>Egen innlogging for sentralt-ledd og distriktsavdelinger, med full oversikt over all aktivitet som er registrert.</p>
+                                <p>Egen innlogging for sentralt-ledd og distriktsavdelinger, tilpasset hvem som skal se hva i organisasjonen.</p>
                             </figcaption>
                         </figure>
                         <figure class="subfeature">
@@ -281,10 +308,10 @@
                         <h4>Roller i Likepersonslogg</h4>
                         <div class="roles-grid">
                             <figure class="subfeature">
-                                <img src="assets/img/products/role-sentral-admin.jpg" alt="Sentral admin i Likepersonslogg" loading="lazy" />
+                                <img src="assets/img/products/role-sentral-admin.jpg" alt="Foreningsadmin i Likepersonslogg" loading="lazy" />
                                 <figcaption>
-                                    <h5>Sentral admin</h5>
-                                    <p>Organisasjonen sentralt har full oversikt over all aktivitet som er logget.</p>
+                                    <h5>Foreningsadmin</h5>
+                                    <p>Kan sette opp alt i organisasjonen, med full oversikt over all aktivitet som er logget sentralt.</p>
                                 </figcaption>
                             </figure>
                             <figure class="subfeature">
@@ -345,7 +372,7 @@
                         <span class="service-entry-tagline">Vi håndterer medlemmene for dere.</span>
                     </div>
                     <div class="service-entry-figure">
-                        <img src="assets/img/products/medlem123-visual.jpg" alt="Medlem123" width="1200" height="900" loading="lazy" />
+                        <img src="assets/img/products/medlem123-visual.jpg" alt="Skjermbilde av Medlem123 — medlemsadministrasjon driftet av Klopp AS" width="1200" height="900" loading="lazy" />
                     </div>
                     <p class="service-card-desc">Vi drifter medlemsregisteret og kontingentinnkrevingen for dere — bygget på Regweb, men uten at foreningen selv trenger å administrere noe.</p>
                     <ul class="service-card-facts">
@@ -393,7 +420,7 @@
                 <hr class="divider" />
 
                 <div class="callout">
-                    <p>Alle tre tjenestene utvikles, driftes og supporteres av <strong>Klopp AS</strong> i Tønsberg — norsk utvikling, norsk support og norsk serverinfrastruktur.</p>
+                    <p>Regweb, Medlem123 og Likepersonslogg utvikles, driftes og supporteres av <strong>Klopp AS</strong> i Tønsberg — norsk utvikling, norsk support og norsk serverinfrastruktur.</p>
                     <ul class="service-card-facts callout-facts">
                         <li><svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Bli utviklingspartner med Klopp AS og betal kun 25 % av kostnaden for nye, godkjente funksjoner til foreningen — funksjoner som ikke finnes i systemet i dag</li>
                         <li><svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Vipps-innlogging på de fleste av tjenestene våre</li>
