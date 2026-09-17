@@ -331,6 +331,8 @@ a { color: var(--accent-text); }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
   transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
 }
 .teaser-grid .teaser-card:hover {
