@@ -403,6 +403,34 @@ hr.divider { display: none; }
   margin-top: var(--space-5);
 }
 
+/* Trust strip — showcases named collaboration partners, mirrors microsoft.com/nb-no/customers'
+   customer-name badges (there shown as logos on case-study cards; here as named chips, since we
+   have no verified logo assets for these organizations to reuse). */
+.trust-strip { margin-top: var(--space-5); }
+.trust-strip-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-3);
+}
+.trust-strip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-elevated);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .service-card-facts {
   list-style: none;
   padding: 0;
