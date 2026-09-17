@@ -554,6 +554,14 @@ hr.divider { display: none; }
 
 /* Photo + card-overlay section — mirrors NBIM's "Ansvarlig forvaltning" pattern */
 .photo-section { padding: var(--space-9) 0; background: var(--color-bg); }
+.photo-section-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin: 0 0 var(--space-4);
+}
 .photo-frame {
   position: relative;
   border-radius: var(--radius-lg);
@@ -665,8 +673,13 @@ hr.divider { display: none; }
   text-underline-offset: 3px;
 }
 .site-footer a:hover { color: var(--navy-dark); }
-.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-6); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 767px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* Partner/member logos — Medlem av (NITO) og Partnere (Vipps, Mastercard), same content as regweb.no's footer */
+.partner-logo { max-height: 28px; width: auto; margin: 0 auto; }
+.partner-logo-row { display: flex; align-items: center; justify-content: center; gap: var(--space-4); }
 .copyright {
   background: #f2f2f2;
   color: #616161;
