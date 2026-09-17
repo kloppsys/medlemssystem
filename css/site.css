@@ -635,6 +635,11 @@ hr.divider { display: none; }
   color: var(--accent-text);
   margin: 0 0 var(--space-4);
 }
+.photo-section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
 .photo-frame {
   position: relative;
   border-radius: var(--radius-lg);
