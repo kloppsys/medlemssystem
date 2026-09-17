@@ -549,6 +549,25 @@ hr.divider { display: none; }
   font-weight: 600;
   color: var(--color-text);
 }
+.price-badge {
+  display: inline-block;
+  margin-right: var(--space-2);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--accent-blue);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.price-was {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  text-decoration: line-through;
+  margin-right: var(--space-1);
+}
 .price-note { display: block; margin-top: 1px; font-size: 13px; }
 .price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.9; margin-top: var(--space-3); }
 .price-table {
