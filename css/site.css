@@ -451,6 +451,49 @@ hr.divider {
 }
 @media (max-width: 767px) { .subfeature-grid { grid-template-columns: 1fr; } }
 
+.roles-block { margin-top: var(--space-6); }
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+.roles-grid .subfeature h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: var(--space-3) 0 var(--space-1);
+}
+.roles-grid .subfeature p { font-size: 13px; }
+@media (max-width: 767px) { .roles-grid { grid-template-columns: 1fr; } }
+.roles-block h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 var(--space-3);
+}
+.roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+.roles-list > div + div { padding-top: var(--space-3); border-top: 1px solid var(--color-border); }
+.roles-list dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.roles-list dt .roles-alias { font-weight: 400; color: var(--color-text-secondary); }
+.roles-list dd {
+  margin: var(--space-1) 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
 .service-card-price {
   margin: var(--space-6) 0 0;
   padding: var(--space-5) var(--space-6);
