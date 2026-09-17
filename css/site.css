@@ -356,17 +356,12 @@ a { color: var(--accent-text); }
 .teaser-card:hover .teaser-card-image img { transform: scale(1.04); }
 .teaser-card-body { padding: var(--space-6); }
 
-.teaser-card-icon {
-  width: 64px; height: 64px;
-  border-radius: var(--radius-md);
-  background: var(--color-bg-elevated);
-  display: flex; align-items: center; justify-content: center;
+/* Real product logo badges (exported from Canva), replacing the old generic line-icon boxes */
+.teaser-card-logo {
+  height: 32px;
+  width: auto;
+  display: block;
   margin-bottom: var(--space-5);
-}
-.teaser-card-icon .icon { color: var(--navy); width: 28px; height: 28px; }
-:root[data-theme="dark"] .teaser-card-icon .icon { color: #ffffff; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .teaser-card-icon .icon { color: #ffffff; }
 }
 
 .teaser-card-title { font-size: 22px; }
