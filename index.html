@@ -22,9 +22,10 @@
         <script>
             (function () {
                 var saved = localStorage.getItem("medlemssystem-theme");
-                if (saved === "light" || saved === "dark") {
-                    document.documentElement.setAttribute("data-theme", saved);
-                }
+                document.documentElement.setAttribute(
+                    "data-theme",
+                    saved === "light" || saved === "dark" ? saved : "light"
+                );
             })();
         </script>
         <title>Medlemssystem — digitale verktøy for foreninger fra Klopp AS</title>
