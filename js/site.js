@@ -55,7 +55,7 @@
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!prefersReducedMotion && "IntersectionObserver" in window) {
-    var revealTargets = document.querySelectorAll(".callout, .service-entry, .teaser-card, .contact-band");
+    var revealTargets = document.querySelectorAll(".callout, .service-entry, .teaser-card, .contact-band, .photo-frame");
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {

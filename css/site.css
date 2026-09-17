@@ -481,6 +481,57 @@ hr.divider {
   :root:not([data-theme="light"]) .service-card-link:hover { background: var(--cream-alt); }
 }
 
+/* Photo + card-overlay section — mirrors NBIM's "Ansvarlig forvaltning" pattern */
+.photo-section { padding: var(--space-9) 0; background: var(--navy); }
+.photo-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.photo-card {
+  position: relative;
+  z-index: 1;
+  margin: var(--space-6);
+  padding: var(--space-7) var(--space-6);
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  max-width: 420px;
+}
+.photo-card h2 { font-size: clamp(1.5rem, 2vw + 1rem, 2rem); color: var(--navy); }
+.photo-card p { color: rgba(0, 21, 56, 0.75); font-size: 16px; line-height: 1.65; margin: var(--space-4) 0 0; }
+.photo-card-facts {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-5) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.photo-card-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 15px;
+  color: var(--navy);
+}
+.photo-card-facts .icon { color: var(--accent-blue); flex: none; margin-top: 0.2em; }
+.photo-card .chevron-link { color: var(--navy); }
+.photo-card .chevron-link:hover { color: var(--accent-blue); }
+@media (max-width: 767px) {
+  .photo-frame { min-height: 420px; }
+  .photo-card { margin: var(--space-4); max-width: none; }
+}
+
 /* Callout / about band, reused as a light card inside a section */
 .callout {
   padding: var(--space-6);
