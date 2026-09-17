@@ -716,6 +716,13 @@ hr.divider { display: none; }
   line-height: 1.6;
 }
 .contact-band .btn { margin-top: var(--space-6); }
+.contact-band-direct {
+  margin: var(--space-4) 0 0;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+.contact-band-direct a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.contact-band-sep { margin: 0 var(--space-1); color: var(--color-border); }
 
 /* Footer — Microsoft's own footer colors, sampled from microsoft.com/nb-no (#F2F2F2 bg, #616161 text,
    11px legal bar). The medlem123.no-matched mauve version from r010 lives only on that branch. */
