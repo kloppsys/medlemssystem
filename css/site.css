@@ -489,6 +489,39 @@ hr.divider { display: none; }
 }
 .service-card-facts .icon { color: var(--accent-text); flex: none; margin-top: 0.2em; }
 
+.selling-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+@media (max-width: 640px) { .selling-points { grid-template-columns: 1fr; } }
+.selling-point {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+.selling-point.full { grid-column: 1 / -1; }
+.selling-point-num {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+.selling-point h4 { font-size: 15px; margin: 0 0 2px; }
+.selling-point p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+
 .subfeature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
