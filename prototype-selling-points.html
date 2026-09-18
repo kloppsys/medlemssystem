@@ -171,6 +171,72 @@
             .facts-h li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: 14px; color: var(--color-text-secondary); }
             .facts-h .icon { flex: none; color: var(--accent-text); margin-top: 0.2em; }
 
+            .point-badge {
+                display: inline-flex; align-items: center;
+                background: #50a4e8; color: var(--navy);
+                font-size: 12px; font-weight: 700;
+                padding: 1px 8px; border-radius: var(--radius-full);
+                margin: 0 1px;
+            }
+
+            /* --- Variant M: hvite kort med skygge, bedre balanse (06 også full-bredde) --- */
+            .grid-m { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+            @media (max-width: 640px) { .grid-m { grid-template-columns: 1fr; } }
+            .card-m {
+                display: flex; gap: var(--space-3); align-items: flex-start;
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                box-shadow: var(--card-shadow);
+                border-radius: var(--radius-md);
+                padding: var(--space-4);
+            }
+            .card-m.full { grid-column: 1 / -1; }
+            .card-m h4 { font-size: 15px; margin: 0 0 2px; }
+            .card-m p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+
+            /* --- Variant N: aksentstripe øverst, tettere og mer "branded" --- */
+            .grid-n { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+            @media (max-width: 640px) { .grid-n { grid-template-columns: 1fr; } }
+            .card-n {
+                display: flex; gap: var(--space-3); align-items: flex-start;
+                background: var(--color-bg-elevated);
+                border-top: 3px solid var(--accent-blue);
+                border-radius: 0 0 var(--radius-md) var(--radius-md);
+                padding: var(--space-4);
+            }
+            .card-n.full { grid-column: 1 / -1; }
+            .card-n h4 { font-size: 15px; margin: 0 0 2px; }
+            .card-n p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+            .card-n .selling-point-num { margin-top: -26px; box-shadow: 0 0 0 3px var(--color-bg-elevated); }
+
+            /* --- Variant O: stor hero-banner + slank liste for resten --- */
+            .hero-o {
+                margin-top: var(--space-6);
+                display: flex; gap: var(--space-4); align-items: center;
+                background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-bright));
+                color: #fff;
+                border-radius: var(--radius-lg);
+                padding: var(--space-5);
+            }
+            .hero-o .num-o { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 32px; font-weight: 800; opacity: 0.85; }
+            .hero-o h4 { font-size: 18px; margin: 0 0 2px; color: #fff; }
+            .hero-o p { font-size: 14px; margin: 0; color: rgba(255,255,255,0.9); }
+            .hero-o .point-badge { background: rgba(255,255,255,0.25); color: #fff; }
+            .list-o { margin-top: var(--space-2); display: flex; flex-direction: column; }
+            .row-o {
+                display: flex; gap: var(--space-3); align-items: flex-start;
+                padding: var(--space-4) 0;
+                border-bottom: 1px solid var(--color-border);
+            }
+            .row-o:last-child { border-bottom: none; }
+            .row-o .num-o {
+                flex: none; width: 24px;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 14px; font-weight: 700; color: var(--accent-text);
+            }
+            .row-o h4 { font-size: 15px; margin: 0 0 2px; }
+            .row-o p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+
             /* --- Variant C-familien: tallmerker i stedet for hake --- */
             .badge-num {
                 font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -659,6 +725,111 @@
                         <div class="card"><span class="ghost-num">03</span><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div>
                         <div class="card"><span class="ghost-num">04</span><h4>Egen innlogging for distriktsavdelinger</h4></div>
                         <div class="card"><span class="ghost-num">05</span><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <hr class="divider" style="margin: var(--space-9) 0;" />
+            <div class="proto-intro">
+                <h1>Tre forbedrede versjoner av kort-designet</h1>
+                <p>Bygget på det oppdaterte innholdet fra Regweb (6 punkter, med badges) — samme nummer-konsept, men med mer visuell dybde/balanse.</p>
+            </div>
+
+            <!-- ============ VARIANT M ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant M — Hvite kort med skygge, bedre balanse</span>
+                <p class="proto-note">Kortene løftes fra den lyseblå seksjonsbakgrunnen med hvit/krem bakgrunn + myk skygge (samme skygge-språk som resten av siden sine kort) — gir mer dybde og lar tallmerket stå tydeligere frem. Punkt 06 er nå også full bredde, så bunnraden ikke blir skjev.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="grid-m">
+                        <div class="card-m full">
+                            <span class="selling-point-num">01</span>
+                            <div><h4>100 % automatisert innmelding av nye medlemmer</h4><p>Automatisk betaling med <span class="point-badge">Vipps</span> eller <span class="point-badge">bankkort</span> kan bestilles</p></div>
+                        </div>
+                        <div class="card-m"><span class="selling-point-num">02</span><div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div></div>
+                        <div class="card-m"><span class="selling-point-num">03</span><div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div></div>
+                        <div class="card-m"><span class="selling-point-num">04</span><div><h4>Egen innlogging for distriktsavdelinger</h4></div></div>
+                        <div class="card-m"><span class="selling-point-num">05</span><div><h4>Vipps-innlogging på Din side</h4></div></div>
+                        <div class="card-m full">
+                            <span class="selling-point-num">06</span>
+                            <div><h4><span class="point-badge">Ubegrenset</span> utsendelse av e-post-faktura/purring</h4><p>Inkl. i serviceavtalen</p></div>
+                        </div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT N ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant N — Aksentstripe øverst, «branded» kort</span>
+                <p class="proto-note">Beholder den lyseblå kort-bakgrunnen, men hvert kort får en tynn blå aksentstripe øverst og tallmerket «flyter» halvveis over stripen — en mer polert, produktaktig detalj uten å endre paletten.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="grid-n">
+                        <div class="card-n full">
+                            <span class="selling-point-num">01</span>
+                            <div><h4>100 % automatisert innmelding av nye medlemmer</h4><p>Automatisk betaling med <span class="point-badge">Vipps</span> eller <span class="point-badge">bankkort</span> kan bestilles</p></div>
+                        </div>
+                        <div class="card-n"><span class="selling-point-num">02</span><div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div></div>
+                        <div class="card-n"><span class="selling-point-num">03</span><div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div></div>
+                        <div class="card-n"><span class="selling-point-num">04</span><div><h4>Egen innlogging for distriktsavdelinger</h4></div></div>
+                        <div class="card-n"><span class="selling-point-num">05</span><div><h4>Vipps-innlogging på Din side</h4></div></div>
+                        <div class="card-n full">
+                            <span class="selling-point-num">06</span>
+                            <div><h4><span class="point-badge">Ubegrenset</span> utsendelse av e-post-faktura/purring</h4><p>Inkl. i serviceavtalen</p></div>
+                        </div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT O ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant O — Stor hero-banner + slank liste</span>
+                <p class="proto-note">Det sterkeste punktet (01) løftes til en stor, fargerik banner rett under bildet. De øvrige fem vises som en ren, luftig liste med tynne skillelinjer i stedet for seks like bokser — mindre repeterende, tydeligere hierarki.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="hero-o">
+                        <span class="num-o">01</span>
+                        <div><h4>100 % automatisert innmelding av nye medlemmer</h4><p>Automatisk betaling med <span class="point-badge">Vipps</span> eller <span class="point-badge">bankkort</span> kan bestilles</p></div>
+                    </div>
+                    <div class="list-o">
+                        <div class="row-o"><span class="num-o">02</span><div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div></div>
+                        <div class="row-o"><span class="num-o">03</span><div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div></div>
+                        <div class="row-o"><span class="num-o">04</span><div><h4>Egen innlogging for distriktsavdelinger</h4></div></div>
+                        <div class="row-o"><span class="num-o">05</span><div><h4>Vipps-innlogging på Din side</h4></div></div>
+                        <div class="row-o"><span class="num-o">06</span><div><h4><span class="point-badge">Ubegrenset</span> utsendelse av e-post-faktura/purring</h4><p>Inkl. i serviceavtalen</p></div></div>
                     </div>
 
                     <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
