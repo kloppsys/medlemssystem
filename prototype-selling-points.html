@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="color-scheme" content="light dark" />
+        <script>
+            (function () {
+                document.documentElement.setAttribute("data-theme", "light");
+            })();
+        </script>
+        <title>Prototype — Selling points</title>
+        <link href="css/site.css" rel="stylesheet" />
+        <style>
+            .proto-page { max-width: 900px; margin: 0 auto; padding: var(--space-7) var(--space-5) var(--space-9); }
+            .proto-intro { margin-bottom: var(--space-8); }
+            .proto-intro h1 { font-size: 28px; margin: 0 0 var(--space-3); }
+            .proto-intro p { color: var(--color-text-secondary); font-size: 16px; line-height: 1.6; }
+            .proto-variant { margin-bottom: var(--space-9); }
+            .proto-label {
+                display: inline-block;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--accent-text);
+                background: var(--color-bg-elevated);
+                border-radius: var(--radius-full);
+                padding: var(--space-2) var(--space-4);
+                margin-bottom: var(--space-4);
+            }
+            .proto-note { font-size: 14px; color: var(--color-text-secondary); margin: var(--space-3) 0 var(--space-5); }
+            .proto-desc-preview { color: var(--color-text-secondary); font-size: 15px; margin-top: var(--space-5); font-style: italic; }
+
+            /* --- Variant A: uthevet sjekkliste (nærmest dagens stil, men flyttet + fremhevet) --- */
+            .facts-a {
+                list-style: none; padding: 0; margin: var(--space-6) 0 0;
+                display: flex; flex-direction: column; gap: var(--space-4);
+            }
+            .facts-a li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: 16px; line-height: 1.5; color: var(--color-text); }
+            .facts-a .check {
+                flex: none; width: 22px; height: 22px; border-radius: 50%;
+                background: var(--color-bg-elevated); color: var(--accent-text);
+                display: flex; align-items: center; justify-content: center; margin-top: 0.1em;
+            }
+            .facts-a strong { font-weight: 700; }
+
+            /* --- Variant B: highlight-chips + kompakt liste --- */
+            .chip-row { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+            .chip {
+                display: inline-flex; align-items: center;
+                background: var(--accent-blue); color: #fff;
+                font-weight: 700; font-size: 14px;
+                padding: var(--space-2) var(--space-4);
+                border-radius: var(--radius-full);
+            }
+            .facts-b {
+                list-style: none; padding: 0; margin: var(--space-5) 0 0;
+                display: flex; flex-direction: column; gap: var(--space-2);
+            }
+            .facts-b li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: 14px; color: var(--color-text-secondary); }
+            .facts-b .icon { flex: none; color: var(--accent-text); margin-top: 0.2em; }
+
+            /* --- Variant C: ikon-kortrutenett --- */
+            .feature-grid {
+                display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);
+                margin-top: var(--space-6);
+            }
+            @media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; } }
+            .feature-card {
+                display: flex; gap: var(--space-3); align-items: flex-start;
+                background: var(--color-bg-elevated);
+                border-radius: var(--radius-md);
+                padding: var(--space-4);
+            }
+            .feature-card .badge {
+                flex: none; width: 36px; height: 36px; border-radius: 50%;
+                background: var(--accent-blue); color: #fff;
+                display: flex; align-items: center; justify-content: center;
+            }
+            .feature-card h4 { font-size: 15px; margin: 0 0 2px; line-height: 1.35; }
+            .feature-card p { font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
+            .feature-card.full { grid-column: 1 / -1; }
+        </style>
+    </head>
+    <body>
+        <main class="proto-page">
+            <div class="proto-intro">
+                <h1>Prototype: «Selling points»-seksjon</h1>
+                <p>Tre stilalternativer for hvordan salgspunktene kan plasseres rett under produktbildet, før ingressen. Alle bruker Regweb-bildet og de oppgitte frasene ordrett. Ikke publisert på selve siden — kun til gjennomsyn her.</p>
+            </div>
+
+            <!-- ============ VARIANT A ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant A — Uthevet sjekkliste</span>
+                <p class="proto-note">Samme sjekkliste-språk som resten av siden i dag, men flyttet rett under bildet, med større tekst og et rundt merke rundt haken for mer visuell vekt. Nøkkelfrasen i hvert punkt er fet.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <ul class="facts-a">
+                        <li><span class="check"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span><span><strong>Nettinnmelding med automatisk prosess</strong> — automatisk betaling med Vipps kan bestilles</span></li>
+                        <li><span class="check"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span><span><strong>Kort, Vipps, eFaktura og avtalegiro</strong></span></li>
+                        <li><span class="check"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span><span><strong>Egen medlemsportal</strong>, innebygd GDPR</span></li>
+                        <li><span class="check"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span><span><strong>Egen innlogging for distriktsavdelinger</strong></span></li>
+                        <li><span class="check"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span><span><strong>Nye moduler</strong>: Vipps-innlogging på Din side, chat-modul, AI-modul og flere</span></li>
+                    </ul>
+
+                    <p class="proto-desc-preview">↓ (ingressen «Et komplett, skybasert medlemssystem …» ville kommet her, som i dag)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT B ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant B — Highlight-chips + kompakt liste</span>
+                <p class="proto-note">En rad med fylte, fargede «chips» viser nøkkelordene med maksimal synlighet i sekundet man ser bildet. Full setning med detaljer følger rett under i mindre tekst.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="chip-row">
+                        <span class="chip">Automatisk nettinnmelding</span>
+                        <span class="chip">Kort · Vipps · eFaktura · avtalegiro</span>
+                        <span class="chip">Egen medlemsportal</span>
+                        <span class="chip">Distriktsavdelinger</span>
+                        <span class="chip">Nye moduler</span>
+                    </div>
+
+                    <ul class="facts-b">
+                        <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Nettinnmelding med automatisk prosess — automatisk betaling med Vipps kan bestilles</li>
+                        <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Kort, Vipps, eFaktura og avtalegiro</li>
+                        <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Egen medlemsportal, innebygd GDPR</li>
+                        <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Egen innlogging for distriktsavdelinger</li>
+                        <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Nye moduler: Vipps-innlogging på Din side, chat-modul, AI-modul og flere</li>
+                    </ul>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT C ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant C — Ikon-kortrutenett</span>
+                <p class="proto-note">Hvert salgspunkt får sitt eget lille kort med sirkel-ikon, fet korttittel og — der teksten selv gir det naturlig (bindestrek/komma/kolon i det du sendte) — en kort forklaringslinje under. Mest «selgende» visuelt, men også størst endring fra dagens stil.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-grid">
+                        <div class="feature-card full">
+                            <span class="badge"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span>
+                            <div><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span>
+                            <div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span>
+                            <div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span>
+                            <div><h4>Egen innlogging for distriktsavdelinger</h4></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg></span>
+                            <div><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div>
+                        </div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>
