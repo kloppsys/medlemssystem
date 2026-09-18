@@ -521,6 +521,17 @@ hr.divider { display: none; }
 }
 .selling-point h4 { font-size: 15px; margin: 0 0 2px; }
 .selling-point p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+.point-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+  margin: 0 1px;
+}
 
 .subfeature-grid {
   display: grid;
