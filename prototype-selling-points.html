@@ -170,6 +170,91 @@
             .facts-h { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-2); }
             .facts-h li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: 14px; color: var(--color-text-secondary); }
             .facts-h .icon { flex: none; color: var(--accent-text); margin-top: 0.2em; }
+
+            /* --- Variant C-familien: tallmerker i stedet for hake --- */
+            .badge-num {
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 13px; font-weight: 700;
+            }
+
+            /* --- Variant I: enkolonne nummererte kort, større og luftigere --- */
+            .feature-list-single { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6); }
+            .feature-list-single .row {
+                display: flex; gap: var(--space-5); align-items: center;
+                background: var(--color-bg-elevated);
+                border-radius: var(--radius-md);
+                padding: var(--space-5);
+            }
+            .feature-list-single .big-num {
+                flex: none;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 28px; font-weight: 700; color: var(--accent-text);
+                width: 48px;
+            }
+            .feature-list-single h4 { font-size: 16px; margin: 0 0 2px; }
+            .feature-list-single p { font-size: 14px; color: var(--color-text-secondary); margin: 0; }
+
+            /* --- Variant J: fylte, fargede kort --- */
+            .feature-grid-filled { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+            @media (max-width: 640px) { .feature-grid-filled { grid-template-columns: 1fr; } }
+            .feature-grid-filled .card {
+                display: flex; gap: var(--space-3); align-items: flex-start;
+                background: var(--accent-blue); color: #fff;
+                border-radius: var(--radius-md);
+                padding: var(--space-4);
+            }
+            .feature-grid-filled .card.full { grid-column: 1 / -1; }
+            .feature-grid-filled .badge {
+                flex: none; width: 32px; height: 32px; border-radius: 50%;
+                background: rgba(255,255,255,0.22); color: #fff;
+                display: flex; align-items: center; justify-content: center;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 13px; font-weight: 700;
+            }
+            .feature-grid-filled h4 { font-size: 15px; margin: 0 0 2px; color: #fff; }
+            .feature-grid-filled p { font-size: 13px; margin: 0; color: rgba(255,255,255,0.85); }
+
+            /* --- Variant K: tynn kant, minimalistisk --- */
+            .feature-grid-outline { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+            @media (max-width: 640px) { .feature-grid-outline { grid-template-columns: 1fr; } }
+            .feature-grid-outline .card {
+                position: relative;
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                padding: var(--space-5) var(--space-4) var(--space-4);
+            }
+            .feature-grid-outline .card.full { grid-column: 1 / -1; }
+            .feature-grid-outline .num-tag {
+                position: absolute; top: -10px; left: var(--space-4);
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-full);
+                padding: 1px 8px;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 12px; font-weight: 700; color: var(--accent-text);
+            }
+            .feature-grid-outline h4 { font-size: 15px; margin: 0 0 2px; }
+            .feature-grid-outline p { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+
+            /* --- Variant L: stort, svakt tonet spøkelsestall i bakgrunnen --- */
+            .feature-grid-ghost { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+            @media (max-width: 640px) { .feature-grid-ghost { grid-template-columns: 1fr; } }
+            .feature-grid-ghost .card {
+                position: relative; overflow: hidden;
+                background: var(--color-bg-elevated);
+                border-radius: var(--radius-md);
+                padding: var(--space-4);
+            }
+            .feature-grid-ghost .card.full { grid-column: 1 / -1; }
+            .feature-grid-ghost .ghost-num {
+                position: absolute; top: -14px; right: 4px;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 56px; font-weight: 700;
+                color: var(--accent-text); opacity: 0.12;
+                line-height: 1; pointer-events: none;
+            }
+            .feature-grid-ghost h4 { position: relative; font-size: 15px; margin: 0 0 2px; }
+            .feature-grid-ghost p { position: relative; font-size: 13px; color: var(--color-text-secondary); margin: 0; }
         </style>
     </head>
     <body>
@@ -419,6 +504,162 @@
                         <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Egen innlogging for distriktsavdelinger</li>
                         <li><svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-6.5 6.5a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06L6.75 10.19l5.97-5.97a.75.75 0 0 1 1.06 0Z"/></svg>Nye moduler: Vipps-innlogging på Din side, chat-modul, AI-modul og flere</li>
                     </ul>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <hr class="divider" style="margin: var(--space-9) 0;" />
+            <div class="proto-intro">
+                <h1>Variant C — videre bearbeiding</h1>
+                <p>Du valgte Variant C (ikon-kortrutenett) som favoritt. Under: samme variant med tallmerker i sirkelen i stedet for hake, pluss fire nye kort-baserte varianter som bygger videre på samme grunnidé.</p>
+            </div>
+
+            <!-- ============ VARIANT C, MED TALL ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant C — med tall (01–05)</span>
+                <p class="proto-note">Identisk med Variant C, men sirkel-ikonet er byttet ut med et tallmerke (01–05) i stedet for haken.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-grid">
+                        <div class="feature-card full">
+                            <span class="badge badge-num">01</span>
+                            <div><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge badge-num">02</span>
+                            <div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge badge-num">03</span>
+                            <div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge badge-num">04</span>
+                            <div><h4>Egen innlogging for distriktsavdelinger</h4></div>
+                        </div>
+                        <div class="feature-card">
+                            <span class="badge badge-num">05</span>
+                            <div><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div>
+                        </div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT I ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant I — Enkolonne, store nummererte rader</span>
+                <p class="proto-note">Samme grunnidé som C, men i én bred kolonne i stedet for rutenett — store tall til venstre, mer luft, roligere lesetempo. God for når punktene skal leses i rekkefølge.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-list-single">
+                        <div class="row"><span class="big-num">01</span><div><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div></div>
+                        <div class="row"><span class="big-num">02</span><div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div></div>
+                        <div class="row"><span class="big-num">03</span><div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div></div>
+                        <div class="row"><span class="big-num">04</span><div><h4>Egen innlogging for distriktsavdelinger</h4></div></div>
+                        <div class="row"><span class="big-num">05</span><div><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div></div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT J ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant J — Fylte, fargede kort</span>
+                <p class="proto-note">Samme kort-rutenett som C, men kortene selv er fylt med aksentfargen — mer «pang» og selgende, men også tyngre visuelt enn de andre kort-variantene.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-grid-filled">
+                        <div class="card full"><span class="badge">01</span><div><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div></div>
+                        <div class="card"><span class="badge">02</span><div><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div></div>
+                        <div class="card"><span class="badge">03</span><div><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div></div>
+                        <div class="card"><span class="badge">04</span><div><h4>Egen innlogging for distriktsavdelinger</h4></div></div>
+                        <div class="card"><span class="badge">05</span><div><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div></div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT K ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant K — Tynn kant, minimalistisk</span>
+                <p class="proto-note">Kortene har kun en tynn kantlinje, ingen fylt bakgrunn — et lite tallmerke sitter over øvre venstre hjørne som en «fane». Roligste og mest tilbakeholdne av kort-variantene.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-grid-outline">
+                        <div class="card full"><span class="num-tag">01</span><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div>
+                        <div class="card"><span class="num-tag">02</span><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div>
+                        <div class="card"><span class="num-tag">03</span><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div>
+                        <div class="card"><span class="num-tag">04</span><h4>Egen innlogging for distriktsavdelinger</h4></div>
+                        <div class="card"><span class="num-tag">05</span><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div>
+                    </div>
+
+                    <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
+                </article>
+            </div>
+
+            <!-- ============ VARIANT L ============ -->
+            <div class="proto-variant">
+                <span class="proto-label">Variant L — Stort spøkelsestall i bakgrunnen</span>
+                <p class="proto-note">Hvert kort har et stort, svakt tonet tall bak teksten øverst til høyre — en redaksjonell, «designbyrå»-aktig detalj. Tallet ER selve identiteten til kortet, ikke bare et merke.</p>
+
+                <article class="service-entry">
+                    <p class="service-card-eyebrow">Medlemssystem</p>
+                    <div class="service-entry-head">
+                        <h3 class="service-entry-title">Regweb</h3>
+                        <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
+                    </div>
+                    <div class="service-entry-figure">
+                        <img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" width="1200" height="900" loading="lazy" />
+                    </div>
+
+                    <div class="feature-grid-ghost">
+                        <div class="card full"><span class="ghost-num">01</span><h4>Nettinnmelding med automatisk prosess</h4><p>Automatisk betaling med Vipps kan bestilles</p></div>
+                        <div class="card"><span class="ghost-num">02</span><h4>Kort, Vipps, eFaktura og avtalegiro</h4></div>
+                        <div class="card"><span class="ghost-num">03</span><h4>Egen medlemsportal</h4><p>Innebygd GDPR</p></div>
+                        <div class="card"><span class="ghost-num">04</span><h4>Egen innlogging for distriktsavdelinger</h4></div>
+                        <div class="card"><span class="ghost-num">05</span><h4>Nye moduler</h4><p>Vipps-innlogging på Din side, chat-modul, AI-modul og flere</p></div>
+                    </div>
 
                     <p class="proto-desc-preview">↓ (ingressen ville kommet her)</p>
                 </article>
