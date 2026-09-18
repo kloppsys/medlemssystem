@@ -524,8 +524,8 @@ hr.divider { display: none; }
 .point-badge {
   display: inline-flex;
   align-items: center;
-  background: var(--accent-blue);
-  color: #fff;
+  background: var(--accent-blue-bright);
+  color: var(--navy);
   font-size: 12px;
   font-weight: 700;
   padding: 1px 8px;
