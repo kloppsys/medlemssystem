@@ -388,6 +388,22 @@ hr.divider { display: none; }
   border: 0;
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: var(--space-4);
+  z-index: 1000;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: top 150ms var(--ease-out);
+}
+.skip-link:focus { top: var(--space-2); }
+
 #tjenester { scroll-margin-top: calc(var(--nav-height) + var(--space-5)); }
 
 /* Full service detail entries — Fluent-style floating white cards, replaces the old plain-flow + <hr> layout */
@@ -820,7 +836,9 @@ hr.divider { display: none; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--accent-blue);
+  /* --accent-blue (#0078d4) on this bg is 4.05:1 — fails WCAG AA (4.5:1) for 14px text.
+     #0063b1 is Fluent UI's own "Blue Dark" token, 5.49:1 on #f2f2f2. */
+  color: #0063b1;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -841,7 +859,7 @@ hr.divider { display: none; }
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 .copyright .container { padding-left: 0; padding-right: 0; }
-.copyright-link { display: inline-block; margin-top: var(--space-2); color: var(--accent-blue); }
+.copyright-link { display: inline-block; margin-top: var(--space-2); color: #0063b1; }
 .copyright-link:hover { color: var(--navy-dark); }
 
 /* Scroll reveal — progressive enhancement, JS-gated */
