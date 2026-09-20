@@ -322,6 +322,18 @@ a { color: var(--accent-text); }
   margin-top: var(--space-8);
 }
 @media (max-width: 767px) { .teaser-grid { grid-template-columns: 1fr; } }
+.campaign-banner {
+  margin: var(--space-7) 0 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: var(--color-bg-elevated);
+}
+.campaign-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .teaser-card {
   background: var(--color-bg);
