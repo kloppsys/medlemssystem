@@ -193,6 +193,18 @@ a { color: var(--accent-text); }
   font-size: 15px;
   flex: none;
 }
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+.navbar-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.navbar-link:hover { color: var(--accent-text); }
 .navbar-brand .brand-tld {
   display: inline-flex;
   align-items: center;
@@ -336,6 +348,7 @@ a { color: var(--accent-text); }
 }
 @media (max-width: 767px) { .teaser-grid { grid-template-columns: 1fr; } }
 .campaign-banner {
+  scroll-margin-top: calc(var(--nav-height) + var(--space-5));
   margin: var(--space-7) 0 0;
   border-radius: var(--radius-lg);
   overflow: hidden;

@@ -139,9 +139,12 @@
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="/"><span class="mark">M</span> Medlemssystem<span class="brand-tld">.no</span></a>
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt mellom lyst og mørkt utseende" aria-pressed="false">
-                    <span class="theme-toggle-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor"><path d="M9.5 1.5a6.5 6.5 0 1 0 5 10.9A7 7 0 0 1 9.5 1.5Z"/></svg></span>
-                </button>
+                <div class="navbar-actions">
+                    <a class="navbar-link" href="#kampanjer">Kampanjer</a>
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt mellom lyst og mørkt utseende" aria-pressed="false">
+                        <span class="theme-toggle-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor"><path d="M9.5 1.5a6.5 6.5 0 1 0 5 10.9A7 7 0 0 1 9.5 1.5Z"/></svg></span>
+                    </button>
+                </div>
             </div>
         </nav>
 
@@ -185,7 +188,7 @@
                         <p>Velg den kombinasjonen som passer foreningen deres — alle tre kan brukes hver for seg, eller sammen.</p>
                     </div>
                 </div>
-                <figure class="campaign-banner">
+                <figure class="campaign-banner" id="kampanjer">
                     <img src="assets/img/campaign-banner.jpg" srcset="assets/img/campaign-banner-1200.jpg 1200w, assets/img/campaign-banner.jpg 2200w" sizes="(min-width: 1160px) 1112px, calc(100vw - 48px)" alt="Kampanje på Regweb og Likepersonslogg" width="2200" height="1283" loading="lazy" decoding="async" />
                 </figure>
                 <div class="teaser-grid">
