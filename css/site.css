@@ -183,15 +183,19 @@ a { color: var(--accent-text); }
   text-decoration: none;
   letter-spacing: -0.01em;
 }
-.navbar-brand .mark {
-  width: 30px; height: 30px;
-  border-radius: 7px;
-  background: var(--navy);
-  color: #ffffff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700;
-  font-size: 15px;
-  flex: none;
+.navbar-brand .brand-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navbar-brand .brand-name { font-size: 19px; }
+.navbar-brand .brand-underline {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+  border-radius: 2px;
+  background: var(--accent-red);
 }
 .navbar-actions {
   display: flex;
@@ -224,10 +228,6 @@ a { color: var(--accent-text); }
   height: 100%;
 }
 .navbar-brand .brand-no-text { font-size: 14px; font-weight: 700; }
-:root[data-theme="dark"] .navbar-brand .mark { background: #ffffff; color: var(--navy); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .navbar-brand .mark { background: #ffffff; color: var(--navy); }
-}
 
 .theme-toggle {
   display: flex;
