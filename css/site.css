@@ -878,16 +878,36 @@ hr.divider { display: none; }
 /* Footer — Microsoft's own footer colors, sampled from microsoft.com/nb-no (#F2F2F2 bg, #616161 text,
    11px legal bar). The medlem123.no-matched mauve version from r010 lives only on that branch. */
 .site-footer { background: #f2f2f2; color: #1d1d1f; text-align: center; padding: var(--space-8) 0; }
-.site-footer-mark {
-  width: 40px; height: 40px;
-  border-radius: 9px;
-  background: var(--accent-blue);
-  color: #ffffff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
   margin: 0 auto var(--space-6);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1d1d1f;
 }
+.footer-brand-wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; }
+.footer-brand-name { font-size: 26px; }
+.footer-brand-underline {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 4px;
+  border-radius: 2px;
+  background: var(--accent-red);
+}
+.footer-brand-no { display: inline-flex; align-items: center; gap: 8px; }
+.footer-brand-no-icon {
+  width: 44px; height: 32px;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: none;
+  box-shadow: 0 0 0 1px rgba(14, 23, 38, 0.12);
+}
+.footer-brand-no-icon svg { display: block; width: 100%; height: 100%; }
+.footer-brand-no-text { font-size: 19px; }
 .site-footer h3 {
   font-family: var(--font-text);
   font-size: 12px;
