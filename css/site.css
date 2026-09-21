@@ -38,6 +38,7 @@
   --accent-blue: #0078d4;
   --accent-blue-bright: #50a4e8;
   --accent-text: var(--accent-blue);
+  --accent-red: #d6293e;
 
   --navy-dark: #005a9e;
 
@@ -191,6 +192,18 @@ a { color: var(--accent-text); }
   font-weight: 700;
   font-size: 15px;
   flex: none;
+}
+.navbar-brand .brand-tld {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-red);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 :root[data-theme="dark"] .navbar-brand .mark { background: #ffffff; color: var(--navy); }
 @media (prefers-color-scheme: dark) {
@@ -436,13 +449,34 @@ hr.divider { display: none; }
   text-transform: uppercase;
   color: var(--accent-text);
 }
-.service-entry-head { margin-top: var(--space-2); }
+.service-entry-head {
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
 .service-entry-title { font-size: 30px; }
 .service-entry-tagline {
   display: block;
   margin-top: var(--space-2);
   font-size: 17px;
   color: var(--color-text-secondary);
+}
+.discount-badge {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  margin-top: 4px;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-red);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .service-entry-figure {
