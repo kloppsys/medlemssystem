@@ -205,18 +205,26 @@ a { color: var(--accent-text); }
   text-decoration: none;
 }
 .navbar-link:hover { color: var(--accent-text); }
-.navbar-brand .brand-tld {
+.navbar-brand .brand-no {
   display: inline-flex;
   align-items: center;
-  margin-left: 1px;
-  padding: 2px 6px;
-  border-radius: var(--radius-sm);
-  background: var(--accent-red);
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  gap: 6px;
+  margin-left: 4px;
 }
+.navbar-brand .brand-no-icon {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: none;
+  box-shadow: 0 0 0 1px rgba(14, 23, 38, 0.12);
+}
+.navbar-brand .brand-no-icon svg {
+  display: block;
+  width: 160%;
+  height: 160%;
+  margin: -30% 0 0 -22%;
+}
+.navbar-brand .brand-no-text { font-size: 14px; font-weight: 700; }
 :root[data-theme="dark"] .navbar-brand .mark { background: #ffffff; color: var(--navy); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .navbar-brand .mark { background: #ffffff; color: var(--navy); }
