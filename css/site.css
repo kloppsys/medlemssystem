@@ -811,6 +811,7 @@ hr.divider { display: none; }
 }
 .price-table > div + div { border-top: 1px solid var(--color-border); }
 .price-table dt { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
+.price-note-inline { font-style: italic; opacity: 0.8; }
 .price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; }
 
 .service-card-link {
