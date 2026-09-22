@@ -524,6 +524,15 @@ hr.divider { display: none; }
    customer-name badges (there shown as logos on case-study cards; here as named chips, since we
    have no verified logo assets for these organizations to reuse). */
 .trust-strip { margin-top: var(--space-5); }
+.trust-strip-early {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-6);
+  padding: var(--space-5);
+  background: rgba(0, 120, 212, 0.08);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: var(--radius-md);
+}
+.trust-strip-early .trust-strip-sentence { margin-bottom: var(--space-4); }
 .trust-strip-sentence {
   font-size: 16px;
   line-height: 1.6;
