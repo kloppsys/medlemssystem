@@ -336,7 +336,7 @@ a { color: var(--accent-text); }
 
 .masthead-cta { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-6); }
 
-.page-section { padding: var(--space-9) 0; }
+.page-section { padding: var(--space-8) 0; }
 @media (max-width: 767px) { .page-section { padding: var(--space-7) 0; } }
 .page-section-alt { background: var(--color-bg-elevated); }
 
@@ -840,7 +840,7 @@ hr.divider { display: none; }
 }
 
 /* Photo + card-overlay section — mirrors NBIM's "Ansvarlig forvaltning" pattern */
-.photo-section { padding: var(--space-9) 0; background: var(--color-bg); }
+.photo-section { padding: var(--space-8) 0; background: var(--color-bg); }
 .photo-section-eyebrow {
   font-size: 13px;
   font-weight: 600;
@@ -913,7 +913,7 @@ hr.divider { display: none; }
 .contact-band {
   background: var(--color-bg-elevated);
   color: var(--color-text);
-  padding: var(--space-9) 0;
+  padding: var(--space-8) 0;
   text-align: center;
 }
 .contact-band-heading {
