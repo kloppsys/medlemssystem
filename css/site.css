@@ -339,6 +339,9 @@ a { color: var(--accent-text); }
 .page-section { padding: var(--space-8) 0; }
 @media (max-width: 767px) { .page-section { padding: var(--space-7) 0; } }
 .page-section-alt { background: var(--color-bg-elevated); }
+/* Two page-section-alt blocks in a row share the same background with no visual break,
+   so the full double padding reads as a dead gap rather than a section change. */
+.page-section-alt + .page-section-alt { padding-top: var(--space-4); }
 
 /* Two-column heading/body intro pattern */
 .intro-grid {
