@@ -270,6 +270,19 @@ a { color: var(--accent-text); }
 }
 .masthead-media { position: relative; min-height: 320px; }
 .masthead-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.masthead-badges {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+.masthead-badges .price-badge { margin-right: 0; box-shadow: var(--card-shadow); }
+.masthead-badges .discount-badge { padding: 4px var(--space-3); box-shadow: var(--card-shadow); }
+.masthead-badge-link { text-decoration: none; }
 @media (max-width: 900px) {
   .masthead-card { grid-template-columns: 1fr; min-height: 0; }
   /* Stacked layout is much wider than tall relative to the (near-square) source photo — a short
