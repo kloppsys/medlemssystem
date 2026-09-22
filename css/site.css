@@ -321,7 +321,7 @@ a { color: var(--accent-text); }
 }
 .btn-light:hover { background: var(--cream-alt); }
 
-.masthead-cta { margin-top: var(--space-6); }
+.masthead-cta { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-6); }
 
 .page-section { padding: var(--space-9) 0; }
 @media (max-width: 767px) { .page-section { padding: var(--space-7) 0; } }
