@@ -743,6 +743,46 @@ hr.divider { display: none; }
 }
 .price-note { display: block; margin-top: 1px; font-size: 13px; }
 .price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.9; margin-top: var(--space-3); }
+.price-example { margin-top: var(--space-4); }
+.price-example-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-3);
+}
+.price-example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+@media (max-width: 560px) { .price-example-grid { grid-template-columns: 1fr; } }
+.price-example-case {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+.price-example-case h5 {
+  margin: 0 0 var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.price-example-total {
+  margin: 0 0 var(--space-1);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.price-example-sum {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
 .price-table {
   margin: var(--space-3) 0;
   padding: var(--space-1) 0;
