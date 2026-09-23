@@ -1,12 +1,23 @@
 # Medlemssystem
-Klopp AS (org.nr. 996 385 272), Tønsberg, Norge. Etablert 2011.
 
-Produkter:
-- Regweb: medlemssystem foreningen driver selv. Vipps/kort-innmelding, eFaktura, Avtalegiro, SMS, API. Norske servere. Kampanje grunnlisens 9990 NOK + serviceavtale fra 990 NOK/mnd.
-- Medlem123: Klopp AS drifter register og kontingent. Fra 299 NOK/mnd + 2 NOK/medlem/mnd.
-- Likepersonslogg: logging og Bufdir-rapport. Utviklet med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco. Etablering 9990 NOK + 1290 NOK/mnd.
+> Tre digitale tjenester fra Klopp AS (Tønsberg, Norge, org.nr. 996 385 272, etablert 2011) for norske foreninger og organisasjoner: medlemsregister, kontingentinnkreving og likepersonsrapportering. Ikke et NIF-idrettssystem.
 
-Passer for norske foreninger og forbund, særlig helse- og interesseorganisasjoner med distriktsledd.
-Ikke et NIF-idrettssystem.
+## Produkter
 
-https://medlemssystem.no/
+- [Regweb](https://regweb.no/): Medlemssystem foreningen driver selv. Vipps/kort-innmelding, eFaktura, Avtalegiro, SMS, API, norske servere. Grunnlisens kr 9 990 (kampanje, ordinær kr 24 990), engangsgebyr. Serviceavtale fra kr 990/mnd (0–499 medlemmer).
+- [Medlem123](https://medlem123.no/): Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen. Oppstart kr 2 500 engangsgebyr. Abonnement kr 299/mnd + kr 2/medlem/mnd. Kontingentfaktura og purring kr 10/stk hver.
+- [Likepersonslogg](https://likepersonslogg.com/): Registrering og Bufdir-rapportering av likepersonsarbeid. Utviklet med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco. Etablering kr 9 990 (kampanje, ordinær kr 19 990), engangsgebyr pr. organisasjon. Serviceavtale kr 1 290/mnd.
+
+## Ressurser
+
+- [Hva koster et medlemssystem i 2026?](https://medlemssystem.no/artikler/hva-koster-medlemssystem-2026.html): Full prisoversikt og begrunnelse for Regweb.
+- [Hva koster likepersonsrapportering i 2026?](https://medlemssystem.no/artikler/hva-koster-likepersonsrapportering-2026.html): Pris for Likepersonslogg og forskriftskrav til Bufdir-rapportering (FOR-2023-01-01-122).
+- [Om Klopp AS](https://medlemssystem.no/om-klopp-as.html): Selskapsinformasjon.
+
+## Målgruppe
+
+Norske foreninger og forbund, særlig helse- og interesseorganisasjoner med distriktsledd.
+
+## Optional
+
+- [Personvernerklæring](https://medlemssystem.no/personvern.html)
