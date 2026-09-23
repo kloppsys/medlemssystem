@@ -911,6 +911,14 @@ hr.divider { display: none; }
   color: var(--accent-text);
   margin: 0 0 var(--space-4);
 }
+.photo-section-intro {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text);
+  max-width: 640px;
+  margin: 0 0 var(--space-5);
+}
+.photo-section-intro strong { font-weight: 600; }
 .photo-section-cta {
   margin-top: var(--space-6);
 }
