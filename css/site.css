@@ -41,6 +41,9 @@
   --accent-red: #d6293e;
 
   --navy-dark: #005a9e;
+  /* WCAG AA-safe accent for text on --color-bg-elevated (cream-alt): #0078d4 on #dceef8 is
+     only 3.80:1, below the 4.5:1 text minimum. #005a9e gives 5.96:1. */
+  --accent-text-strong: var(--navy-dark);
 
   /* Fluent-style double-layer elevation shadow, sampled from <store-card-feature> */
   --card-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14);
@@ -58,6 +61,7 @@
     --color-border: rgba(255, 255, 255, 0.16);
     --shadow-color: rgba(0, 0, 0, 0.5);
     --accent-text: var(--accent-blue-bright);
+    --accent-text-strong: var(--accent-blue-bright);
     --card-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
@@ -69,6 +73,7 @@
   --color-border: rgba(255, 255, 255, 0.16);
   --shadow-color: rgba(0, 0, 0, 0.5);
   --accent-text: var(--accent-blue-bright);
+  --accent-text-strong: var(--accent-blue-bright);
   --card-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -236,11 +241,17 @@ a { color: var(--accent-text); }
   width: 40px; height: 40px;
   background: transparent;
   color: var(--color-text);
-  border: 1px solid var(--color-border);
+  /* Own border-color (not --color-border): needs >=3:1 against the bg as a UI component
+     boundary (WCAG 1.4.11) — --color-border's usual 0.12/0.16 opacity only gives ~1.3-1.7:1. */
+  border: 1px solid rgba(14, 23, 38, 0.5);
   border-radius: 50%;
   font-size: 15px;
   cursor: pointer;
   transition: background var(--duration-fast) var(--ease-out);
+}
+:root[data-theme="dark"] .theme-toggle { border-color: rgba(255, 255, 255, 0.4); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle { border-color: rgba(255, 255, 255, 0.4); }
 }
 .theme-toggle:hover { background: var(--color-bg-elevated); }
 
@@ -292,7 +303,7 @@ a { color: var(--accent-text); }
   .masthead-content { padding: var(--space-6) var(--space-5); }
 }
 
-.masthead .eyebrow-dot { color: var(--accent-blue); }
+.masthead .eyebrow-dot { color: var(--accent-text-strong); }
 .masthead .eyebrow-dot .dot { background: var(--accent-blue); }
 .masthead-heading {
   font-size: clamp(2.25rem, 3.5vw + 1rem, 3rem);
@@ -817,7 +828,7 @@ hr.divider { display: none; }
   margin-right: var(--space-1);
 }
 .price-note { display: block; margin-top: 1px; font-size: 13px; }
-.price-fineprint { font-size: 12px; color: var(--color-text-secondary); opacity: 0.9; margin-top: var(--space-3); }
+.price-fineprint { font-size: 12px; color: var(--color-text-secondary); margin-top: var(--space-3); }
 .price-example { margin-top: var(--space-4); }
 .price-example-label {
   font-size: 12px;
@@ -873,7 +884,7 @@ hr.divider { display: none; }
 }
 .price-table > div + div { border-top: 1px solid var(--color-border); }
 .price-table dt { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
-.price-note-inline { font-style: italic; opacity: 0.8; }
+.price-note-inline { font-style: italic; }
 .price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; }
 
 .service-card-link {
@@ -1005,7 +1016,7 @@ hr.divider { display: none; }
   font-size: 15px;
   color: var(--color-text-secondary);
 }
-.contact-band-direct a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.contact-band-direct a { color: var(--accent-text-strong); text-decoration: underline; text-underline-offset: 3px; }
 .contact-band-sep { margin: 0 var(--space-1); color: var(--color-border); }
 
 /* Footer — Microsoft's own footer colors, sampled from microsoft.com/nb-no (#F2F2F2 bg, #616161 text,
