@@ -143,6 +143,21 @@
                 border-radius: var(--radius-lg);
                 text-align: center;
             }
+            .article-page .section-heading-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--space-4);
+                flex-wrap: wrap;
+                margin-top: var(--space-8);
+            }
+            .article-page .section-heading-row h2 { margin-top: 0; margin-bottom: 0; }
+            .article-page .section-heading-logo {
+                height: 36px;
+                width: auto;
+                display: block;
+                border-radius: var(--radius-sm);
+            }
         </style>
     </head>
     <body>
@@ -169,7 +184,12 @@
                 <p><strong>Kort svar:</strong> Likepersonslogg koster kr 9 990 i etablering (kampanjepris, ordinær pris kr 19 990), engangsgebyr, og deretter kr 1 290/mnd i serviceavtale. Brukerkontoer for de første 49 likepersonene er gratis. Verktøyet er utviklet i samarbeid med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco.</p>
             </div>
 
-            <h2>Derfor velger foreninger Likepersonslogg</h2>
+            <div class="section-heading-row">
+                <h2>Derfor velger foreninger Likepersonslogg</h2>
+                <a href="https://likepersonslogg.com/" target="_blank" rel="noopener" aria-label="Besøk likepersonslogg.com">
+                    <img class="section-heading-logo" src="../assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" />
+                </a>
+            </div>
             <p>Likepersonslogg er bygget sammen med organisasjonene som faktisk bruker det til daglig — ikke tilpasset likepersonsarbeid i etterkant av et generelt skjemaverktøy. Dette er hovedgrunnene kundene oppgir:</p>
 
             <div class="selling-points">
