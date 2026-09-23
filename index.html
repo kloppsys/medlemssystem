@@ -49,6 +49,7 @@
             "@id": "https://medlemssystem.no/#organization",
             "name": "Klopp AS",
             "url": "https://klopp.no/",
+            "sameAs": ["https://klopp.no/"],
             "logo": "https://medlemssystem.no/assets/img/Klopp_logo_ink_R_w200.png",
             "foundingDate": "2011-01-14",
             "vatID": "NO996385272MVA",
@@ -78,8 +79,13 @@
             "@type": "SoftwareApplication",
             "name": "Regweb",
             "url": "https://regweb.no/",
+            "description": "Skybasert medlemssystem foreningen driver selv — medlemsregister, betaling og kommunikasjon, med Vipps, eFaktura, Avtalegiro og API-integrasjon mot foreningens egne systemer.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
+            "featureList": ["Vipps-betaling", "eFaktura", "Avtalegiro", "API-integrasjon", "Din side (medlemsportal)"],
+            "screenshot": "https://medlemssystem.no/assets/img/products/regweb-visual.jpg",
+            "countriesSupported": "NO",
+            "inLanguage": "nb-NO",
             "provider": { "@id": "https://medlemssystem.no/#organization" },
             "offers": {
                 "@type": "Offer",
@@ -100,8 +106,13 @@
             "@type": "SoftwareApplication",
             "name": "Medlem123",
             "url": "https://medlem123.no/",
+            "description": "Fullservice medlemsadministrasjon — Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen, med Vipps-betaling og Din side inkludert som tillegg.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
+            "featureList": ["Vipps-betaling", "Nettinnmelding", "Din side (medlemsportal)"],
+            "screenshot": "https://medlemssystem.no/assets/img/products/medlem123-visual.jpg",
+            "countriesSupported": "NO",
+            "inLanguage": "nb-NO",
             "provider": { "@id": "https://medlemssystem.no/#organization" },
             "offers": {
                 "@type": "Offer",
@@ -123,8 +134,13 @@
             "@type": "SoftwareApplication",
             "name": "Likepersonslogg",
             "url": "https://likepersonslogg.com/",
+            "description": "Digitalt verktøy for registrering og rapportering av likepersonsarbeid, med Vipps-innlogging for likepersoner og ferdig Bufdir-rapport for organisasjonen.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
+            "featureList": ["Vipps-innlogging", "Bufdir-rapport", "Rollestyring (4 nivåer)"],
+            "screenshot": "https://medlemssystem.no/assets/img/products/likepersonslogg-visual.jpg",
+            "countriesSupported": "NO",
+            "inLanguage": "nb-NO",
             "provider": { "@id": "https://medlemssystem.no/#organization" },
             "offers": {
                 "@type": "Offer",
@@ -167,6 +183,70 @@
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Med Medlem123: kr 2 500 i oppstart (engangsgebyr), deretter kr 299/mnd i abonnement + kr 2/medlem/mnd for medlemssystemet, kr 10 pr. kontingentfaktura og kr 10 pr. purring (begge + betalingsservicegebyr). Eksempel: en forening med 200 medlemmer og én årlig fellesutsendelse betaler ca. kr 2 700 den måneden kontingenten sendes ut, og ca. kr 700/mnd resten av året."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hva er et medlemssystem?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Et medlemssystem er et digitalt verktøy for å føre medlemsregister, sende kontingentfaktura og holde oversikt over betalt og ubetalt kontingent samt inn- og utmeldinger."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hva er forskjellen på Regweb og Medlem123?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Regweb er medlemssystemet foreningen driver selv. Medlem123 bruker samme teknologi, men Klopp AS drifter medlemsregisteret og kontingentinnkrevingen for foreningen i stedet."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Finnes det medlemssystem uten regnskapserfaring?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja. Regweb krever ingen regnskapserfaring, og med Medlem123 tar Klopp AS hele den løpende kontingentinnkrevingen for foreningen."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Kan distriktsavdelinger ha egen innlogging?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja, i Regweb. Hver distriktsavdeling får egen innlogging og egne medlemslister avgrenset til egne medlemmer, mens sentralleddet beholder full oversikt over hele organisasjonen."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Lagrer dere data i Norge?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja. Regweb, Medlem123 og Likepersonslogg driftes alle på norsk serverinfrastruktur."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hva koster Regweb for 200 medlemmer per år?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Med 200 medlemmer havner foreningen i laveste serviceavtale-trinn, 0–499 medlemmer: kr 990/mnd, altså kr 11 880/år. Det første året kommer grunnlisensen i tillegg, kr 9 990 i kampanjepris (ordinær pris kr 24 990), engangsgebyr."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Kan vi importere fra Excel?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja. Dataimport fra Excel eller et annet medlemssystem inngår i oppstarten for Medlem123 (kr 2 500), og kan bestilles ved oppstart av Regweb."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Er løsningen GDPR-klar / har dere databehandleravtale?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja. Foreningen er behandlingsansvarlig og Klopp AS er databehandler for alle tre tjenestene — skriftlig databehandleravtale inngås ved oppstart."
                     }
                 }
             ]
@@ -710,6 +790,38 @@
                     <details>
                         <summary>Hva koster det å outsource kontingentinnkreving?</summary>
                         <p>Med Medlem123: kr 2 500 i oppstart (engangsgebyr), deretter kr 299/mnd i abonnement + kr 2/medlem/mnd for medlemssystemet, kr 10 pr. kontingentfaktura og kr 10 pr. purring (begge + betalingsservicegebyr). Eksempel: en forening med 200 medlemmer og én årlig fellesutsendelse betaler ca. kr 2 700 den måneden kontingenten sendes ut, og ca. kr 700/mnd resten av året.</p>
+                    </details>
+                    <details>
+                        <summary>Hva er et medlemssystem?</summary>
+                        <p>Et medlemssystem er et digitalt verktøy for å føre medlemsregister, sende kontingentfaktura og holde oversikt over betalt og ubetalt kontingent samt inn- og utmeldinger.</p>
+                    </details>
+                    <details>
+                        <summary>Hva er forskjellen på Regweb og Medlem123?</summary>
+                        <p>Regweb er medlemssystemet foreningen driver selv. Medlem123 bruker samme teknologi, men Klopp AS drifter medlemsregisteret og kontingentinnkrevingen for foreningen i stedet.</p>
+                    </details>
+                    <details>
+                        <summary>Finnes det medlemssystem uten regnskapserfaring?</summary>
+                        <p>Ja. Regweb krever ingen regnskapserfaring, og med Medlem123 tar Klopp AS hele den løpende kontingentinnkrevingen for foreningen.</p>
+                    </details>
+                    <details>
+                        <summary>Kan distriktsavdelinger ha egen innlogging?</summary>
+                        <p>Ja, i Regweb. Hver distriktsavdeling får egen innlogging og egne medlemslister avgrenset til egne medlemmer, mens sentralleddet beholder full oversikt over hele organisasjonen.</p>
+                    </details>
+                    <details>
+                        <summary>Lagrer dere data i Norge?</summary>
+                        <p>Ja. Regweb, Medlem123 og Likepersonslogg driftes alle på norsk serverinfrastruktur.</p>
+                    </details>
+                    <details>
+                        <summary>Hva koster Regweb for 200 medlemmer per år?</summary>
+                        <p>Med 200 medlemmer havner foreningen i laveste serviceavtale-trinn, 0–499 medlemmer: kr 990/mnd, altså kr 11 880/år. Det første året kommer grunnlisensen i tillegg, kr 9 990 i kampanjepris (ordinær pris kr 24 990), engangsgebyr.</p>
+                    </details>
+                    <details>
+                        <summary>Kan vi importere fra Excel?</summary>
+                        <p>Ja. Dataimport fra Excel eller et annet medlemssystem inngår i oppstarten for Medlem123 (kr 2 500), og kan bestilles ved oppstart av Regweb.</p>
+                    </details>
+                    <details>
+                        <summary>Er løsningen GDPR-klar / har dere databehandleravtale?</summary>
+                        <p>Ja. Foreningen er behandlingsansvarlig og Klopp AS er databehandler for alle tre tjenestene — skriftlig databehandleravtale inngås ved oppstart.</p>
                     </details>
                 </div>
             </div>
