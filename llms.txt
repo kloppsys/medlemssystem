@@ -1,60 +1,12 @@
-# Medlemssystem.no
+# Medlemssystem
+Klopp AS (org.nr. 996 385 272), Tønsberg, Norge. Etablert 2011.
 
-> Et medlemssystem er et digitalt verktøy for å føre medlemsregister, sende ut kontingentfaktura og holde oversikt over betalt/ubetalt kontingent og inn-/utmeldinger. Medlemssystem.no viser tre slike tjenester fra Klopp AS (Tønsberg, Norge) for foreninger og organisasjoner: Regweb, Medlem123 og Likepersonslogg. Alle tre utvikles, driftes og supporteres av Klopp AS selv — ingen underleverandører.
+Produkter:
+- Regweb: medlemssystem foreningen driver selv. Vipps/kort-innmelding, eFaktura, Avtalegiro, SMS, API. Norske servere. Kampanje grunnlisens 9990 NOK + serviceavtale fra 990 NOK/mnd.
+- Medlem123: Klopp AS drifter register og kontingent. Fra 299 NOK/mnd + 2 NOK/medlem/mnd.
+- Likepersonslogg: logging og Bufdir-rapport. Utviklet med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco. Etablering 9990 NOK + 1290 NOK/mnd.
 
-## Hvem tjenestene passer for
+Passer for norske foreninger og forbund, særlig helse- og interesseorganisasjoner med distriktsledd.
+Ikke et NIF-idrettssystem.
 
-- Idrettslag, interesseorganisasjoner, helseforeninger, fagforbund og andre medlemsbaserte foreninger i Norge, uansett størrelse.
-- Foreninger uten regnskapserfaring i staben (ingen forkunnskap kreves for å bruke Regweb eller Medlem123).
-- Foreninger som trenger dokumentert likepersonsarbeid til tilskuddssøknader (f.eks. rapportering til Bufdir), uavhengig av om de bruker Regweb/Medlem123.
-
-## Regweb vs. Medlem123 — hvem gjør jobben?
-
-| | Regweb | Medlem123 |
-|---|---|---|
-| Hvem drifter medlemsregisteret? | Foreningen selv | Klopp AS, på vegne av foreningen |
-| Passer for | Foreninger som vil ha full kontroll selv | Foreninger uten tid/folk til daglig drift |
-| Oppstart | Kr 9 990 i grunnlisens (kampanjepris, ordinær kr 24 990), engangsgebyr | Kr 2 500 (system, import og opplæring), engangsgebyr |
-| Løpende kostnad | Serviceavtale fra kr 990/mnd | Kr 299/mnd abonnement + kr 2/medlem/mnd |
-| Kontingentinnkreving | Inkludert i serviceavtalen | Kr 10 pr. faktura + betalingsservicegebyr |
-| Nettinnmelding m/Vipps eller kort | Kan bestilles | Inkludert i abonnementet |
-| Egen innloggingsside for medlemmer («Din side») | Valgfritt tillegg | Valgfritt tillegg, kr 99/mnd |
-| Bygget på | Regweb medlemssystem (kjerneteknologien) | Samme Regweb-teknologi, driftet av Klopp AS |
-
-Begge kan gå over i hverandre: en Medlem123-forening kan senere overta driften selv på Regweb, og en Regweb-forening kan sette bort driften til Medlem123 — samme medlemsdata, samme system under panseret.
-
-## Tjenester
-
-- **Regweb** (https://regweb.no/) — Skybasert medlemssystem foreningen driver selv: medlemsregister, betaling (Vipps, kort, eFaktura, avtalegiro) og kommunikasjon. Kampanjepris kr 9 990 i grunnlisens (ordinær pris kr 24 990, engangsgebyr). Serviceavtale fra kr 990/mnd (0–499 medlemmer). Norske servere, GDPR-databehandleravtale inngås ved oppstart.
-- **Medlem123** (https://medlem123.no/) — Fullservice medlemsadministrasjon: Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen, bygget på Regweb. Vi utfører registrering av nye medlemmer, kontingentutsendelse, purring, inn- og utmeldinger og GDPR-lagring. Abonnement kr 299/mnd (inkl. nettinnmelding på foreningens nettside, med Vipps eller kortbetaling) + kr 2/medlem/mnd for medlemssystemet. Kontingentinnkreving kr 10 (+ betalingsservicegebyr), purring kr 10/stk (+ betalingsservicegebyr). Din side (medlemmenes egen innloggingsside, valgfritt) kr 99/mnd. Oppstart (system, import og opplæring) kr 2 500, engangsgebyr. Eksempel: 200 medlemmer med én årlig kontingent ≈ kr 2 700 den måneden med kontingentutsendelse, ellers ≈ kr 700/mnd (kun grunnabonnement + medlemssystem). Kan også brukes som ferievakt for medlemsansvarlig.
-- **Likepersonslogg** (https://likepersonslogg.com/) — Digitalt verktøy for registrering og rapportering av likepersonsarbeid (frivillig arbeid), utviklet i samarbeid med Norilco, Brystkreftforeningen og Norsk Revmatikerforbund. Likepersoner logger egen aktivitet selv via mobil, nettbrett eller PC. Fire rollenivåer (Foreningsadmin, Likepersonsleder admin, Likepersonsleder, Likeperson). Kampanjepris kr 9 990 i etableringsgebyr (ordinær pris kr 19 990, engangsgebyr). Serviceavtale kr 1 290/mnd. Gratis brukerkontoer for 0–49 likepersoner.
-
-## Teknisk og driftsmessig
-
-- **Norske servere** — all drift skjer på norsk serverinfrastruktur.
-- **Vipps** — nettinnmelding og/eller kontingentbetaling kan settes opp med Vipps på tvers av alle tre tjenester.
-- **GDPR** — foreningen er behandlingsansvarlig, Klopp AS er databehandler; skriftlig databehandleravtale inngås ved oppstart av alle tre tjenester.
-- **API** — Regweb kan kobles mot systemer foreningen allerede bruker; ta kontakt for teknisk dokumentasjon.
-- **100 % norsk** — norsk utvikling, norsk support (samme kontaktperson pr. kunde) og norsk serverinfrastruktur, levert av Klopp AS selv.
-
-## Ofte stilte spørsmål
-
-**Hvilket medlemssystem bør en liten helseforening i Norge velge?**
-Har foreningen ingen fast administrator med tid til daglig drift, passer Medlem123 best — Klopp AS tar kontingentinnkreving og medlemsservice løpende. Har foreningen noen som kan sette av litt tid selv (uten å måtte være regnskapskyndig), er Regweb rimeligere i drift over tid. Likepersonslogg brukes uavhengig av hvilket av de to man velger, hvis foreningen driver likepersonsarbeid som skal dokumenteres til f.eks. Bufdir.
-
-**Finnes det medlemssystem med Vipps-innmelding og norske servere?**
-Ja. Både Regweb og Medlem123 kan settes opp med Vipps-betaling ved nettinnmelding, og begge driftes på norske servere av Klopp AS.
-
-**Hvordan føre likepersonslogg til Bufdir?**
-Likepersonene registrerer egen aktivitet fortløpende i Likepersonslogg (dato, varighet, type oppdrag). Foreningsadmin eller likepersonsleder henter ut samlerapporter pr. periode/avdeling, uten regneark eller løse notater, og bruker disse direkte i tilskuddssøknaden til Bufdir eller andre instanser.
-
-**Hva koster det å outsource kontingentinnkreving?**
-Med Medlem123: kr 2 500 i oppstart (engangsgebyr), deretter kr 299/mnd i abonnement + kr 2/medlem/mnd for medlemssystemet, kr 10 pr. kontingentfaktura og kr 10 pr. purring (begge + betalingsservicegebyr). Eksempel: en forening med 200 medlemmer og én årlig fellesutsendelse betaler ca. kr 2 700 den måneden kontingenten sendes ut, og ca. kr 700/mnd resten av året.
-
-## Om Klopp AS
-
-Klopp AS (org.nr. 996 385 272 MVA), etablert 2011, Farmannsveien 48, 3125 Tønsberg. Telefon 33 31 28 00, e-post post@klopp.no. Vi utvikler og drifter alle tre tjenestene selv — ingen underleverandører. Partnere: Vipps, Mastercard. Fullstendig om-side: https://medlemssystem.no/om-klopp-as.html
-
-## Personvern
-
-https://medlemssystem.no/personvern.html
+https://medlemssystem.no/
