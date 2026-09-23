@@ -151,6 +151,21 @@
                 border-radius: var(--radius-lg);
                 text-align: center;
             }
+            .article-page .section-heading-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--space-4);
+                flex-wrap: wrap;
+                margin-top: var(--space-8);
+            }
+            .article-page .section-heading-row h2 { margin-top: 0; margin-bottom: 0; }
+            .article-page .section-heading-logo {
+                height: 36px;
+                width: auto;
+                display: block;
+                border-radius: var(--radius-sm);
+            }
         </style>
     </head>
     <body>
@@ -177,7 +192,12 @@
                 <p><strong>Kort svar:</strong> Regweb koster kr 9 990 i oppstart (kampanjepris, ordinær pris kr 24 990) og fra kr 990/mnd i serviceavtale. Prisen inkluderer ubegrenset e-postfaktura og purring, norsk support fra samme person hver gang, og et system norske pasient- og interesseorganisasjoner allerede stoler på. Ønsker foreningen at Klopp AS drifter medlemsregisteret for dere i stedet, finnes Medlem123 fra kr 2 500 i oppstart.</p>
             </div>
 
-            <h2>Derfor velger foreninger Regweb</h2>
+            <div class="section-heading-row">
+                <h2>Derfor velger foreninger Regweb</h2>
+                <a href="https://regweb.no/" target="_blank" rel="noopener" aria-label="Besøk regweb.no">
+                    <img class="section-heading-logo" src="../assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" />
+                </a>
+            </div>
             <p>Regweb er bygget for å være den tryggeste, mest gjennomtestede løsningen for foreninger som ikke har råd til at medlemsregisteret svikter. Dette er hovedgrunnene kundene oppgir:</p>
 
             <div class="selling-points">
