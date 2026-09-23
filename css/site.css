@@ -546,12 +546,13 @@ hr.divider { display: none; }
   border-radius: var(--radius-sm);
 }
 .service-entry-intro {
-  margin-top: var(--space-3);
+  margin-top: var(--space-4);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-text);
   max-width: 640px;
 }
+.service-entry-intro strong { font-weight: 600; }
 .service-entry-tagline {
   display: block;
   margin-top: var(--space-2);
