@@ -1,14 +1,37 @@
 (function () {
     var form = document.getElementById("contactForm");
-    if (!form) return;
-
-    var submitButton = document.getElementById("contactSubmit");
     var status = document.getElementById("formStatus");
+    if (!status) return;
+
+    var params = new URLSearchParams(window.location.search);
 
     function showStatus(kind, message) {
         status.textContent = message;
         status.className = "form-status is-" + kind;
+        status.focus();
     }
+
+    // No-JS fallback: Web3Forms redirects here with ?sendt=1 after a native form POST.
+    if (params.get("sendt") === "1") {
+        showStatus("success", "Takk! Henvendelsen er sendt til Klopp AS. Vi svarer til e-postadressen du oppga, normalt innen én virkedag.");
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState({}, "", window.location.pathname);
+        }
+    }
+
+    if (!form) return;
+
+    // Preselect "Gjelder" from a link like /kontakt.html?tjeneste=Likepersonslogg
+    var topicSelect = document.getElementById("contact-topic");
+    var preselect = params.get("tjeneste");
+    if (topicSelect && preselect) {
+        var matchingOption = Array.prototype.find.call(topicSelect.options, function (opt) {
+            return opt.value.toLowerCase() === preselect.toLowerCase();
+        });
+        if (matchingOption) topicSelect.value = matchingOption.value;
+    }
+
+    var submitButton = document.getElementById("contactSubmit");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -17,6 +40,9 @@
         if (formData.get("botcheck")) {
             return;
         }
+
+        var tjeneste = formData.get("tjeneste");
+        formData.set("subject", tjeneste && tjeneste !== "Generelt" ? "Ny henvendelse: " + tjeneste + " — medlemssystem.no" : "Ny henvendelse fra medlemssystem.no");
 
         var payload = Object.fromEntries(formData);
         submitButton.disabled = true;
@@ -37,12 +63,9 @@
             .then(function (result) {
                 if (result.ok) {
                     form.reset();
-                    showStatus("success", "Takk! Henvendelsen er sendt. Vi svarer så raskt vi kan.");
+                    showStatus("success", "Takk! Henvendelsen er sendt til Klopp AS. Vi svarer til e-postadressen du oppga, normalt innen én virkedag.");
                 } else {
-                    showStatus(
-                        "error",
-                        "Noe gikk galt: " + (result.json && result.json.message ? result.json.message : "ukjent feil") + ". Prøv igjen, eller ring 33 31 28 00."
-                    );
+                    showStatus("error", "Vi klarte ikke å sende henvendelsen akkurat nå. Prøv igjen, eller ring 33 31 28 00.");
                 }
             })
             .catch(function () {
