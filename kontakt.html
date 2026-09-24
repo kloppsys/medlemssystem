@@ -118,6 +118,19 @@
                 font-size: clamp(1.75rem, 3vw, 2.5rem);
                 letter-spacing: -0.02em;
             }
+            .legal-page .section-heading-row {
+                display: flex;
+                align-items: center;
+                gap: var(--space-4);
+                flex-wrap: wrap;
+            }
+            .legal-page .section-heading-row h1 { margin: 0; }
+            .legal-page .section-heading-logo {
+                height: 36px;
+                width: auto;
+                display: block;
+                border-radius: var(--radius-sm);
+            }
             .legal-page .contact-lead {
                 color: var(--color-text-secondary);
                 font-size: 18px;
@@ -233,7 +246,12 @@
         </nav>
 
         <main class="legal-page" id="main">
-            <h1>Kontakt oss</h1>
+            <div class="section-heading-row">
+                <h1>Kontakt oss</h1>
+                <a href="https://klopp.no/" target="_blank" rel="noopener" aria-label="Besøk klopp.no">
+                    <img class="section-heading-logo" src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS" loading="lazy" />
+                </a>
+            </div>
             <p class="contact-lead">Klopp AS i Tønsberg svarer på spørsmål om Regweb, Medlem123 og Likepersonslogg.</p>
 
             <p class="quick-contact">Tlf. <a href="tel:+4733312800">33 31 28 00</a> <span class="contact-band-sep">·</span> <a href="mailto:post@klopp.no">post@klopp.no</a> <span class="contact-band-sep">·</span> man–fre 09–15</p>
