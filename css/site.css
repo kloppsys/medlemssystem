@@ -739,6 +739,22 @@ hr.divider { display: none; }
   margin: 0 1px;
 }
 
+.selling-point.bonus {
+  background: #fdeaec;
+}
+.selling-point.bonus .selling-point-num {
+  background: var(--accent-red);
+}
+.selling-point.bonus h4,
+.selling-point.bonus p,
+.selling-point.bonus .point-eyebrow {
+  color: #1a1a1a;
+}
+.selling-point.bonus .point-badge {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
 .subfeature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
