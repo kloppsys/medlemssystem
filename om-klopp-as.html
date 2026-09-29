@@ -161,6 +161,7 @@
                 grid-template-columns: repeat(3, minmax(0, 1fr));
                 gap: var(--space-5);
                 margin-top: var(--space-6);
+                margin-bottom: var(--space-4);
             }
             @media (max-width: 900px) { .capability-grid { grid-template-columns: 1fr; } }
             .capability-card {
@@ -184,13 +185,14 @@
                 margin-bottom: var(--space-4);
             }
             .capability-icon svg { width: 20px; height: 20px; }
-            .capability-card h3 { font-size: 18px; margin: 0 0 var(--space-2); letter-spacing: -0.01em; }
+            .capability-card h3 { font-size: 18px; margin: 0 0 var(--space-2); letter-spacing: -0.01em; overflow-wrap: break-word; hyphens: auto; }
             .capability-card p { color: var(--color-text-secondary); line-height: 1.6; margin: 0; font-size: 15px; }
             .client-list {
                 display: flex;
                 flex-wrap: wrap;
                 gap: var(--space-3);
                 margin-top: var(--space-5);
+                margin-bottom: var(--space-4);
                 padding: 0;
                 list-style: none;
             }
