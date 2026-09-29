@@ -144,13 +144,14 @@
             }
             @media (max-width: 900px) { .capability-grid { grid-template-columns: 1fr; } }
             .capability-card {
-                background: var(--color-bg);
+                background: var(--color-bg-elevated);
+                border: 1px solid var(--color-border);
                 border-radius: var(--radius-lg);
                 box-shadow: var(--card-shadow);
                 padding: var(--space-6) var(--space-5);
-                transition: transform var(--duration-base) var(--ease-out);
+                transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
             }
-            .capability-card:hover { transform: translateY(-3px); }
+            .capability-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16); }
             .capability-icon {
                 display: inline-flex;
                 align-items: center;
