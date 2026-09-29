@@ -239,6 +239,27 @@
                 border-bottom: 1px solid var(--color-border);
             }
             .fact-table th { width: 40%; color: var(--color-text-secondary); font-weight: 600; }
+            .partner-logo-fact { max-height: 36px; width: auto; display: block; }
+            .partner-cards {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: var(--space-5);
+                margin-top: var(--space-6);
+                max-width: 460px;
+            }
+            .partner-card {
+                background: var(--color-bg-elevated);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                padding: var(--space-6) var(--space-5);
+                text-align: center;
+                text-decoration: none;
+                color: inherit;
+                transition: transform var(--duration-base) var(--ease-out);
+            }
+            .partner-card:hover { transform: translateY(-3px); }
+            .partner-card img { max-height: 40px; width: auto; margin: 0 auto var(--space-4); display: block; }
+            .partner-card p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-text-secondary); }
         </style>
     </head>
     <body>
@@ -345,7 +366,7 @@
                     <h2 class="intro-heading">Produktene våre</h2>
                     <div class="intro-body">
                         <p>Fire løsninger, bygget og driftet av oss selv — kan brukes hver for seg, eller sammen.</p>
-                        <a class="chevron-link" href="/#tjenester">Sammenlign Regweb, Medlem123 og Likepersonslogg <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                        <a class="chevron-link" href="/#kampanjer">Se kampanjer her - medlemssystem.no <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
                     </div>
                 </div>
                 <div class="teaser-grid">
@@ -403,6 +424,7 @@
                                 <tr><th>Bransje</th><td>Dataprogrammering (NACE 62.100)</td></tr>
                                 <tr><th>Telefon</th><td><a href="tel:+4733312800">33 31 28 00</a></td></tr>
                                 <tr><th>E-post</th><td><a href="mailto:post@klopp.no">post@klopp.no</a></td></tr>
+                                <tr><th>Medlem av</th><td><a href="https://www.nito.no/" target="_blank" rel="noopener"><img src="assets/img/partners/nito_logo.png" alt="NITO" class="partner-logo-fact" /></a></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -415,11 +437,16 @@
                 <div class="intro-grid">
                     <h2 class="intro-heading">Partnere</h2>
                     <div class="intro-body">
-                        <p>Medlem av NITO, og utviklingspartner med Vipps og Mastercard for betalingsløsningene i tjenestene våre.</p>
-                        <div class="partner-logo-row" style="margin-top: var(--space-6);">
-                            <a href="https://www.nito.no/" target="_blank" rel="noopener"><img src="assets/img/partners/nito_logo.png" alt="NITO" class="partner-logo" /></a>
-                            <a href="https://vipps.no/" target="_blank" rel="noopener"><img src="assets/img/partners/vipps_logo.png" alt="Vipps" class="partner-logo" /></a>
-                            <a href="https://www.mastercard.no/" target="_blank" rel="noopener"><img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" class="partner-logo" /></a>
+                        <p>Utviklingspartner med Vipps og Mastercard.</p>
+                        <div class="partner-cards">
+                            <a class="partner-card" href="https://vipps.no/" target="_blank" rel="noopener">
+                                <img src="assets/img/partners/vipps_logo.png" alt="Vipps" />
+                                <p>Betalingsløsning for nettinnmelding og kontingent</p>
+                            </a>
+                            <a class="partner-card" href="https://www.mastercard.no/" target="_blank" rel="noopener">
+                                <img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" />
+                                <p>Kortbetaling i tjenestene våre</p>
+                            </a>
                         </div>
                     </div>
                 </div>
