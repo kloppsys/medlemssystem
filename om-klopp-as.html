@@ -241,25 +241,25 @@
             .fact-table th { width: 40%; color: var(--color-text-secondary); font-weight: 600; }
             .partner-logo-fact { max-height: 36px; width: auto; display: block; }
             .partner-cards {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: var(--space-5);
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-4);
                 margin-top: var(--space-6);
-                max-width: 460px;
             }
             .partner-card {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 background: var(--color-bg-elevated);
                 border: 1px solid var(--color-border);
                 border-radius: var(--radius-md);
-                padding: var(--space-6) var(--space-5);
-                text-align: center;
+                padding: var(--space-4);
                 text-decoration: none;
                 color: inherit;
                 transition: transform var(--duration-base) var(--ease-out);
             }
             .partner-card:hover { transform: translateY(-3px); }
-            .partner-card img { max-height: 40px; width: auto; margin: 0 auto var(--space-4); display: block; }
-            .partner-card p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-text-secondary); }
+            .partner-card img { max-height: 28px; width: auto; display: block; }
         </style>
     </head>
     <body>
@@ -441,11 +441,9 @@
                         <div class="partner-cards">
                             <a class="partner-card" href="https://vipps.no/" target="_blank" rel="noopener">
                                 <img src="assets/img/partners/vipps_logo.png" alt="Vipps" />
-                                <p>Betalingsløsning for nettinnmelding og kontingent</p>
                             </a>
                             <a class="partner-card" href="https://www.mastercard.no/" target="_blank" rel="noopener">
                                 <img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" />
-                                <p>Kortbetaling i tjenestene våre</p>
                             </a>
                         </div>
                     </div>
