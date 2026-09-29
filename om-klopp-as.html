@@ -136,6 +136,26 @@
                 font-size: 13px;
                 color: var(--color-text-secondary);
             }
+            :root {
+                --capability-bg: #f7eef5;
+                --capability-border: rgba(187, 112, 169, 0.35);
+                --capability-icon-bg: rgba(187, 112, 169, 0.18);
+                --capability-icon-color: #5c4461;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) {
+                    --capability-bg: #3c2f37;
+                    --capability-border: rgba(217, 168, 205, 0.3);
+                    --capability-icon-bg: rgba(217, 168, 205, 0.2);
+                    --capability-icon-color: #d9a8cd;
+                }
+            }
+            :root[data-theme="dark"] {
+                --capability-bg: #3c2f37;
+                --capability-border: rgba(217, 168, 205, 0.3);
+                --capability-icon-bg: rgba(217, 168, 205, 0.2);
+                --capability-icon-color: #d9a8cd;
+            }
             .capability-grid {
                 display: grid;
                 grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -144,11 +164,11 @@
             }
             @media (max-width: 900px) { .capability-grid { grid-template-columns: 1fr; } }
             .capability-card {
-                background: var(--color-bg-elevated);
-                border: 1px solid var(--color-border);
+                background: var(--capability-bg);
+                border: 1px solid var(--capability-border);
                 border-radius: var(--radius-lg);
                 box-shadow: var(--card-shadow);
-                padding: var(--space-6) var(--space-5);
+                padding: var(--space-6);
                 transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
             }
             .capability-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16); }
@@ -159,8 +179,8 @@
                 width: 44px;
                 height: 44px;
                 border-radius: var(--radius-full);
-                background: rgba(0, 120, 212, 0.14);
-                color: var(--accent-text);
+                background: var(--capability-icon-bg);
+                color: var(--capability-icon-color);
                 margin-bottom: var(--space-4);
             }
             .capability-icon svg { width: 20px; height: 20px; }
