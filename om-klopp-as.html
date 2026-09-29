@@ -3,20 +3,20 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123 og Likepersonslogg selv, på norske servere. Partnere: Vipps og Mastercard." />
+        <meta name="description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123, Likepersonslogg og XReg selv, på norske servere. Partnere: Vipps og Mastercard." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/om-klopp-as.html" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://medlemssystem.no/om-klopp-as.html" />
         <meta property="og:title" content="Om Klopp AS — Medlemssystem" />
-        <meta property="og:description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123 og Likepersonslogg selv, på norske servere." />
+        <meta property="og:description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123, Likepersonslogg og XReg selv, på norske servere." />
         <meta property="og:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="nb_NO" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Om Klopp AS — Medlemssystem" />
-        <meta name="twitter:description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123 og Likepersonslogg selv, på norske servere." />
+        <meta name="twitter:description" content="Klopp AS (org.nr. 996 385 272), Tønsberg — etablert 2011. Vi utvikler og drifter Regweb, Medlem123, Likepersonslogg og XReg selv, på norske servere." />
         <meta name="twitter:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
         <meta name="color-scheme" content="light dark" />
         <script>
@@ -86,44 +86,98 @@
                 "postalCode": "3125",
                 "addressLocality": "Tønsberg",
                 "addressCountry": "NO"
-            }
+            },
+            "memberOf": { "@type": "Organization", "name": "NITO" }
         }
         </script>
         <style>
-            .legal-page {
-                max-width: 760px;
-                margin: 0 auto;
-                padding: calc(var(--nav-height) + var(--space-8)) var(--space-5) var(--space-9);
+            .about-stats {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: var(--space-5);
+                margin-top: var(--space-6);
             }
-            .legal-page h1 {
-                font-size: clamp(1.75rem, 3vw, 2.5rem);
-                letter-spacing: -0.02em;
+            @media (max-width: 900px) { .about-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            .about-stat {
+                background: var(--color-bg-elevated);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                padding: var(--space-5) var(--space-4);
+                text-align: center;
             }
-            .legal-page .legal-updated {
+            .about-stat-value {
+                display: block;
+                font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                color: var(--color-text);
+            }
+            .about-stat-label {
+                display: block;
+                margin-top: var(--space-1);
+                font-size: 13px;
                 color: var(--color-text-secondary);
-                font-size: 14px;
-                margin: var(--space-2) 0 var(--space-8);
             }
-            .legal-page h2 {
-                font-size: 20px;
-                margin-top: var(--space-8);
-                margin-bottom: var(--space-3);
+            .capability-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: var(--space-5);
+                margin-top: var(--space-6);
             }
-            .legal-page p, .legal-page li { line-height: 1.6; }
-            .legal-page ul { padding-left: 1.2em; }
-            .legal-page li { margin-bottom: var(--space-2); }
-            .legal-page .fact-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: var(--space-5) 0;
+            @media (max-width: 900px) { .capability-grid { grid-template-columns: 1fr; } }
+            .capability-card {
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                padding: var(--space-5);
+            }
+            .capability-card h3 { font-size: 18px; margin: 0 0 var(--space-2); }
+            .capability-card p { color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+            .client-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-3);
+                margin-top: var(--space-5);
+                padding: 0;
+                list-style: none;
+            }
+            .client-list li {
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-full);
+                padding: var(--space-2) var(--space-4);
+                font-weight: 600;
                 font-size: 15px;
             }
-            .legal-page .fact-table th, .legal-page .fact-table td {
+            .rating-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-3);
+                margin-top: var(--space-5);
+            }
+            .rating-chip {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--space-2);
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-full);
+                padding: var(--space-2) var(--space-4);
+                font-size: 14px;
+            }
+            .rating-chip strong { color: var(--color-text); }
+            .fact-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: var(--space-5);
+                font-size: 15px;
+            }
+            .fact-table th, .fact-table td {
                 text-align: left;
                 padding: var(--space-3) var(--space-4);
                 border-bottom: 1px solid var(--color-border);
             }
-            .legal-page .fact-table th { width: 40%; color: var(--color-text-secondary); font-weight: 600; }
+            .fact-table th { width: 40%; color: var(--color-text-secondary); font-weight: 600; }
         </style>
     </head>
     <body>
@@ -142,39 +196,185 @@
             </div>
         </nav>
 
-        <main class="legal-page" id="main">
-            <h1>Om Klopp AS</h1>
-            <p class="legal-updated">Selskapet bak Regweb, Medlem123 og Likepersonslogg</p>
+        <main id="main">
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-card">
+                    <div class="masthead-content">
+                        <span class="eyebrow-dot"><span class="dot"></span>Klopp AS · Etablert 2011</span>
+                        <h1 class="masthead-heading">Vi bygger og drifter egne digitale løsninger — selv</h1>
+                        <p class="masthead-subheading">Klopp AS er et norsk programvareselskap i Tønsberg. Vi står bak Regweb, Medlem123, Likepersonslogg og XReg, og leverer i tillegg skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. All utvikling, drift og support skjer internt — ingen del er satt bort.</p>
+                        <div class="masthead-cta">
+                            <a class="btn" href="#produkter">Se produktene våre <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M8 3.5a.75.75 0 0 1 .75.75v6.69l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0L3.72 9.53a.75.75 0 1 1 1.06-1.06l2.47 2.47V4.25A.75.75 0 0 1 8 3.5Z"/></svg></a>
+                            <a class="chevron-link" href="kontakt.html">Kontakt oss <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                        </div>
+                    </div>
+                    <div class="masthead-media">
+                        <img src="assets/img/photo-section-bg.jpg" alt="Kontorpult hos Klopp AS i Tønsberg" />
+                    </div>
+                </div>
 
-            <p>Klopp AS er et norsk programvareselskap i Tønsberg som utvikler og drifter medlemssystemer for foreninger og organisasjoner. Vi bygger og vedlikeholder selv — ingen del av utviklingen eller driften er satt bort til underleverandører, og alle tre tjenestene kjører på norsk serverinfrastruktur.</p>
+                <div class="about-stats">
+                    <div class="about-stat"><span class="about-stat-value">2011</span><span class="about-stat-label">Etableringsår</span></div>
+                    <div class="about-stat"><span class="about-stat-value">Kr. 0</span><span class="about-stat-label">Gjeld (2025)</span></div>
+                    <div class="about-stat"><span class="about-stat-value">926/1000</span><span class="about-stat-label">Experian-rating, Gull</span></div>
+                    <div class="about-stat"><span class="about-stat-value">AAA</span><span class="about-stat-label">Bisnode-rating</span></div>
+                </div>
+            </div>
+        </header>
 
-            <h2>Nøkkeltall</h2>
-            <table class="fact-table">
-                <tbody>
-                    <tr><th>Organisasjonsnummer</th><td>996 385 272 MVA</td></tr>
-                    <tr><th>Etablert</th><td>2011</td></tr>
-                    <tr><th>Adresse</th><td>Farmannsveien 48, 3125 Tønsberg</td></tr>
-                    <tr><th>Bransje</th><td>Dataprogrammering (NACE 62.100)</td></tr>
-                    <tr><th>Telefon</th><td><a href="tel:+4733312800">33 31 28 00</a></td></tr>
-                    <tr><th>E-post</th><td><a href="mailto:post@klopp.no">post@klopp.no</a></td></tr>
-                </tbody>
-            </table>
+        <section class="page-section">
+            <div class="container">
+                <div class="intro-grid">
+                    <h2 class="intro-heading">Mer enn medlemssystemer</h2>
+                    <div class="intro-body">
+                        <p>Regweb, Medlem123 og Likepersonslogg er tre av produktene våre — men Klopp AS er først og fremst et <strong>norsk IT-selskap som utvikler digitale løsninger for bedrifter og organisasjoner</strong>, fra idé og arkitektur til drift og videreutvikling.</p>
+                        <div class="capability-grid">
+                            <div class="capability-card">
+                                <h3>Webapplikasjoner og apper</h3>
+                                <p>Lang og solid erfaring med skreddersydde digitale produkter — ikke ferdiglagde maler.</p>
+                            </div>
+                            <div class="capability-card">
+                                <h3>AI-agenter og automatisering</h3>
+                                <p>Vi utvikler AI-agenter som automatiserer arbeidsflyt for bedrifter.</p>
+                            </div>
+                            <div class="capability-card">
+                                <h3>Integrasjoner og datalag</h3>
+                                <p>Integrasjoner mellom systemer, og solide datalag som binder alt sammen — mot foreningens eller bedriftens egne systemer.</p>
+                            </div>
+                        </div>
+                        <p>Vi leverer til både private virksomheter og offentlig sektor, innen blant annet datasystemer, logistikk, prosjektstyring, kurssystemer og gavekortløsninger.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>Hva vi leverer</h2>
-            <ul>
-                <li><strong>Regweb</strong> (<a href="https://regweb.no/" target="_blank" rel="noopener">regweb.no</a>) — medlemssystem foreningen driver selv.</li>
-                <li><strong>Medlem123</strong> (<a href="https://medlem123.no/" target="_blank" rel="noopener">medlem123.no</a>) — fullservice medlemsadministrasjon driftet av oss.</li>
-                <li><strong>Likepersonslogg</strong> (<a href="https://likepersonslogg.com/" target="_blank" rel="noopener">likepersonslogg.com</a>) — registrering og rapportering av likepersonsarbeid.</li>
-            </ul>
+        <section class="page-section page-section-alt">
+            <div class="container">
+                <div class="intro-grid">
+                    <h2 class="intro-heading">Tillit fra store og små</h2>
+                    <div class="intro-body">
+                        <p>Vi har levert utviklingsprosjekter for virksomheter som:</p>
+                        <ul class="client-list">
+                            <li>Aschehoug</li>
+                            <li>Best Western</li>
+                            <li>Telenor</li>
+                            <li>Storebrand</li>
+                            <li>Jernbaneverket</li>
+                        </ul>
+                        <p>Samtidig er vi valgt av frivillige organisasjoner som Norsk Revmatikerforbund, Brystkreftforeningen og Norilco til å bygge og drifte kritiske medlems- og likepersonsløsninger.</p>
+                        <p class="rating-row">
+                            <span class="rating-chip"><strong>Experian</strong> 926/1000 — Gull</span>
+                            <span class="rating-chip"><strong>Bisnode</strong> AAA-rating</span>
+                            <span class="rating-chip"><strong>Proff.no</strong> Oppført selskap</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>Egenutvikling og egendrift</h2>
-            <p>All kode, all support og all serverdrift for de tre tjenestene håndteres av Klopp AS selv. Det betyr én kontaktperson å forholde seg til uansett hva henvendelsen gjelder, og at data aldri passerer gjennom et tredjeparts driftsledd.</p>
+        <section class="page-section" id="produkter">
+            <div class="container">
+                <div class="intro-grid">
+                    <h2 class="intro-heading">Produktene våre</h2>
+                    <div class="intro-body">
+                        <p>Fire løsninger, bygget og driftet av oss selv — kan brukes hver for seg, eller sammen.</p>
+                        <a class="chevron-link" href="/#tjenester">Sammenlign Regweb, Medlem123 og Likepersonslogg <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                    </div>
+                </div>
+                <div class="teaser-grid">
+                    <a class="teaser-card" href="https://regweb.no/" target="_blank" rel="noopener">
+                        <div class="teaser-card-image"><img src="assets/img/products/regweb-visual.jpg" alt="Skjermbilde av Regweb medlemssystem" loading="lazy" /></div>
+                        <div class="teaser-card-body">
+                            <img class="teaser-card-logo" src="assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" />
+                            <h3 class="teaser-card-title">Regweb</h3>
+                            <p class="teaser-card-desc">Medlemssystemet foreningen driver selv — medlemsregister, betaling og kommunikasjon.</p>
+                            <span class="chevron-link">Besøk regweb.no <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span>
+                        </div>
+                    </a>
+                    <a class="teaser-card" href="https://medlem123.no/" target="_blank" rel="noopener">
+                        <div class="teaser-card-image"><img src="assets/img/products/medlem123-visual.jpg" alt="Fullservice medlemsadministrasjon fra Klopp AS" style="object-position: center top;" loading="lazy" /></div>
+                        <div class="teaser-card-body">
+                            <img class="teaser-card-logo" src="assets/img/logos/medlem123-logo.png" alt="Medlem123" loading="lazy" />
+                            <h3 class="teaser-card-title">Medlem123</h3>
+                            <p class="teaser-card-desc">Vi drifter medlemsregisteret og kontingentinnkrevingen for dere — bygget på Regweb.</p>
+                            <span class="chevron-link">Besøk medlem123.no <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span>
+                        </div>
+                    </a>
+                    <a class="teaser-card" href="https://likepersonslogg.com/" target="_blank" rel="noopener">
+                        <div class="teaser-card-image"><img src="assets/img/products/likepersonslogg-visual.jpg" alt="Skjermbilde av Likepersonslogg" loading="lazy" /></div>
+                        <div class="teaser-card-body">
+                            <img class="teaser-card-logo" src="assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" />
+                            <h3 class="teaser-card-title">Likepersonslogg</h3>
+                            <p class="teaser-card-desc">Digitalt verktøy for registrering og rapportering av likepersonsarbeid, med Bufdir-rapport.</p>
+                            <span class="chevron-link">Besøk likepersonslogg.com <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span>
+                        </div>
+                    </a>
+                </div>
+                <p style="margin-top: var(--space-5); color: var(--color-text-secondary);">I tillegg bygde vi <strong>XReg</strong> — en frittstående verktøykasse som kobler seg til foreningens eksisterende medlemssystem via API, blant annet brukt som Regwebs egen «Din side»-portal. <a class="chevron-link" href="https://xreg.no/" target="_blank" rel="noopener">Les mer om XReg</a></p>
+            </div>
+        </section>
 
-            <h2>Partnere</h2>
-            <p>Vi tilbyr betalingsløsninger via <strong>Vipps</strong> og <strong>Mastercard</strong> i tjenestene der dette er relevant (nettinnmelding og kontingentbetaling).</p>
+        <section class="page-section page-section-alt">
+            <div class="container">
+                <div class="intro-grid">
+                    <h2 class="intro-heading">Egenutvikling og egendrift</h2>
+                    <div class="intro-body">
+                        <p>All kode, all support og all serverdrift for våre tjenester håndteres av Klopp AS selv. Det betyr én kontaktperson å forholde seg til uansett hva henvendelsen gjelder, og at data aldri passerer gjennom et tredjeparts driftsledd.</p>
+                        <div class="selling-points">
+                            <div class="selling-point">
+                                <span class="selling-point-num">01</span>
+                                <div><h4>Bygget <span class="point-badge">internt</span>, ikke satt bort</h4><p>Ingen del av utvikling eller drift er outsourcet til underleverandører.</p></div>
+                            </div>
+                            <div class="selling-point">
+                                <span class="selling-point-num">02</span>
+                                <div><h4><span class="point-badge">Norske servere</span>, norsk support</h4><p>All drift og all brukerstøtte skjer i Norge, på norsk.</p></div>
+                            </div>
+                            <div class="selling-point">
+                                <span class="selling-point-num">03</span>
+                                <div><h4>Én <span class="point-badge">kontaktperson</span>, uansett henvendelse</h4><p>Samme team kjenner både koden og kunden — fra første kontakt til daglig drift.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>Kontakt</h2>
-            <p>Tlf. <a href="tel:+4733312800">33 31 28 00</a> (mandag–fredag, 09.00–15.00) eller <a href="mailto:post@klopp.no">post@klopp.no</a>. Mer om selskapet: <a href="https://klopp.no/" target="_blank" rel="noopener">klopp.no</a>.</p>
+        <section class="page-section">
+            <div class="container">
+                <div class="intro-grid">
+                    <h2 class="intro-heading">Fakta om selskapet</h2>
+                    <div class="intro-body">
+                        <table class="fact-table">
+                            <tbody>
+                                <tr><th>Organisasjonsnummer</th><td>996 385 272 MVA</td></tr>
+                                <tr><th>Etablert</th><td>2011</td></tr>
+                                <tr><th>Adresse</th><td>Farmannsveien 48, 3125 Tønsberg</td></tr>
+                                <tr><th>Bransje</th><td>Dataprogrammering (NACE 62.100)</td></tr>
+                                <tr><th>Telefon</th><td><a href="tel:+4733312800">33 31 28 00</a></td></tr>
+                                <tr><th>E-post</th><td><a href="mailto:post@klopp.no">post@klopp.no</a></td></tr>
+                                <tr><th>Medlemskap</th><td>NITO</td></tr>
+                                <tr><th>Utviklingspartner</th><td>Vipps og Mastercard</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="partner-logo-row" style="margin-top: var(--space-6);">
+                            <a href="https://www.nito.no/" target="_blank" rel="noopener"><img src="assets/img/partners/nito_logo.png" alt="NITO" class="partner-logo" /></a>
+                            <a href="https://vipps.no/" target="_blank" rel="noopener"><img src="assets/img/partners/vipps_logo.png" alt="Vipps" class="partner-logo" /></a>
+                            <a href="https://www.mastercard.no/" target="_blank" rel="noopener"><img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" class="partner-logo" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-band">
+            <div class="container">
+                <h2 class="contact-band-heading">Vil du vite mer om Klopp AS?</h2>
+                <p class="contact-band-body">Ta kontakt for en uforpliktende prat om produktene våre, eller et nytt utviklingsprosjekt.</p>
+                <a class="btn" href="kontakt.html">Kontakt oss <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg></a>
+                <p class="contact-band-direct">Eller ring <a href="tel:+4733312800">33 31 28 00</a> <span class="contact-band-sep">·</span> <a href="mailto:post@klopp.no">post@klopp.no</a> <span class="contact-band-sep">·</span> <a href="https://klopp.no/" target="_blank" rel="noopener">klopp.no</a></p>
+            </div>
+        </section>
         </main>
 
         <footer class="site-footer">
