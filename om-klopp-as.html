@@ -91,6 +91,24 @@
         }
         </script>
         <style>
+            /* Denne siden: full, uklippet bilde øverst i masthead-kortet, tekstblokken under */
+            .masthead-card {
+                grid-template-columns: 1fr;
+                min-height: 0;
+            }
+            .masthead-media {
+                position: static;
+                min-height: 0;
+                order: -1;
+            }
+            .masthead-media img {
+                position: static;
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: initial;
+            }
+            .masthead-content { order: 0; }
             .about-stats {
                 display: grid;
                 grid-template-columns: repeat(4, minmax(0, 1fr));
