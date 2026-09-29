@@ -145,12 +145,26 @@
             @media (max-width: 900px) { .capability-grid { grid-template-columns: 1fr; } }
             .capability-card {
                 background: var(--color-bg);
-                border: 1px solid var(--color-border);
-                border-radius: var(--radius-md);
-                padding: var(--space-5);
+                border-radius: var(--radius-lg);
+                box-shadow: var(--card-shadow);
+                padding: var(--space-6) var(--space-5);
+                transition: transform var(--duration-base) var(--ease-out);
             }
-            .capability-card h3 { font-size: 18px; margin: 0 0 var(--space-2); }
-            .capability-card p { color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+            .capability-card:hover { transform: translateY(-3px); }
+            .capability-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                border-radius: var(--radius-full);
+                background: rgba(0, 120, 212, 0.14);
+                color: var(--accent-text);
+                margin-bottom: var(--space-4);
+            }
+            .capability-icon svg { width: 20px; height: 20px; }
+            .capability-card h3 { font-size: 18px; margin: 0 0 var(--space-2); letter-spacing: -0.01em; }
+            .capability-card p { color: var(--color-text-secondary); line-height: 1.6; margin: 0; font-size: 15px; }
             .client-list {
                 display: flex;
                 flex-wrap: wrap;
@@ -249,16 +263,19 @@
                         <p>Regweb, Medlem123 og Likepersonslogg er tre av produktene våre — men Klopp AS er først og fremst et <strong>norsk IT-selskap som utvikler digitale løsninger for bedrifter og organisasjoner</strong>, fra idé og arkitektur til drift og videreutvikling.</p>
                         <div class="capability-grid">
                             <div class="capability-card">
+                                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.3"/><rect x="9" y="1" width="6" height="6" rx="1.3"/><rect x="1" y="9" width="6" height="6" rx="1.3"/><rect x="9" y="9" width="6" height="6" rx="1.3"/></svg></span>
                                 <h3>Webapplikasjoner og apper</h3>
-                                <p>Lang og solid erfaring med skreddersydde digitale produkter — ikke ferdiglagde maler.</p>
+                                <p>Skreddersydde digitale produkter, bygget fra bunnen av — ikke ferdiglagde maler.</p>
                             </div>
                             <div class="capability-card">
+                                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1c.4 2.6 1.2 4.2 2.6 5.1C11.7 6.7 13 7 14.5 7.3 13 7.6 11.7 7.9 10.6 8.6 9.2 9.5 8.4 11.1 8 13.7 7.6 11.1 6.8 9.5 5.4 8.6 4.3 7.9 3 7.6 1.5 7.3 3 7 4.3 6.7 5.4 6.1 6.8 5.2 7.6 3.6 8 1Z"/></svg></span>
                                 <h3>AI-agenter og automatisering</h3>
-                                <p>Vi utvikler AI-agenter som automatiserer arbeidsflyt for bedrifter.</p>
+                                <p>AI-agenter som automatiserer arbeidsflyt og fjerner manuelt, repeterende arbeid.</p>
                             </div>
                             <div class="capability-card">
+                                <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.3 14.7 5 8 8.7 1.3 5 8 1.3Z"/><path d="M1.3 7.6 8 11.3 14.7 7.6 14.7 9.3 8 13 1.3 9.3 1.3 7.6Z"/></svg></span>
                                 <h3>Integrasjoner og datalag</h3>
-                                <p>Integrasjoner mellom systemer, og solide datalag som binder alt sammen — mot foreningens eller bedriftens egne systemer.</p>
+                                <p>Integrasjoner mot eksisterende systemer, og solide datalag som binder alt sammen.</p>
                             </div>
                         </div>
                         <p>Vi leverer til både private virksomheter og offentlig sektor, innen blant annet datasystemer, logistikk, prosjektstyring, kurssystemer og gavekortløsninger.</p>
