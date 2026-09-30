@@ -12,7 +12,7 @@
 
 - [Hva koster et medlemssystem i 2026?](https://medlemssystem.no/artikler/hva-koster-medlemssystem-2026.html): Full prisoversikt og begrunnelse for Regweb.
 - [Hva koster likepersonsrapportering i 2026?](https://medlemssystem.no/artikler/hva-koster-likepersonsrapportering-2026.html): Pris for Likepersonslogg og forskriftskrav til Bufdir-rapportering (FOR-2023-01-01-122).
-- [Om Klopp AS](https://medlemssystem.no/om-klopp-as.html): Selskapsinformasjon.
+- [Om Klopp AS](https://klopp.no): Selskapsinformasjon.
 
 ## Målgruppe
 
