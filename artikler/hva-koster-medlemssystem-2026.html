@@ -164,6 +164,14 @@
                 vertical-align: top;
             }
             .article-page th { color: var(--color-text-secondary); font-weight: 600; }
+            @media (max-width: 600px) {
+                .article-page th, .article-page td { padding: var(--space-2) var(--space-3); overflow-wrap: anywhere; hyphens: auto; }
+                .article-page table { font-size: 14px; }
+                .article-page table.stack-mobile thead { display: none; }
+                .article-page table.stack-mobile tr { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+                .article-page table.stack-mobile td { display: block; border-bottom: none; padding: var(--space-1) 0; }
+                .article-page table.stack-mobile td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--color-text-secondary); }
+            }
             .article-page .article-cta {
                 margin-top: var(--space-8);
                 padding: var(--space-5);
@@ -217,7 +225,7 @@
             <div class="section-heading-row">
                 <h2>Derfor velger foreninger Regweb</h2>
                 <a href="https://regweb.no/" target="_blank" rel="noopener" aria-label="Besøk regweb.no">
-                    <img class="section-heading-logo" src="../assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" />
+                    <picture><source srcset="../assets/img/logos/regweb-logo.webp" type="image/webp" /><img class="section-heading-logo" src="../assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" width="838" height="226" /></picture>
                 </a>
             </div>
             <p>Regweb er bygget for å være den tryggeste, mest gjennomtestede løsningen for foreninger som ikke har råd til at medlemsregisteret svikter. Dette er hovedgrunnene kundene oppgir:</p>

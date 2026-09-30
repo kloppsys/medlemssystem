@@ -314,7 +314,7 @@ a { color: var(--accent-text); }
 .masthead-badges .discount-badge { padding: 4px var(--space-3); box-shadow: var(--card-shadow); }
 .masthead-badge-link { text-decoration: none; }
 @media (max-width: 900px) {
-  .masthead-card { grid-template-columns: 1fr; min-height: 0; }
+  .masthead-card { grid-template-columns: minmax(0, 1fr); min-height: 0; }
   /* Stacked layout is much wider than tall relative to the (near-square) source photo — a short
      min-height here crops out his face entirely, leaving only hair. 320px keeps enough vertical
      room that the face stays in frame at every width down to 375px. */
@@ -325,6 +325,7 @@ a { color: var(--accent-text); }
 .masthead .eyebrow-dot { color: var(--accent-text-strong); }
 .masthead .eyebrow-dot .dot { background: var(--accent-blue); }
 .masthead-heading {
+  overflow-wrap: break-word;
   font-size: clamp(2.25rem, 3.5vw + 1rem, 3rem);
   font-weight: 500;
   color: var(--color-text);
@@ -912,7 +913,7 @@ hr.divider { display: none; }
 }
 .price-table > div {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
   gap: var(--space-3);
   padding: var(--space-2) 0;
@@ -920,7 +921,11 @@ hr.divider { display: none; }
 .price-table > div + div { border-top: 1px solid var(--color-border); }
 .price-table dt { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
 .price-note-inline { font-style: italic; }
-.price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; }
+.price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; min-width: 0; }
+@media (max-width: 360px) {
+  .price-table > div { grid-template-columns: minmax(0, 1fr) minmax(0, auto); }
+  .price-note { overflow-wrap: anywhere; hyphens: auto; }
+}
 
 .service-card-link {
   display: inline-flex;
@@ -1142,3 +1147,16 @@ hr.divider { display: none; }
   transition: opacity var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
 }
 .theme-toggle-icon.is-swapping { opacity: 0; transform: rotate(-40deg) scale(0.8); }
+
+/* hCaptcha renders a fixed 303px iframe — scale it down so it fits the smallest phones. */
+@media (max-width: 360px) {
+  .h-captcha { transform: scale(0.86); transform-origin: left top; height: 68px; }
+}
+
+/* Footer phone/e-mail links sit on their own lines — give them a >=24px tap target (WCAG 2.5.8). */
+.footer-grid a { display: inline-flex; align-items: center; min-height: 24px; }
+
+/* Smallest phones: "likepersonslogg" at the 36px clamp minimum is wider than the card — shrink instead of hyphenating. */
+@media (max-width: 360px) {
+  .masthead-heading { font-size: 1.625rem; }
+}

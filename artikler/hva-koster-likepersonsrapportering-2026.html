@@ -156,6 +156,14 @@
                 vertical-align: top;
             }
             .article-page th { color: var(--color-text-secondary); font-weight: 600; }
+            @media (max-width: 600px) {
+                .article-page th, .article-page td { padding: var(--space-2) var(--space-3); overflow-wrap: anywhere; hyphens: auto; }
+                .article-page table { font-size: 14px; }
+                .article-page table.stack-mobile thead { display: none; }
+                .article-page table.stack-mobile tr { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+                .article-page table.stack-mobile td { display: block; border-bottom: none; padding: var(--space-1) 0; }
+                .article-page table.stack-mobile td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--color-text-secondary); }
+            }
             .article-page .article-cta {
                 margin-top: var(--space-8);
                 padding: var(--space-5);
@@ -209,7 +217,7 @@
             <div class="section-heading-row">
                 <h2>Derfor velger foreninger Likepersonslogg</h2>
                 <a href="https://likepersonslogg.com/" target="_blank" rel="noopener" aria-label="Besøk likepersonslogg.com">
-                    <img class="section-heading-logo" src="../assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" />
+                    <picture><source srcset="../assets/img/logos/likepersonslogg-logo.webp" type="image/webp" /><img class="section-heading-logo" src="../assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" width="950" height="220" /></picture>
                 </a>
             </div>
             <p>Likepersonslogg er bygget sammen med organisasjonene som faktisk bruker det til daglig — ikke tilpasset likepersonsarbeid i etterkant av et generelt skjemaverktøy. Dette er hovedgrunnene kundene oppgir:</p>
@@ -281,14 +289,14 @@
             <h3>Tellende likeperson (§ 10)</h3>
             <p>For hver tellende likeperson kreves navn, adresse, telefon og e-post pr. 31. desember i grunnlagsåret, samt bekreftelse på minst én likepersonsaktivitet i året. Personen skal være frivillig — en tellende likeperson kan ikke motta lønn for likepersonsarbeidet — og pekt ut etter en vurdering i organisasjonen; det er ikke nok å ha et verv. Oversikten over likepersoner dateres og signeres av styreleder, daglig leder eller den styret har gitt fullmakt.</p>
 
-            <table>
+            <table class="stack-mobile">
                 <thead>
                     <tr><th>Kategori</th><th>Eksempler</th><th>Dokumentasjon</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Tellende likepersonsaktivitet (§ 11)</td><td>Oppsøkende møte, gruppe (≥45 min, ≥3 deltakere), likepersonskurs (≥2×45 min/dag)</td><td>Type, dato, tid/varighet, leder (navn, adresse, telefon)</td></tr>
-                    <tr><td>Annen erfaringsutveksling (§ 12)</td><td>Likepersonstelefon, chat, forum</td><td>Offentliggjøring + ev. skjermbilde uten persondata</td></tr>
-                    <tr><td>Tellende likeperson (§ 10)</td><td>Frivillig, pekt ut, minst én aktivitet i året</td><td>Navn, adresse, telefon, e-post + signert bekreftelse</td></tr>
+                    <tr><td data-label="Kategori">Tellende likepersonsaktivitet (§ 11)</td><td data-label="Eksempler">Oppsøkende møte, gruppe (≥45 min, ≥3 deltakere), likepersonskurs (≥2×45 min/dag)</td><td data-label="Dokumentasjon">Type, dato, tid/varighet, leder (navn, adresse, telefon)</td></tr>
+                    <tr><td data-label="Kategori">Annen erfaringsutveksling (§ 12)</td><td data-label="Eksempler">Likepersonstelefon, chat, forum</td><td data-label="Dokumentasjon">Offentliggjøring + ev. skjermbilde uten persondata</td></tr>
+                    <tr><td data-label="Kategori">Tellende likeperson (§ 10)</td><td data-label="Eksempler">Frivillig, pekt ut, minst én aktivitet i året</td><td data-label="Dokumentasjon">Navn, adresse, telefon, e-post + signert bekreftelse</td></tr>
                 </tbody>
             </table>
 
