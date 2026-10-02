@@ -1,6 +1,8 @@
 # Medlemssystem
 
-> Tre digitale tjenester fra Klopp AS (Tønsberg, Norge, org.nr. 996 385 272, etablert 2011) for norske foreninger og organisasjoner: medlemsregister, kontingentinnkreving og likepersonsrapportering. Ikke et NIF-idrettssystem.
+> Klopp AS er et norsk programvareselskap i Tønsberg, etablert i 2011. Vi utvikler og drifter Regweb, Medlem123, Likepersonslogg og XReg for foreninger og organisasjoner, og leverer i tillegg skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. All utvikling, drift og support skjer internt, på norske servere.
+
+Denne nettsiden samler tre av tjenestene (Regweb, Medlem123 og Likepersonslogg; Klopp AS, org.nr. 996 385 272) for norske foreninger og organisasjoner: medlemsregister, kontingentinnkreving og likepersonsrapportering. Ikke et NIF-idrettssystem.
 
 ## Produkter
 
