@@ -434,6 +434,7 @@ a { color: var(--accent-text); }
 }
 .faq-list details[open] summary::after { transform: rotate(-135deg); }
 .faq-list p {
+  max-width: 40em;
   margin: 0;
   padding: 0 var(--space-6) var(--space-5);
   color: var(--color-text-secondary);
@@ -842,6 +843,7 @@ hr.divider { display: none; }
 }
 .service-card-price p { margin: 0 0 var(--space-2); }
 .service-card-price p:last-child { margin-bottom: 0; }
+.price-headline { max-width: 70ch; }
 .price-headline strong {
   font-size: 20px;
   font-weight: 600;
