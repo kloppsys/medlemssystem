@@ -925,6 +925,24 @@ hr.divider { display: none; }
 }
 .price-table > div + div { border-top: 1px solid var(--color-border); }
 .price-table dt { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
+.price-subhead { margin: var(--space-4) 0 var(--space-1); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text); }
+.price-subhead:first-child { margin-top: 0; }
+.price-subhead-note { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--color-text-secondary); }
+.price-inline-note { font-weight: 400; font-size: 12px; color: var(--color-text-secondary); }
+.price-table dd .price-was { font-size: 13px; }
+.price-examples { width: 100%; margin: var(--space-2) 0 var(--space-3); border-collapse: collapse; font-size: 13px; color: var(--color-text); }
+.price-examples th, .price-examples td { padding: var(--space-2) var(--space-2); text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
+.price-examples thead th { font-size: 12px; color: var(--color-text-secondary); font-weight: 600; border-bottom: 2px solid var(--color-border); }
+.price-examples tbody th { font-weight: 600; }
+.price-examples td strong { font-size: 14px; }
+@media (max-width: 640px) {
+  .price-examples, .price-examples tbody, .price-examples tr, .price-examples th, .price-examples td { display: block; width: auto; }
+  .price-examples thead { display: none; }
+  .price-examples tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
+  .price-examples th, .price-examples td { border: 0; padding: 2px 0; }
+  .price-examples tbody th { font-size: 14px; padding-bottom: var(--space-1); }
+  .price-examples td::before { content: attr(data-label) ": "; color: var(--color-text-secondary); }
+}
 .price-note-inline { font-style: italic; }
 .price-table dd { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-text); text-align: right; min-width: 0; }
 @media (max-width: 360px) {
