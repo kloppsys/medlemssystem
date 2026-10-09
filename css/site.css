@@ -1133,6 +1133,10 @@ hr.divider { display: none; }
   font-size: 12px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+.text-link { color: #005a9e; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.text-link:hover { color: var(--color-text); }
+:root[data-theme="dark"] .text-link { color: var(--accent-blue-bright); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .text-link { color: var(--accent-blue-bright); } }
 .copyright a { display: inline-block; padding: 4px 2px; min-height: 24px; }
 .copyright .container { padding-left: 0; padding-right: 0; }
 .copyright-link { display: inline-block; margin-top: var(--space-2); color: #0063b1; }
