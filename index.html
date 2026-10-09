@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
         <meta name="description" content="Regweb, Medlem123 og Likepersonslogg fra Klopp AS: medlemssystem, kontingentinnkreving og Bufdir-rapport med Vipps-betaling, driftet i Norge." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/" />
@@ -11,6 +13,8 @@
         <meta property="og:title" content="Medlemssystem og Likepersonslogg | Vipps, kontingent og Bufdir-rapport" />
         <meta property="og:description" content="Regweb, Medlem123 og Likepersonslogg fra Klopp AS: medlemssystem, kontingentinnkreving og Bufdir-rapport med Vipps-betaling, driftet i Norge." />
         <meta property="og:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="nb_NO" />
@@ -18,6 +22,7 @@
         <meta name="twitter:title" content="Medlemssystem og Likepersonslogg | Vipps, kontingent og Bufdir-rapport" />
         <meta name="twitter:description" content="Regweb, Medlem123 og Likepersonslogg fra Klopp AS: medlemssystem, kontingentinnkreving og Bufdir-rapport med Vipps-betaling, driftet i Norge." />
         <meta name="twitter:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta name="twitter:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta name="color-scheme" content="light dark" />
         <script>
             (function () {
@@ -466,7 +471,7 @@
                                 <h3 class="service-entry-title">Regweb</h3>
                                 <a href="https://regweb.no/" target="_blank" rel="noopener" aria-label="Besøk regweb.no">
                                     <picture><source srcset="assets/img/logos/regweb-logo.webp" type="image/webp" /><img class="service-entry-title-logo" src="assets/img/logos/regweb-logo.png" alt="Regweb" loading="lazy" width="838" height="226" /></picture>
-                                </a>
+                                <span class="sr-only"> (åpner i ny fane)</span></a>
                             </div>
                             <span class="service-entry-tagline">Medlemssystemet foreningen driver selv.</span>
                             <p class="service-entry-intro">Regweb er et skybasert medlemssystem for norske foreninger, utviklet og driftet av Klopp AS i Tønsberg. Med nettinnmelding kan nye medlemmer melde seg inn og betale med <strong>Vipps</strong> og <strong>bankkort</strong>, uten manuell registrering. Data ligger på <strong>servere i Norge</strong>.</p>
@@ -542,7 +547,7 @@
                     <a class="service-card-link" href="https://regweb.no/" target="_blank" rel="noopener">
                         Besøk regweb.no
                         <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg>
-                    </a>
+                    <span class="sr-only"> (åpner i ny fane)</span></a>
                 </article>
 
                 <hr class="divider" />
@@ -555,7 +560,7 @@
                                 <h3 class="service-entry-title">Likepersonslogg</h3>
                                 <a href="https://likepersonslogg.com/" target="_blank" rel="noopener" aria-label="Besøk likepersonslogg.com">
                                     <picture><source srcset="assets/img/logos/likepersonslogg-logo.webp" type="image/webp" /><img class="service-entry-title-logo" src="assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" width="950" height="220" /></picture>
-                                </a>
+                                <span class="sr-only"> (åpner i ny fane)</span></a>
                             </div>
                             <span class="service-entry-tagline">Digitalt verktøy for registrering og rapportering av likepersonsarbeid.</span>
                             <p class="service-entry-intro">Likepersonslogg er et skybasert verktøy for å registrere og rapportere likepersonsarbeid i norske foreninger. Klopp AS har utviklet løsningen i samarbeid med <strong>Norsk Revmatikerforbund</strong>, <strong>Brystkreftforeningen</strong> og <strong>Norilco</strong>, og drifter den selv. Likepersonene logger aktivitet selv med <strong>Vipps-innlogging</strong> på mobil, nettbrett eller datamaskin, og foreningen henter ut samlerapport til <strong>Bufdir</strong> og andre tilskuddsgivere. Data ligger på <strong>servere i Norge</strong>.</p>
@@ -707,7 +712,7 @@
                     <a class="service-card-link" href="https://likepersonslogg.com/" target="_blank" rel="noopener">
                         Besøk likepersonslogg.com
                         <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg>
-                    </a>
+                    <span class="sr-only"> (åpner i ny fane)</span></a>
                 </article>
 
                 <hr class="divider" />
@@ -720,7 +725,7 @@
                                 <h3 class="service-entry-title">Medlem123</h3>
                                 <a href="https://medlem123.no/" target="_blank" rel="noopener" aria-label="Besøk medlem123.no">
                                     <picture><source srcset="assets/img/logos/medlem123-logo.webp" type="image/webp" /><img class="service-entry-title-logo" src="assets/img/logos/medlem123-logo.png" alt="Medlem123" loading="lazy" width="951" height="223" /></picture>
-                                </a>
+                                <span class="sr-only"> (åpner i ny fane)</span></a>
                             </div>
                             <span class="service-entry-tagline">Vi håndterer medlemmene for dere.</span>
                             <p class="service-entry-intro">Medlem123 er en driftstjeneste der Klopp AS i Tønsberg kjører medlemsregister og kontingentinnkreving for norske foreninger, på samme plattform som Regweb. Foreningen slipper daglig fakturering, purring og medlemshenvendelser om personalia; nye medlemmer melder seg inn og betaler med <strong>Vipps</strong> eller <strong>kort</strong>, og Klopp AS følger opp registeret gjennom året. Data ligger på <strong>servere i Norge</strong>.</p>
@@ -817,7 +822,7 @@
                     <a class="service-card-link" href="https://medlem123.no/" target="_blank" rel="noopener">
                         Besøk medlem123.no
                         <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg>
-                    </a>
+                    <span class="sr-only"> (åpner i ny fane)</span></a>
                 </article>
 
                 <hr class="divider" />
@@ -884,7 +889,7 @@
                     </picture>
                 </div>
                 <div class="photo-section-cta">
-                    <a class="btn" href="https://klopp.no" target="_blank" rel="noopener">Besøk Klopp AS <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg></a>
+                    <a class="btn" href="https://klopp.no" target="_blank" rel="noopener">Besøk Klopp AS <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.5 2.75A.75.75 0 0 1 7.25 2H13a.75.75 0 0 1 .75.75v5.75a.75.75 0 0 1-1.5 0V4.56L4.28 12.53a.75.75 0 0 1-1.06-1.06L11.19 3.5H7.25a.75.75 0 0 1-.75-.75Z"/><path d="M2.75 4.5A.75.75 0 0 1 3.5 3.75h3a.75.75 0 0 1 0 1.5h-2.25v7h7V10a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-8.5Z"/></svg><span class="sr-only"> (åpner i ny fane)</span></a>
                 </div>
             </div>
         </section>
@@ -913,17 +918,17 @@
                     </div>
                     <div>
                         <h3>Klopp AS</h3>
-                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /></a>
+                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /><span class="sr-only"> (åpner i ny fane)</span></a>
                     </div>
                     <div>
                         <h3>Medlem av</h3>
-                        <a href="https://www.nito.no/" target="_blank" rel="noopener"><img src="assets/img/partners/nito_logo.png" alt="NITO" class="partner-logo" width="81" height="30" /></a>
+                        <a href="https://www.nito.no/" target="_blank" rel="noopener"><img src="assets/img/partners/nito_logo.png" alt="NITO" class="partner-logo" width="81" height="30" /><span class="sr-only"> (åpner i ny fane)</span></a>
                     </div>
                     <div>
                         <h3>Partnere</h3>
                         <div class="partner-logo-row">
-                            <a href="https://vipps.no/" target="_blank" rel="noopener"><picture><source srcset="assets/img/partners/vipps_logo.webp" type="image/webp" /><img src="assets/img/partners/vipps_logo.png" alt="Vipps" class="partner-logo" width="512" height="207" /></picture></a>
-                            <a href="https://www.mastercard.no/" target="_blank" rel="noopener"><img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" class="partner-logo" width="999" height="776" /></a>
+                            <a href="https://vipps.no/" target="_blank" rel="noopener"><picture><source srcset="assets/img/partners/vipps_logo.webp" type="image/webp" /><img src="assets/img/partners/vipps_logo.png" alt="Vipps" class="partner-logo" width="512" height="207" /></picture><span class="sr-only"> (åpner i ny fane)</span></a>
+                            <a href="https://www.mastercard.no/" target="_blank" rel="noopener"><img src="assets/img/partners/mastercard_logo_wordmark_dark.svg" alt="Mastercard" class="partner-logo" width="999" height="776" /><span class="sr-only"> (åpner i ny fane)</span></a>
                         </div>
                     </div>
                 </div>
@@ -932,7 +937,7 @@
                 <div class="container">
                     Alle rettigheter forbeholdes Klopp AS » Web &amp; Software Engineering.
                     <br />
-                    <a href="personvern.html" class="copyright-link">Personvernerklæring</a> · <a href="https://klopp.no" target="_blank" rel="noopener" class="copyright-link">Om Klopp AS</a>
+                    <a href="personvern.html" class="copyright-link">Personvernerklæring</a> · <a href="https://klopp.no" target="_blank" rel="noopener" class="copyright-link">Om Klopp AS<span class="sr-only"> (åpner i ny fane)</span></a>
                 </div>
             </div>
         </footer>

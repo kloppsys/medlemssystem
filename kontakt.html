@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI=' https://web3forms.com https://js.hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline' https://newassets.hcaptcha.com; img-src 'self' data: https://newassets.hcaptcha.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com; frame-src https://newassets.hcaptcha.com https://hcaptcha.com; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'" />
         <meta name="description" content="Ta kontakt med Klopp AS om Regweb, Medlem123 eller Likepersonslogg. Fyll ut skjemaet, ring 33 31 28 00, eller send e-post til post@klopp.no." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/kontakt.html" />
@@ -11,6 +13,8 @@
         <meta property="og:title" content="Kontakt oss — Medlemssystem" />
         <meta property="og:description" content="Ta kontakt med Klopp AS om Regweb, Medlem123 eller Likepersonslogg." />
         <meta property="og:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="nb_NO" />
@@ -18,6 +22,7 @@
         <meta name="twitter:title" content="Kontakt oss — Medlemssystem" />
         <meta name="twitter:description" content="Ta kontakt med Klopp AS om Regweb, Medlem123 eller Likepersonslogg." />
         <meta name="twitter:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta name="twitter:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta name="color-scheme" content="light dark" />
         <script>
             (function () {
@@ -251,7 +256,7 @@
                 <h1>Kontakt oss</h1>
                 <a href="https://klopp.no/" target="_blank" rel="noopener" aria-label="Besøk klopp.no">
                     <img class="section-heading-logo" src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS" loading="lazy" width="200" height="46" />
-                </a>
+                <span class="sr-only"> (åpner i ny fane)</span></a>
             </div>
             <p class="contact-lead">Klopp AS svarer på spørsmål om Regweb, Medlem123 og Likepersonslogg.</p>
 
@@ -265,7 +270,7 @@
                 <input type="hidden" name="subject" value="Ny henvendelse fra medlemssystem.no" />
                 <input type="hidden" name="from_name" value="Kontaktskjema — medlemssystem.no" />
                 <input type="hidden" name="redirect" value="https://medlemssystem.no/kontakt.html?sendt=1" />
-                <input type="checkbox" name="botcheck" class="botcheck-field" tabindex="-1" autocomplete="off" />
+                <input type="checkbox" name="botcheck" class="botcheck-field" tabindex="-1" autocomplete="off" aria-label="La stå tomt (spamvern)" />
 
                 <div class="form-row">
                     <div class="field">
@@ -304,7 +309,7 @@
                     <textarea id="contact-message" name="message" maxlength="3000" spellcheck="true" required></textarea>
                 </div>
 
-                <div class="legal-box">Henvendelsen videresendes til vår e-post via tredjepartstjenesten <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a>. Web3Forms kan ha midlertidige serverlogger (servere i USA). Vi bruker opplysningene bare for å svare deg. Se <a href="personvern.html">personvernerklæringen</a>.</div>
+                <div class="legal-box">Henvendelsen videresendes til vår e-post via tredjepartstjenesten <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms<span class="sr-only"> (åpner i ny fane)</span></a>. Web3Forms kan ha midlertidige serverlogger (servere i USA). Vi bruker opplysningene bare for å svare deg. Se <a href="personvern.html">personvernerklæringen</a>.</div>
 
                 <div class="h-captcha" data-captcha="true"></div>
 
@@ -314,7 +319,7 @@
             </form>
 
             <h2>Direkte kontakt</h2>
-            <p>Tlf. <a href="tel:+4733312800">33 31 28 00</a> (mandag–fredag, 09.00–15.00)<br />E-post: <a href="mailto:post@klopp.no">post@klopp.no</a><br />Adresse: <a href="https://www.google.com/maps/search/?api=1&amp;query=Farmannsveien+48%2C+3125+T%C3%B8nsberg" target="_blank" rel="noopener">Farmannsveien 48, 3125 Tønsberg</a></p>
+            <p>Tlf. <a href="tel:+4733312800">33 31 28 00</a> (mandag–fredag, 09.00–15.00)<br />E-post: <a href="mailto:post@klopp.no">post@klopp.no</a><br />Adresse: <a href="https://www.google.com/maps/search/?api=1&amp;query=Farmannsveien+48%2C+3125+T%C3%B8nsberg" target="_blank" rel="noopener">Farmannsveien 48, 3125 Tønsberg<span class="sr-only"> (åpner i ny fane)</span></a></p>
         </main>
 
         <footer class="site-footer">
@@ -331,13 +336,13 @@
                     </div>
                     <div>
                         <h3>Klopp AS</h3>
-                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /></a>
+                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /><span class="sr-only"> (åpner i ny fane)</span></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
                 <div class="container">
-                    <a href="index.html">Til forsiden</a> · <a href="https://klopp.no" target="_blank" rel="noopener">Om Klopp AS</a> · <a href="personvern.html">Personvernerklæring</a> · Alle rettigheter forbeholdes Klopp AS » Web &amp; Software Engineering.
+                    <a href="index.html">Til forsiden</a> · <a href="https://klopp.no" target="_blank" rel="noopener">Om Klopp AS<span class="sr-only"> (åpner i ny fane)</span></a> · <a href="personvern.html">Personvernerklæring</a> · Alle rettigheter forbeholdes Klopp AS » Web &amp; Software Engineering.
                 </div>
             </div>
         </footer>

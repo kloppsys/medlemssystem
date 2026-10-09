@@ -856,7 +856,7 @@ hr.divider { display: none; }
   border-radius: var(--radius-sm);
   background: var(--accent-blue);
   color: #ffffff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1130,9 +1130,10 @@ hr.divider { display: none; }
   color: #616161;
   text-align: center;
   padding: var(--space-4) var(--space-5);
-  font-size: 11px;
+  font-size: 12px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+.copyright a { display: inline-block; padding: 4px 2px; min-height: 24px; }
 .copyright .container { padding-left: 0; padding-right: 0; }
 .copyright-link { display: inline-block; margin-top: var(--space-2); color: #0063b1; }
 .copyright-link:hover { color: var(--navy-dark); }

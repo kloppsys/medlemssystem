@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
         <meta name="description" content="Hva koster digital likepersonsrapportering i 2026? Se prisen for Likepersonslogg — utviklet sammen med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco — og hva som gjør Bufdir-rapporteringen enklere." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/artikler/hva-koster-likepersonsrapportering-2026.html" />
@@ -11,6 +13,8 @@
         <meta property="og:title" content="Hva koster likepersonsrapportering i 2026?" />
         <meta property="og:description" content="Prisen for Likepersonslogg, og hvorfor norske pasient- og interesseorganisasjoner bruker det til Bufdir-rapportering." />
         <meta property="og:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="nb_NO" />
@@ -18,6 +22,7 @@
         <meta name="twitter:title" content="Hva koster likepersonsrapportering i 2026?" />
         <meta name="twitter:description" content="Prisen for Likepersonslogg, og hvorfor norske pasient- og interesseorganisasjoner bruker det til Bufdir-rapportering." />
         <meta name="twitter:image" content="https://medlemssystem.no/assets/img/og-image.jpg" />
+        <meta name="twitter:image:alt" content="Medlemssystem: Regweb, Medlem123 og Likepersonslogg fra Klopp AS" />
         <meta name="color-scheme" content="light dark" />
         <script>
             (function () {
@@ -170,6 +175,7 @@
                 border-radius: var(--radius-lg);
                 text-align: center;
             }
+            .article-page .article-cta a { color: var(--accent-text-strong); text-decoration: underline; text-underline-offset: 3px; }
             .article-page .section-heading-row {
                 display: flex;
                 align-items: center;
@@ -217,7 +223,7 @@
                 <h2>Derfor velger foreninger Likepersonslogg</h2>
                 <a href="https://likepersonslogg.com/" target="_blank" rel="noopener" aria-label="Besøk likepersonslogg.com">
                     <picture><source srcset="../assets/img/logos/likepersonslogg-logo.webp" type="image/webp" /><img class="section-heading-logo" src="../assets/img/logos/likepersonslogg-logo.png" alt="Likepersonslogg" loading="lazy" width="950" height="220" /></picture>
-                </a>
+                <span class="sr-only"> (åpner i ny fane)</span></a>
             </div>
             <p>Likepersonslogg er bygget sammen med organisasjonene som faktisk bruker det til daglig — ikke tilpasset likepersonsarbeid i etterkant av et generelt skjemaverktøy. Dette er hovedgrunnene kundene oppgir:</p>
 
@@ -299,13 +305,13 @@
                 </tbody>
             </table>
 
-            <p>Dokumentasjonen oppbevares i sentralleddet i fem år fra 1. januar i grunnlagsåret, og skal kunne fremvises ved kontroll fra Bufdir eller den representanten Bufdir bruker, samt Riksrevisjonen. Se full forskrift hos <a href="https://lovdata.no/dokument/SF/forskrift/2023-01-01-122" target="_blank" rel="noopener">Lovdata</a> og skjema/maler hos <a href="https://www.bufdir.no/tilskudd/funksjonshemmedes-organisasjoner/" target="_blank" rel="noopener">Bufdir</a>.</p>
+            <p>Dokumentasjonen oppbevares i sentralleddet i fem år fra 1. januar i grunnlagsåret, og skal kunne fremvises ved kontroll fra Bufdir eller den representanten Bufdir bruker, samt Riksrevisjonen. Se full forskrift hos <a href="https://lovdata.no/dokument/SF/forskrift/2023-01-01-122" target="_blank" rel="noopener">Lovdata<span class="sr-only"> (åpner i ny fane)</span></a> og skjema/maler hos <a href="https://www.bufdir.no/tilskudd/funksjonshemmedes-organisasjoner/" target="_blank" rel="noopener">Bufdir<span class="sr-only"> (åpner i ny fane)</span></a>.</p>
 
             <h2>Alternativet: regneark og løse notater</h2>
             <p>Et regneark koster ingenting i lisens, men samler ikke inn navn, adresse, telefon og signatur automatisk, og har ingen varsling når en likeperson ikke har logget aktivitet på lenge. Jo flere likepersoner og avdelinger organisasjonen har, jo mer tid går med til å samle inn og kvalitetssikre dokumentasjonen manuelt før en søknadsfrist — tid som kunne gått til selve likepersonsarbeidet.</p>
 
             <div class="article-cta">
-                <p>Se <a href="/#tjenester">alle tjenestene</a>, <a href="https://likepersonslogg.com/" target="_blank" rel="noopener">besøk likepersonslogg.com</a>, les også <a href="hva-koster-medlemssystem-2026.html">Hva koster et medlemssystem i 2026?</a>, eller <a href="https://klopp.no" target="_blank" rel="noopener">les om Klopp AS</a>.</p>
+                <p>Se <a href="/#tjenester">alle tjenestene</a>, <a href="https://likepersonslogg.com/" target="_blank" rel="noopener">besøk likepersonslogg.com<span class="sr-only"> (åpner i ny fane)</span></a>, les også <a href="hva-koster-medlemssystem-2026.html">Hva koster et medlemssystem i 2026?</a>, eller <a href="https://klopp.no" target="_blank" rel="noopener">les om Klopp AS<span class="sr-only"> (åpner i ny fane)</span></a>.</p>
             </div>
         </main>
 
@@ -323,13 +329,13 @@
                     </div>
                     <div>
                         <h3>Klopp AS</h3>
-                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="../assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /></a>
+                        <a href="https://klopp.no/" target="_blank" rel="noopener"><img src="../assets/img/Klopp_logo_ink_R_w200.png" alt="Klopp AS logo" width="200" height="46" style="width:200px; margin: 0 auto;" /><span class="sr-only"> (åpner i ny fane)</span></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
                 <div class="container">
-                    <a href="/">Til forsiden</a> · <a href="https://klopp.no" target="_blank" rel="noopener">Om Klopp AS</a> · <a href="/personvern.html">Personvernerklæring</a> · Alle rettigheter forbeholdes Klopp AS » Web &amp; Software Engineering.
+                    <a href="/">Til forsiden</a> · <a href="https://klopp.no" target="_blank" rel="noopener">Om Klopp AS<span class="sr-only"> (åpner i ny fane)</span></a> · <a href="/personvern.html">Personvernerklæring</a> · Alle rettigheter forbeholdes Klopp AS » Web &amp; Software Engineering.
                 </div>
             </div>
         </footer>
