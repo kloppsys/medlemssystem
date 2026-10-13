@@ -1188,3 +1188,15 @@ hr.divider { display: none; }
 @media (max-width: 360px) {
   .masthead-heading { font-size: 1.625rem; }
 }
+
+/* Regweb-seksjon: kroner per medlem, røde CTA, volumpris-notat */
+.price-block-note { display: block; font-weight: 400; margin-top: 2px; }
+.per-member { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: var(--space-4) 0 var(--space-2); }
+@media (max-width: 640px) { .per-member { grid-template-columns: 1fr; } }
+.per-member-item { display: flex; flex-direction: column; background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); }
+.per-member-item strong { font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-text); margin: var(--space-1) 0; }
+.per-member-label { font-size: 13px; color: var(--color-text-secondary); }
+.per-member-unit { font-size: 13px; color: var(--color-text-secondary); }
+.service-card-link-red { background: var(--accent-red); color: #fff; }
+.service-card-link-red:hover { background: #b8212f; }
+.selling-point-num svg { display: block; }
