@@ -8,7 +8,7 @@ Denne nettsiden samler tre av tjenestene (Regweb, Medlem123 og Likepersonslogg; 
 
 - [Regweb](https://regweb.no/): Medlemssystem foreningen driver selv. Vipps/kort-innmelding, eFaktura, Avtalegiro, SMS, API, norske servere. Grunnlisens kr 9 990 (kampanje, ordinær kr 24 990), engangsgebyr. Serviceavtale fra kr 990/mnd (0–499 medlemmer).
 - [Medlem123](https://medlem123.no/): Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen. Oppstart kr 2 500 engangsgebyr. Abonnement kr 299/mnd + kr 2/medlem/mnd. Kontingentfaktura og purring kr 10/stk hver.
-- [Likepersonslogg](https://likepersonslogg.com/): Registrering og Bufdir-rapportering av likepersonsarbeid. Utviklet med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco. Etablering kr 9 990 (kampanje, ordinær kr 19 990), engangsgebyr pr. organisasjon. Serviceavtale kr 1 290/mnd.
+- [Likepersonslogg](https://likepersonslogg.com/): Registrering og Bufdir-rapportering av likepersonsarbeid. Utviklet med Norsk Revmatikerforbund, Brystkreftforeningen og Norilco. Etablering kr 9 990 (kampanje, ordinær kr 19 990), engangsgebyr per organisasjon. Serviceavtale kr 1 290/mnd.
 
 ## Ressurser
 

@@ -1200,3 +1200,13 @@ hr.divider { display: none; }
 .service-card-link-red { background: var(--accent-red); color: #fff; }
 .service-card-link-red:hover { background: #b8212f; }
 .selling-point-num svg { display: block; }
+
+/* Eksterne tekstlenker: diskret pil ut av boks (skjult for skjermlesere, som har sr-only-teksten) */
+p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not(.btn):not(.service-card-link)::after,
+.hero-link[target="_blank"]::after, .text-link[target="_blank"]::after {
+  content: " \2197" / "";
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.8em;
+  text-decoration: none;
+}
