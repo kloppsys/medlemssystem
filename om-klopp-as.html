@@ -135,6 +135,8 @@
                 padding: calc(var(--nav-height) + var(--space-8)) var(--space-5) var(--space-9);
             }
             .legal-page h1 { font-size: clamp(1.75rem, 3vw, 2.5rem); letter-spacing: -0.02em; }
+            .about-page h1 { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3) var(--space-4); }
+            .about-page .h1-logo { display: block; height: 0.9em; width: auto; }
             .legal-page .lead { font-size: 18px; line-height: 1.6; margin: var(--space-4) 0 var(--space-6); }
             .legal-page h2 { font-size: 20px; margin-top: var(--space-8); margin-bottom: var(--space-3); }
             .legal-page p, .legal-page li { line-height: 1.6; }
@@ -226,7 +228,7 @@
         </nav>
 
         <main class="legal-page about-page" id="main">
-            <h1>Om Klopp AS</h1>
+            <h1>Om Klopp AS<img class="h1-logo" src="assets/img/Klopp_logo_ink_R_w200.png" alt="" width="200" height="46" /></h1>
             <p class="lead">Klopp AS er et norsk IT-selskap i Tønsberg, etablert i 2011. Selskapet utvikler og drifter <a class="text-link" href="/#regweb">Regweb</a> medlemssystem, <a class="text-link" href="/#medlem123">Medlem123</a> medlemsdrift, <a class="text-link" href="/#likepersonslogg">Likepersonslogg</a> oppdragslogg og <a class="text-link" href="https://xreg.no/" target="_blank" rel="noopener">XReg<span class="sr-only"> (åpner i ny fane)</span></a> verktøykasse for foreninger og organisasjoner. I tillegg leverer de skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. Klopp AS har et tett utviklingssamarbeid med Vipps og Mastercard. All utvikling, drift og support skjer internt, og alle data lagres på norske servere.</p>
 
             <section class="about-solid" aria-label="Soliditet">
