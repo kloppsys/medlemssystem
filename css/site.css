@@ -1270,3 +1270,24 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .benefit-list span { font-size: 13px; color: var(--color-text-secondary); max-width: 62ch; }
 
 .subfeature img[height="560"] { aspect-ratio: 900 / 560; object-position: center; }
+
+/* Kampanjekort — three product cards at #kampanjer */
+.btn-navy { background: var(--navy); color: #ffffff; }
+.btn-navy:hover { background: var(--navy-dark); }
+:root[data-theme="dark"] .btn-navy { background: #ffffff; color: var(--navy); }
+.btn-red { background: var(--accent-red); color: #ffffff; }
+.btn-red:hover { background: #b81f31; }
+.campaign-card { position: relative; padding-top: var(--space-7); }
+.campaign-card-featured { box-shadow: 0 0 0 2px var(--accent-red), var(--card-shadow); }
+.campaign-badge { position: absolute; top: 0; left: var(--space-5); transform: translateY(-50%); background: var(--navy-dark); color: #ffffff; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 6px 14px; border-radius: var(--radius-full); white-space: nowrap; }
+.campaign-badge-red { background: var(--accent-red); }
+.campaign-price { margin: auto 0 var(--space-1); padding-top: var(--space-3); border-top: 1px solid var(--color-border); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2); }
+.campaign-price strong { font-size: 32px; letter-spacing: -0.02em; line-height: 1.1; }
+.campaign-price s { font-size: 16px; color: var(--color-text-secondary); }
+.campaign-price span { font-size: 14px; color: var(--color-text-secondary); }
+.campaign-sub { margin: 0 0 var(--space-3); font-size: 15px; font-weight: 600; }
+.campaign-value { margin: 0 0 var(--space-4); font-size: 14px; line-height: 1.55; color: var(--color-text-secondary); }
+.campaign-card .btn { align-self: flex-start; min-height: 44px; }
+.compare-table .check { display: inline-flex; vertical-align: -3px; margin-right: var(--space-2); color: #1a7f37; }
+:root[data-theme="dark"] .compare-table .check { color: #56d364; }
+.compare-closing { margin: var(--space-5) 0 var(--space-2); max-width: 72ch; font-size: 16px; line-height: 1.6; }

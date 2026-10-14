@@ -385,6 +385,49 @@
             ]
         }
         </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://medlemssystem.no/#kampanjer",
+            "name": "Regweb, Likepersonslogg og Medlem123: kampanjer",
+            "provider": { "@id": "https://medlemssystem.no/#organization" },
+            "areaServed": "NO",
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "NOK",
+                "lowPrice": "2500",
+                "highPrice": "9990",
+                "offerCount": 3,
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Regweb, kampanje 60 % rabatt på etablering",
+                        "price": "9990",
+                        "priceCurrency": "NOK",
+                        "url": "https://medlemssystem.no/#regweb",
+                        "description": "Etablering kr 9 990 (ordinært kr 24 990). Drift fra kr 990/mnd. Medlemssystemet foreningen driver selv."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Likepersonslogg, kampanje 50 % rabatt på etablering",
+                        "price": "9990",
+                        "priceCurrency": "NOK",
+                        "url": "https://medlemssystem.no/#likepersonslogg",
+                        "description": "Etablering kr 9 990 (ordinært kr 19 990). Drift kr 1 290/mnd. Ferdig rapport til Bufdir og andre tilskuddsgivere."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Medlem123, nye og bedre priser",
+                        "price": "2500",
+                        "priceCurrency": "NOK",
+                        "url": "https://medlemssystem.no/#medlem123",
+                        "description": "Oppstart kr 2 500. Kr 299/mnd i abonnement + kr 2 per medlem/mnd. Klopp AS tar kontingentinnkreving, purring og medlemsservice."
+                    }
+                ]
+            }
+        }
+        </script>
     </head>
     <body>
         <a class="skip-link" href="#main">Hopp til innhold</a>
@@ -430,51 +473,61 @@
         </header>
 
         <section class="page-section page-section-alt" id="velg-losning">
-            <div class="container">
+            <div class="container" id="kampanjer">
                 <div class="intro-grid">
-                    <h2 class="intro-heading">Hvilken løsning passer foreningen deres?</h2>
+                    <h2 class="intro-heading">Kampanjer: velg tjenesten som passer foreningen</h2>
                     <div class="intro-body">
-                        <p>Regweb, Medlem123 og Likepersonslogg kommer alle fra Klopp AS og driftes i Norge. Velg etter hvem som skal gjøre jobben, og hva dere trenger.</p>
+                        <p>Regweb, Likepersonslogg og Medlem123 kommer alle fra Klopp AS og driftes i Norge. Velg etter hvem som skal gjøre jobben, og hva dere trenger.</p>
                     </div>
                 </div>
-                <div class="choose-grid">
-                    <article class="choose-card">
-                        <p class="choose-card-audience">For organisasjonen som vil gjøre det selv</p>
+                <div class="choose-grid campaign-cards">
+                    <article class="choose-card campaign-card">
+                        <span class="campaign-badge">Kampanje −60&nbsp;%</span>
+                        <p class="choose-card-audience">Gjør det selv</p>
                         <h3 class="choose-card-title">Regweb</h3>
                         <p class="choose-card-text">Medlemssystemet dere driver selv: medlemsregister, kontingent, nettinnmelding med Vipps og bankkort og egen innlogging for lokallag.</p>
-                        <p class="choose-card-price"><strong>Fra kr&nbsp;990/mnd</strong><span>Etablering kr&nbsp;9&nbsp;990 i kampanjen</span></p>
-                        <a class="chevron-link" href="#regweb">Les om Regweb <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                        <p class="campaign-price"><s>Kr&nbsp;24&nbsp;990</s> <strong>Kr&nbsp;9&nbsp;990</strong> <span>i etablering</span></p>
+                        <p class="campaign-sub">Drift fra kr&nbsp;990/mnd</p>
+                        <p class="campaign-value">Fra kr&nbsp;29,70 per medlem per år for en forening med 400 medlemmer.</p>
+                        <a class="btn btn-navy" href="#regweb">Velg Regweb</a>
                     </article>
-                    <article class="choose-card">
-                        <p class="choose-card-audience">For foreningen som vil slippe jobben</p>
-                        <h3 class="choose-card-title">Medlem123</h3>
-                        <p class="choose-card-text">Regweb driftet av Klopp AS. Vi tar kontingentinnkrevingen og henvendelser fra medlemmene — også når medlemsansvarlig skiftes ut eller har ferie.</p>
-                        <p class="choose-card-price"><strong>Fra kr&nbsp;299/mnd</strong><span>Oppstart kr&nbsp;2&nbsp;500 + kr&nbsp;2 per medlem/mnd</span></p>
-                        <a class="chevron-link" href="#medlem123">Les om Medlem123 <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
-                    </article>
-                    <article class="choose-card">
+                    <article class="choose-card campaign-card">
+                        <span class="campaign-badge">Kampanje −50&nbsp;%</span>
                         <p class="choose-card-audience">For organisasjoner med frivillig likepersonsarbeid</p>
                         <h3 class="choose-card-title">Likepersonslogg</h3>
-                        <p class="choose-card-text">Likepersonene logger aktiviteten selv, og dere henter ut ferdig rapport til Bufdir og andre tilskuddsgivere — uten regneark.</p>
-                        <p class="choose-card-price"><strong>Fra kr&nbsp;1&nbsp;290/mnd</strong><span>Etablering kr&nbsp;9&nbsp;990 i kampanjen</span></p>
-                        <a class="chevron-link" href="#likepersonslogg">Les om Likepersonslogg <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                        <p class="choose-card-text">Likepersonene logger aktiviteten selv med Vipps-innlogging, og dere henter ut ferdig rapport til Bufdir og andre tilskuddsgivere — uten regneark.</p>
+                        <p class="campaign-price"><s>Kr&nbsp;19&nbsp;990</s> <strong>Kr&nbsp;9&nbsp;990</strong> <span>i etablering</span></p>
+                        <p class="campaign-sub">Drift kr&nbsp;1&nbsp;290/mnd</p>
+                        <p class="campaign-value">Ferdig Bufdir-rapport fra aktivitetene likepersonene registrerer.</p>
+                        <a class="btn btn-navy" href="#likepersonslogg">Velg Likepersonslogg</a>
+                    </article>
+                    <article class="choose-card campaign-card campaign-card-featured">
+                        <span class="campaign-badge campaign-badge-red">Nye bedre priser</span>
+                        <p class="choose-card-audience">Fullservice — slipp jobben</p>
+                        <h3 class="choose-card-title">Medlem123</h3>
+                        <p class="choose-card-text">Regweb driftet av Klopp AS. Vi tar kontingentinnkrevingen og henvendelser fra medlemmene — også når medlemsansvarlig skiftes ut eller har ferie.</p>
+                        <p class="campaign-price"><strong>Kr&nbsp;2&nbsp;500</strong> <span>i oppstart</span></p>
+                        <p class="campaign-sub">Kr&nbsp;299/mnd + kr&nbsp;2 per medlem/mnd</p>
+                        <p class="campaign-value">Klopp AS tar kontingent, purring og medlemsservice. Dere får tid tilbake.</p>
+                        <a class="btn btn-red" href="#medlem123">Velg Medlem123</a>
                     </article>
                 </div>
                 <div class="compare-wrap">
                     <table class="compare-table">
                         <caption class="sr-only">Sammenligning av Regweb, Medlem123 og Likepersonslogg</caption>
-                        <thead><tr><th scope="col">Behov</th><th scope="col">Regweb</th><th scope="col">Medlem123</th><th scope="col">Likepersonslogg</th></tr></thead>
+                        <thead><tr><th scope="col">Behov</th><th scope="col">Regweb</th><th scope="col">Likepersonslogg</th><th scope="col">Medlem123</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">Hvem driver systemet?</th><td data-label="Regweb">Foreningen selv</td><td data-label="Medlem123">Klopp AS driver det for foreningen</td><td data-label="Likepersonslogg">Foreningen selv</td></tr>
-                            <tr><th scope="row">Medlemsregister</th><td data-label="Regweb">Ja</td><td data-label="Medlem123">Ja</td><td data-label="Likepersonslogg">Nei — logger likepersonsaktivitet</td></tr>
-                            <tr><th scope="row">Kontingent og betaling</th><td data-label="Regweb">Ja — foreningen sender selv</td><td data-label="Medlem123">Ja — Klopp AS krever inn og purrer</td><td data-label="Likepersonslogg">Nei</td></tr>
-                            <tr><th scope="row">Henvendelser fra medlemmer</th><td data-label="Regweb">Foreningen</td><td data-label="Medlem123">Klopp AS besvarer henvendelser om medlemmene; foreningen beholder organisasjonen</td><td data-label="Likepersonslogg">Ikke aktuelt</td></tr>
-                            <tr><th scope="row">Bufdir-rapport</th><td data-label="Regweb">Nei</td><td data-label="Medlem123">Nei</td><td data-label="Likepersonslogg">Ja — hovedformålet</td></tr>
-                            <tr><th scope="row">Norsk support og servere i Norge</th><td data-label="Regweb">Ja</td><td data-label="Medlem123">Ja</td><td data-label="Likepersonslogg">Ja</td></tr>
+                            <tr><th scope="row">Hvem driver systemet?</th><td data-label="Regweb">Foreningen selv</td><td data-label="Likepersonslogg">Foreningen selv</td><td data-label="Medlem123">Klopp AS driver det for foreningen</td></tr>
+                            <tr><th scope="row">Medlemsregister</th><td data-label="Regweb"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja</td><td data-label="Likepersonslogg">Nei — logger likepersonsaktivitet</td><td data-label="Medlem123"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja</td></tr>
+                            <tr><th scope="row">Kontingent og betaling</th><td data-label="Regweb"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja — foreningen sender selv</td><td data-label="Likepersonslogg">Nei</td><td data-label="Medlem123"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja — Klopp AS krever inn og purrer</td></tr>
+                            <tr><th scope="row">Henvendelser fra medlemmer</th><td data-label="Regweb">Foreningen</td><td data-label="Likepersonslogg">Ikke aktuelt</td><td data-label="Medlem123">Klopp AS besvarer henvendelser om medlemmene; foreningen beholder organisasjonen</td></tr>
+                            <tr><th scope="row">Bufdir-rapport</th><td data-label="Regweb">Nei</td><td data-label="Likepersonslogg"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja — hovedformålet</td><td data-label="Medlem123">Nei</td></tr>
+                            <tr><th scope="row">Norsk support og servere i Norge</th><td data-label="Regweb"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja</td><td data-label="Likepersonslogg"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja</td><td data-label="Medlem123"><span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg></span>Ja</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="price-fineprint">Alle priser eks. mva. Se prisene i detalj under hver tjeneste. Usikker? <a class="text-link" href="kontakt.html">Kontakt oss</a>, så hjelper vi dere å velge.</p>
+                <p class="compare-closing">Usikker på hvilken kombinasjon som passer best? Alle tre tjenestene leveres av Klopp AS i Tønsberg, driftes på servere i Norge, og kan brukes hver for seg eller sammen, etter foreningens størrelse og behov. <a class="text-link" href="kontakt.html">Kontakt oss</a>, så hjelper vi dere å velge.</p>
+                <p class="price-fineprint">Alle priser eks. mva. Se prisene i detalj under hver tjeneste.</p>
             </div>
         </section>
 
@@ -502,7 +555,7 @@
                         <p>Velg den kombinasjonen som passer foreningen deres — alle tre kan brukes hver for seg, eller sammen.</p>
                     </div>
                 </div>
-                <figure class="campaign-banner" id="kampanjer">
+                <figure class="campaign-banner">
                     <picture>
                         <source srcset="assets/img/campaign-banner-800.webp 800w, assets/img/campaign-banner-1200.webp 1200w, assets/img/campaign-banner.webp 2000w" sizes="(min-width: 1160px) 1112px, calc(100vw - 48px)" type="image/webp" />
                         <img src="assets/img/campaign-banner.jpg" srcset="assets/img/campaign-banner-800.jpg 800w, assets/img/campaign-banner-1200.jpg 1200w, assets/img/campaign-banner.jpg 2000w" sizes="(min-width: 1160px) 1112px, calc(100vw - 48px)" alt="Kampanje: Regweb 60 % rabatt, Likepersonslogg 50 % rabatt på grunnlisensen" width="2000" height="1414" loading="lazy" decoding="async" />
