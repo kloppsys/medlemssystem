@@ -253,6 +253,12 @@ a { color: var(--accent-text); }
 }
 .navbar-brand .brand-no-text { font-size: 14px; font-weight: 700; }
 
+.navbar-brand-block { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; flex-shrink: 0; }
+.brand-by { display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 11px; line-height: 1; font-weight: 500; letter-spacing: 0; color: var(--color-text-muted, #6b6b6b); text-decoration: none; white-space: nowrap; }
+.brand-by img { display: block; height: 13px; width: auto; }
+.brand-by:hover { color: var(--accent-text); }
+@media (max-width: 420px) { .brand-by { font-size: 10px; } .brand-by img { height: 12px; } }
+
 .theme-toggle {
   display: flex;
   align-items: center;
