@@ -167,13 +167,20 @@
             .about-card p { margin: 0; flex: 1; }
             .about-card-link { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-weight: 600; }
             .company-facts a { display: inline-flex; align-items: center; min-height: 44px; }
-            .ref-title { font-size: 17px; margin: var(--space-5) 0 var(--space-3); color: var(--color-text-secondary); }
-            .ref-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-3); }
-            .ref-logos li { display: flex; align-items: center; justify-content: center; min-height: 72px; padding: var(--space-3) var(--space-4); margin: 0; background: #fff; border-radius: var(--radius-md); }
-            .ref-logos img { display: block; width: auto; max-width: 100%; max-height: 40px; filter: grayscale(1) brightness(0.55) contrast(1.1) opacity(0.8); }
-            .ref-logos li:hover img { filter: none; }
-            .ref-logos li:has(img[height="96"]) img { height: 36px !important; filter: none; }
-            @media (max-width: 480px) { .ref-logos li { padding: var(--space-3) var(--space-4); } }
+            .ref-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; margin: var(--space-6) 0 20px; }
+            :root[data-theme="dark"] .ref-title { color: #a8a8a8; }
+            .ref-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: var(--space-5) 60px; }
+            .ref-logos-wide { justify-content: space-between; }
+            .ref-logos li { display: flex; align-items: center; margin: 0; min-height: 44px; }
+            .ref-logos img { display: block; width: auto; max-width: 100%; height: 32px; filter: grayscale(1) brightness(0.55) contrast(1.1); opacity: 0.65; transition: opacity 0.2s ease; }
+            .ref-logos img.ref-lg { height: 35px; }
+            .ref-logos img.ref-sb { height: 18px; }
+            .ref-logos img.ref-bn { height: 24px; }
+            .ref-logos img.ref-sm { height: 28px; }
+            .ref-logos li:hover img { opacity: 1; }
+            :root[data-theme="dark"] .ref-logos li { background: #fff; padding: 6px 12px; border-radius: var(--radius-md); }
+            @media (max-width: 900px) { .ref-logos-wide { justify-content: flex-start; } }
+            @media (max-width: 480px) { .ref-logos { gap: var(--space-4) var(--space-5); } }
         </style>
     </head>
     <body>
@@ -218,13 +225,13 @@
 
             <h2>Referanser</h2>
             <h3 class="ref-title">Utvikling</h3>
-            <ul class="ref-logos">
-                    <li><img src="assets/img/kunder/aschehoug.svg" alt="Aschehoug" style="height:32px" loading="lazy" /></li>
-                    <li><img src="assets/img/kunder/telenor.svg" alt="Telenor" style="height:38px" loading="lazy" /></li>
-                    <li><img src="assets/img/kunder/storebrand.svg" alt="Storebrand" style="height:26px" loading="lazy" /></li>
-                    <li><img src="assets/img/kunder/best-western.svg" alt="Best Western Hotels &amp; Resorts" style="height:32px" loading="lazy" /></li>
-                    <li><img src="assets/img/kunder/bane-nor.svg" alt="Bane NOR" style="height:24px" loading="lazy" /></li>
-                    <li><img src="assets/img/kunder/owens-corning.svg" alt="Owens Corning" style="height:40px" loading="lazy" /></li>
+            <ul class="ref-logos ref-logos-wide">
+                    <li><img src="assets/img/kunder/aschehoug.svg" alt="Aschehoug" class="ref-lg" loading="lazy" /></li>
+                    <li><img src="assets/img/kunder/telenor.svg" alt="Telenor" class="ref-sm" loading="lazy" /></li>
+                    <li><img src="assets/img/kunder/storebrand.svg" alt="Storebrand" class="ref-sb" loading="lazy" /></li>
+                    <li><img src="assets/img/kunder/best-western.svg" alt="Best Western Hotels &amp; Resorts" loading="lazy" /></li>
+                    <li><img src="assets/img/kunder/bane-nor.svg" alt="Bane NOR" class="ref-bn" loading="lazy" /></li>
+                    <li><img src="assets/img/kunder/owens-corning.svg" alt="Owens Corning" class="ref-sm" loading="lazy" /></li>
             </ul>
             <h3 class="ref-title">Medlemsløsninger og likepersonsløsninger</h3>
             <ul class="ref-logos">
