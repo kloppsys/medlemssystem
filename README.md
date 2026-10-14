@@ -15,7 +15,7 @@ Den offisielle logoen ligger i `assets/img/logo/`. Alle filer er utledet fra SVG
 | `medlemssystem-ikon-kvadrat-fullbleed.svg`, `-1024.png`, `-512.png` | Kvadrat uten avrunding: profilbilde i sosiale medier, maskerbart app-ikon |
 
 Regler:
-- Farger: mørkeblå `#0b2252` (firkant, ord), flaggrød `#e71111` (midterste person), hvit.
+- Farger: mørkeblå `#0b2252` (firkant, ord), hvit (de to ytre personene), lys blå `#8fc4f0` (midterste person), flaggrød `#e71111` (flagget). Ikonet på mørk bakgrunn: hvit firkant, mørkeblå ytre personer, samme lyse blå i midten.
 - Skrift: Public Sans Bold. Ikke tegn ordet på nytt, bruk filene.
 - Minste størrelse: 24 px høyde for hele logoen, 16 px for ikonet.
 - Frisone: minst en halv firkant (50 % av ikonets høyde) på alle sider.
