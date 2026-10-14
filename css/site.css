@@ -672,6 +672,24 @@ hr.divider { display: none; }
   color: var(--color-text);
 }
 
+.trust-logos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.trust-logos li {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
+  background: #fff;
+  border-radius: var(--radius-md);
+}
+.trust-logos img { height: 40px; width: auto; max-width: 100%; display: block; }
+@media (max-width: 480px) { .trust-logos img { height: 32px; } }
+
 .service-card-facts {
   list-style: none;
   padding: 0;
