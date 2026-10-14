@@ -199,31 +199,42 @@
                 display: block;
                 border-radius: var(--radius-sm);
             }
-            .ref-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; margin: var(--space-6) 0 20px; }
+            .ref-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; margin: var(--space-6) 0 44px; }
             :root[data-theme="dark"] .ref-title { color: #a8a8a8; }
-            .ref-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: var(--space-5) 60px; }
+            .ref-logos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 35px 24px; }
             .ref-logos-wide { justify-content: space-between; column-gap: 28px; }
-            .ref-logos li { display: flex; align-items: center; margin: 0; min-height: 44px; }
-            .ref-logos img { display: block; width: auto; max-width: 100%; height: 32px; filter: grayscale(1) brightness(0.55) contrast(1.1); opacity: 0.65; transition: opacity 0.2s ease; }
+            .ref-logos li { display: flex; align-items: center; justify-content: center; width: 100%; margin: 0; min-height: 48px; }
+            .ref-logos img { display: block; width: auto; max-width: 100%; max-height: 40px; height: 32px; filter: grayscale(1) brightness(0.55) contrast(1.1); opacity: 0.65; transition: opacity 0.2s ease; }
             .ref-logos img.ref-lg { height: 35px; }
             .ref-logos img.ref-sb { height: 18px; }
             .ref-logos img.ref-bn { height: 24px; }
             .ref-logos img.ref-sm { height: 28px; }
-            .ref-logos img.ref-org { height: 30px; }
-            .ref-logos img.ref-nfs { height: 44px; }
+            .ref-logos img.ref-org { height: 40px; }
+            .ref-logos img.ref-nfs { height: 40px; }
             .ref-logos img.ref-pef { height: 38px; }
             .ref-logos img.ref-h30 { height: 30px; }
+            .ref-logos img.ref-emb { max-height: 64px; }
+            .ref-logos img.ref-e48 { height: 48px; }
+            .ref-logos img.ref-e56 { height: 56px; }
+            .ref-logos img.ref-e60 { height: 60px; }
+            .ref-logos img.ref-e64 { height: 64px; }
+            .ref-logos img.ref-soft { filter: grayscale(1) brightness(0.55) contrast(1.1); opacity: 0.55; }
+            .ref-logos li:hover img.ref-soft { opacity: 1; }
             .ref-logos img.ref-h34 { height: 34px; }
             .ref-logos img.ref-h36 { height: 36px; }
             .ref-logos img.ref-h40 { height: 40px; }
             .ref-logos img.ref-h44 { height: 44px; }
-            .ref-logos img.ref-h48 { height: 48px; }
-            .ref-logos img.ref-h52 { height: 52px; }
-            .ref-logos img.ref-h64 { height: 64px; }
+            .ref-logos img.ref-h48 { height: 40px; }
+            .ref-logos img.ref-h52 { height: 36px; }
+            .ref-logos img.ref-h64 { height: 40px; }
             .ref-logos li:hover img { opacity: 1; }
-            :root[data-theme="dark"] .ref-logos li { background: #fff; padding: 6px 12px; border-radius: var(--radius-md); }
-            @media (max-width: 900px) { .ref-logos-wide { justify-content: flex-start; } }
-            @media (max-width: 480px) { .ref-logos { gap: var(--space-4) var(--space-5); } }
+            .ref-logos li.ref-more { flex-shrink: 0; white-space: nowrap; gap: 10px; box-sizing: border-box; width: auto; height: 48px; padding: 0 20px; border: 1.5px dashed #c9cdd2; border-radius: var(--radius-md); font-size: 13px; color: #8a8f96; }
+            .ref-more-plus { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #c9cdd2; font-size: 15px; line-height: 1; color: #8a8f96; }
+            :root[data-theme="dark"] .ref-logos li.ref-more { background: transparent; border-color: #5a5f66; color: #a8a8a8; }
+            :root[data-theme="dark"] .ref-more-plus { border-color: #5a5f66; color: #a8a8a8; }
+            :root[data-theme="dark"] .ref-logos li:not(.ref-more) { background: #fff; padding: 6px 12px; border-radius: var(--radius-md); }
+            @media (max-width: 900px) { .ref-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ref-logos-wide { justify-content: flex-start; } }
+            @media (max-width: 480px) { .ref-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; } }
         </style>
     </head>
     <body>
@@ -263,24 +274,25 @@
             <h3 class="ref-title">Medlemsløsninger og likepersonsløsninger</h3>
             <ul class="ref-logos">
                     <li><img src="../assets/img/partners/revmatiker.png" alt="Norsk Revmatikerforbund" width="634" height="96" loading="lazy" /></li>
-                    <li><img src="../assets/img/partners/brystkreftforeningen.png" alt="Brystkreftforeningen" width="274" height="96" class="ref-h64" loading="lazy" /></li>
+                    <li><img src="../assets/img/partners/brystkreftforeningen.png" alt="Brystkreftforeningen" width="575" height="200" class="ref-emb ref-e56" loading="lazy" /></li>
                     <li><img src="../assets/img/partners/norilco.png" alt="Norilco" width="368" height="96" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/ryggforeningen.png" alt="Ryggforeningen" class="ref-org" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/ryggforeningen.png" alt="Ryggforeningen" class="ref-h40" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/nfs.png" alt="Norsk Farmasøytisk Selskap" class="ref-nfs" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/pef.svg" alt="Psoriasis- og eksemforbundet" class="ref-pef" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/tourette.png" alt="Norsk Tourette Forening" class="ref-org" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/rusfri-oppvekst.png" alt="Rusfri Oppvekst" class="ref-h48" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/norges-massasjeforbund.png" alt="Norges Massasjeforbund" class="ref-h52" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/fod.svg" alt="Foreningen for omplassering av dyr" class="ref-h40" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/rh-foreningen.svg" alt="Ryggmargsbrokk- og hydrocephalusforeningen" class="ref-h44" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/rusfri-oppvekst.png" alt="Rusfri Oppvekst" class="ref-emb ref-e48" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/norges-massasjeforbund.png" alt="Norges Massasjeforbund" class="ref-emb ref-e64" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/fod.svg" alt="Foreningen for omplassering av dyr" class="ref-h40 ref-soft" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/rh-foreningen.svg" alt="Ryggmargsbrokk- og hydrocephalusforeningen" class="ref-emb ref-e48" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/edru.svg" alt="Edru Livsstil (DNT)" class="ref-h34" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/nkp.png" alt="Norges Kommunistiske Parti" class="ref-h52" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/ffm.png" alt="Foreningen for Muskelsyke" class="ref-h52" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/nkp.png" alt="Norges Kommunistiske Parti" class="ref-emb ref-e60" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/ffm.png" alt="Foreningen for Muskelsyke" class="ref-emb ref-e64" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/lnt.png" alt="Landsforeningen for Nyrepasienter og Transplanterte" class="ref-h30" loading="lazy" /></li>
-                    <li><img src="../assets/img/kunder/fh-norge.png" alt="FH Norge" class="ref-h30" loading="lazy" /></li>
+                    <li><img src="../assets/img/kunder/fh-norge.png" alt="FH Norge" class="ref-h36" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/spafo.png" alt="Spafo Norge" class="ref-h40" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/hindu-kultursenter.png" alt="Norges Hindu Kultur senter" class="ref-h36" loading="lazy" /></li>
                     <li><img src="../assets/img/kunder/autismeforeningen.png" alt="Autismeforeningen i Norge" class="ref-h44" loading="lazy" /></li>
+                    <li class="ref-more" aria-label="Og flere"><span class="ref-more-plus" aria-hidden="true">+</span><span>Og flere</span></li>
             </ul>
 
 
