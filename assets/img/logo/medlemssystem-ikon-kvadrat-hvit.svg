@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.0 100.0" width="1024" height="1024" role="img" aria-label="Medlemssystem.no">
+<title>Medlemssystem.no</title>
+<g transform="translate(0.0 0.0)">
+<rect width="100.0" height="100.0" rx="22" fill="#ffffff"/>
+<g fill="#0b2252">
+  <circle cx="19" cy="44" r="7.5"/><circle cx="81" cy="44" r="7.5"/><circle cx="50" cy="35" r="12.5"/>
+  <path d="M9 71.0 V62 a10 10 0 0 1 10 -10 h0 a10 10 0 0 1 10 10 V71.0 a3.0 3.0 0 0 1 -3.0 3.0 H12.0 a3.0 3.0 0 0 1 -3.0 -3.0z"/><path d="M71 71.0 V62 a10 10 0 0 1 10 -10 h0 a10 10 0 0 1 10 10 V71.0 a3.0 3.0 0 0 1 -3.0 3.0 H74.0 a3.0 3.0 0 0 1 -3.0 -3.0z"/><path d="M32.5 77.0 V68.5 a17.5 17.5 0 0 1 17.5 -17.5 h0.0 a17.5 17.5 0 0 1 17.5 17.5 V77.0 a3.0 3.0 0 0 1 -3.0 3.0 H35.5 a3.0 3.0 0 0 1 -3.0 -3.0z"/>
+</g></g>
+</svg>

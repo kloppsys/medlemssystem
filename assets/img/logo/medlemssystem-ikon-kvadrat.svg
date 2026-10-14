@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024" height="1024" role="img" aria-label="Medlemssystem.no">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.0 100.0" width="1024" height="1024" role="img" aria-label="Medlemssystem.no">
 <title>Medlemssystem.no</title>
-<rect width="100" height="100" fill="#ffffff"/><g transform="translate(8.291 -54.977) scale(0.28182)"><g fill="#0f2557" stroke="none">
-<circle cx="77" cy="353" r="15.5"/><circle cx="219" cy="353" r="15.5"/><circle cx="148" cy="325" r="22"/><circle cx="148" cy="428" r="14"/><circle cx="42" cy="414" r="4"/><circle cx="254" cy="414" r="4"/></g>
-<g fill="none" stroke="#0f2557" stroke-width="8.0" stroke-linecap="round" stroke-linejoin="round">
-<path stroke-linecap="butt" d="M42 414 C42 392 58 378 77 378 C93 378 103 388 108.4 402"/>
-<path stroke-linecap="butt" d="M254 414 C254 392 238 378 219 378 C203 378 193 388 187.6 402"/>
-<circle cx="148" cy="397" r="40"/></g></g>
+<g transform="translate(0.0 0.0)">
+<rect width="100.0" height="100.0" rx="22" fill="#0b2252"/>
+<g fill="#ffffff">
+  <circle cx="19" cy="44" r="7.5"/><circle cx="81" cy="44" r="7.5"/><circle cx="50" cy="35" r="12.5"/>
+  <path d="M9 71.0 V62 a10 10 0 0 1 10 -10 h0 a10 10 0 0 1 10 10 V71.0 a3.0 3.0 0 0 1 -3.0 3.0 H12.0 a3.0 3.0 0 0 1 -3.0 -3.0z"/><path d="M71 71.0 V62 a10 10 0 0 1 10 -10 h0 a10 10 0 0 1 10 10 V71.0 a3.0 3.0 0 0 1 -3.0 3.0 H74.0 a3.0 3.0 0 0 1 -3.0 -3.0z"/><path d="M32.5 77.0 V68.5 a17.5 17.5 0 0 1 17.5 -17.5 h0.0 a17.5 17.5 0 0 1 17.5 17.5 V77.0 a3.0 3.0 0 0 1 -3.0 3.0 H35.5 a3.0 3.0 0 0 1 -3.0 -3.0z"/>
+</g></g>
 </svg>
