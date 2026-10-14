@@ -171,6 +171,9 @@
             .about-card h3 { margin: var(--space-2) 0 0; font-size: 20px; }
             .about-card p { margin: 0; flex: 1; }
             .about-card-link { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-weight: 600; }
+            .about-card .about-card-link { color: #005a9e; }
+            :root[data-theme="dark"] .about-card .about-card-link { color: var(--accent-blue-bright); }
+            @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .about-card .about-card-link { color: var(--accent-blue-bright); } }
             .company-facts a { display: inline-flex; align-items: center; min-height: 44px; }
             .ref-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; margin: var(--space-6) 0 44px; }
             :root[data-theme="dark"] .ref-title { color: #a8a8a8; }
