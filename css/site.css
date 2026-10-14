@@ -1250,3 +1250,5 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .benefit-list li { display: flex; flex-direction: column; gap: 2px; }
 .benefit-list strong { font-size: 15px; font-weight: 600; }
 .benefit-list span { font-size: 13px; color: var(--color-text-secondary); max-width: 62ch; }
+
+.subfeature img[height="560"] { aspect-ratio: 900 / 560; object-position: center; }
