@@ -1233,7 +1233,9 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .campaign-price span { font-size: 14px; color: var(--color-text-secondary); }
 .campaign-sub { margin: 0 0 var(--space-3); font-size: 15px; font-weight: 600; }
 .campaign-value { margin: 0 0 var(--space-4); font-size: 14px; line-height: 1.55; color: var(--color-text-secondary); }
-.campaign-card .btn { align-self: flex-start; min-height: 44px; }
+.campaign-card .btn { min-height: 44px; }
+.campaign-actions { display: flex; flex-direction: column; gap: var(--space-3); margin-top: auto; }
+.campaign-actions .btn { width: 100%; justify-content: center; text-align: center; }
 .compare-table .check { display: inline-flex; vertical-align: -3px; margin-right: var(--space-2); color: #1a7f37; }
 :root[data-theme="dark"] .compare-table .check { color: #56d364; }
 .compare-closing { margin: var(--space-5) 0 var(--space-2); max-width: 72ch; font-size: 16px; line-height: 1.6; }
