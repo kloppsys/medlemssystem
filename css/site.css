@@ -304,7 +304,7 @@ a { color: var(--accent-text); }
 :root[data-theme="dark"] .masthead-hero::after { background: rgba(0, 0, 0, 0.32); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .masthead-hero::after { background: rgba(0, 0, 0, 0.32); } }
 .masthead-hero .masthead-badges { top: var(--space-5); right: var(--space-5); z-index: 2; }
-.masthead-below { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-8); align-items: start; padding-top: var(--space-7); }
+.masthead-below { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-8); align-items: center; padding-top: var(--space-7); }
 .masthead-below .masthead-heading { margin-top: var(--space-3); }
 .masthead-below-text .masthead-subheading { margin-top: 0; }
 @media (max-width: 900px) {
