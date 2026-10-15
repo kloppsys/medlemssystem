@@ -296,6 +296,25 @@ a { color: var(--accent-text); }
   .masthead-content { padding: var(--space-6) var(--space-5); }
 }
 
+/* Full-width hero image (same pattern as klopp.no): the box stack photo spans the whole viewport, heading and text sit below it in two columns. */
+.masthead-wide { padding: var(--nav-height) 0 var(--space-7); }
+.masthead-hero { position: relative; width: 100%; overflow: hidden; background: #d5dde7; }
+.masthead-hero img { display: block; width: 100%; height: auto; aspect-ratio: 3200 / 1240; object-fit: cover; object-position: 62% 50%; }
+.masthead-hero::after { content: ""; position: absolute; inset: 0; background: transparent; pointer-events: none; }
+:root[data-theme="dark"] .masthead-hero::after { background: rgba(0, 0, 0, 0.32); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .masthead-hero::after { background: rgba(0, 0, 0, 0.32); } }
+.masthead-hero .masthead-badges { top: var(--space-5); right: var(--space-5); z-index: 2; }
+.masthead-below { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-8); align-items: start; padding-top: var(--space-7); }
+.masthead-below .masthead-heading { margin-top: var(--space-3); }
+.masthead-below-text .masthead-subheading { margin-top: 0; }
+@media (max-width: 900px) {
+  .masthead-hero img { height: clamp(260px, 72vw, 380px); aspect-ratio: auto; object-position: 66% 50%; }
+  .masthead-hero .masthead-badges { top: var(--space-3); left: var(--space-3); right: auto; align-items: flex-start; }
+  .masthead-below { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); padding-top: var(--space-6); }
+}
+/* On phones the badges would cover the box stack; "Kampanjer" stays in the nav and the price info is in the campaign section. */
+@media (max-width: 600px) { .masthead-hero .masthead-badges { display: none; } }
+
 .masthead .eyebrow-dot { color: var(--accent-text-strong); }
 .masthead .eyebrow-dot .dot { background: var(--accent-blue); }
 .masthead-heading {
