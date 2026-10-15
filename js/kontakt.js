@@ -47,7 +47,7 @@
         }
 
         var tjeneste = formData.get("tjeneste");
-        formData.set("subject", tjeneste && tjeneste !== "Generelt" ? "Ny henvendelse: " + tjeneste + " — medlemssystem.no" : "Ny henvendelse fra medlemssystem.no");
+        formData.set("subject", tjeneste && tjeneste !== "Generelt" ? "Ny henvendelse: " + tjeneste + " – medlemssystem.no" : "Ny henvendelse fra medlemssystem.no");
 
         var payload = Object.fromEntries(formData);
         submitButton.disabled = true;
