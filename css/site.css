@@ -248,32 +248,12 @@ a { color: var(--accent-text); }
 }
 .theme-toggle:hover { background: var(--color-bg-elevated); }
 
-/* Hero — Microsoft's own "feature card" pattern (e.g. the Edge showcase on microsoft.com/nb-no):
-   a light page background with one big rounded two-column card, text left, photo right. No more
-   full-bleed dark photo + white overlay text — Microsoft's consumer site stays light throughout. */
+/* Hero: see the full-width pattern below. */
 .masthead {
   position: relative;
   background: var(--color-bg);
   padding: calc(var(--nav-height) + var(--space-7)) 0 var(--space-8);
 }
-.masthead-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  align-items: stretch;
-  background: var(--color-bg-elevated);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-  min-height: 460px;
-}
-.masthead-content {
-  padding: var(--space-8) var(--space-7);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.masthead-media { position: relative; min-height: 320px; }
-.masthead-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% bottom; }
 .masthead-badges {
   position: absolute;
   top: var(--space-4);
@@ -287,15 +267,6 @@ a { color: var(--accent-text); }
 .masthead-badges .price-badge { margin-right: 0; box-shadow: var(--card-shadow); }
 .masthead-badges .discount-badge { padding: 4px var(--space-3); box-shadow: var(--card-shadow); }
 .masthead-badge-link { text-decoration: none; }
-@media (max-width: 900px) {
-  .masthead-card { grid-template-columns: minmax(0, 1fr); min-height: 0; }
-  /* Stacked layout is much wider than tall relative to the (near-square) source photo — a short
-     min-height here crops out his face entirely, leaving only hair. 320px keeps enough vertical
-     room that the face stays in frame at every width down to 375px. */
-  .masthead-media { min-height: 0; aspect-ratio: 1408 / 1136; max-height: 600px; order: -1; }
-  .masthead-content { padding: var(--space-6) var(--space-5); }
-}
-
 /* Full-width hero image (same pattern as klopp.no): the box stack photo spans the whole viewport, heading and text sit below it in two columns. */
 .masthead-wide { padding: var(--nav-height) 0 var(--space-7); }
 .masthead-hero { position: relative; width: 100%; overflow: hidden; background: #d5dde7; }
@@ -986,74 +957,6 @@ hr.divider { display: none; }
   :root:not([data-theme="light"]) .service-card-link:hover { background: var(--cream-alt); }
 }
 
-/* Photo + card-overlay section — mirrors NBIM's "Ansvarlig forvaltning" pattern */
-.photo-section { padding: var(--space-8) 0; background: var(--color-bg); }
-.photo-section-eyebrow {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-  margin: 0 0 var(--space-4);
-}
-.photo-section-intro {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--color-text);
-  max-width: 640px;
-  margin: 0 0 var(--space-5);
-}
-.photo-section-intro strong { font-weight: 600; }
-.photo-section-cta {
-  margin-top: var(--space-6);
-}
-.photo-frame {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 2.3 / 1;
-  box-shadow: var(--card-shadow);
-}
-.photo-frame img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-.photo-card {
-  position: relative;
-  z-index: 1;
-  margin: var(--space-6);
-  padding: var(--space-7) var(--space-6);
-  background: var(--cream);
-  border-radius: var(--radius-md);
-  max-width: 420px;
-}
-.photo-card h2 { font-size: clamp(1.5rem, 2vw + 1rem, 2rem); color: var(--navy); }
-.photo-card p { color: rgba(0, 21, 56, 0.75); font-size: 16px; line-height: 1.65; margin: var(--space-4) 0 0; }
-.photo-card-facts {
-  list-style: none;
-  padding: 0;
-  margin: var(--space-5) 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-.photo-card-facts li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-size: 15px;
-  color: var(--navy);
-}
-.photo-card-facts .icon { color: var(--accent-blue); flex: none; margin-top: 0.2em; }
-.photo-card .chevron-link { color: var(--navy); }
-.photo-card .chevron-link:hover { color: var(--accent-blue); }
-@media (max-width: 767px) {
-  .photo-card { margin: var(--space-4); max-width: none; }
-}
-
 /* Callout / about band, reused as a light card inside a section */
 .callout {
   padding: var(--space-6);
@@ -1258,3 +1161,15 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .compare-table .check { display: inline-flex; vertical-align: -3px; margin-right: var(--space-2); color: #1a7f37; }
 :root[data-theme="dark"] .compare-table .check { color: #56d364; }
 .compare-closing { margin: var(--space-5) 0 var(--space-2); max-width: 72ch; font-size: 16px; line-height: 1.6; }
+
+/* Samtykke (cookie-banner) */
+.consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; background: var(--color-bg-elevated, #f5f5f7); color: var(--color-text, #1d1d1f); border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.12)); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08); }
+.consent-banner[hidden] { display: none; }
+.consent-banner-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; }
+.consent-banner-text { margin: 0; flex: 1 1 360px; font-size: 0.9375rem; line-height: 1.5; }
+.consent-banner-text a { color: var(--accent-text, inherit); text-decoration: underline; }
+.consent-banner-actions { display: flex; gap: 10px; }
+.consent-btn { min-height: 44px; min-width: 96px; padding: 0 20px; border: 1px solid var(--color-text, #1d1d1f); border-radius: var(--radius-full, 8px); background: var(--color-text, #1d1d1f); color: var(--color-bg, #fff); font: inherit; font-weight: 600; cursor: pointer; }
+.consent-btn:focus-visible, .consent-reopen:focus-visible { outline: 3px solid var(--accent-text, currentColor); outline-offset: 2px; }
+.consent-reopen { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; min-height: 24px; }
+@media (max-width: 560px) { .consent-banner-actions { width: 100%; } .consent-btn { flex: 1; } }

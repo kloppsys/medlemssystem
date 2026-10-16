@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com; base-uri 'self'; form-action 'self'; object-src 'none'" />
         <meta name="description" content="Møt Klopp AS i Tønsberg – selskapet bak Regweb, Medlem123 og Likepersonslogg. Helnorsk utvikling, support og servere med AAA-soliditet siden 2011." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/om-klopp-as.html" />
@@ -50,8 +50,8 @@
             "name": "Om Klopp AS | Solid og helnorsk IT-partner siden 2011",
             "url": "https://medlemssystem.no/om-klopp-as.html",
             "isPartOf": { "@id": "https://medlemssystem.no/#website" },
-            "about": { "@id": "https://medlemssystem.no/#organization" },
-            "mainEntity": { "@id": "https://medlemssystem.no/#organization" },
+            "about": { "@id": "https://klopp.no/#organization" },
+            "mainEntity": { "@id": "https://klopp.no/#organization" },
             "inLanguage": "nb-NO"
         }
         </script>
@@ -89,12 +89,24 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://medlemssystem.no/#organization",
+            "@id": "https://klopp.no/#organization",
             "name": "Klopp AS",
             "description": "Klopp AS er et norsk IT-selskap i Tønsberg, etablert i 2011. Selskapet utvikler og drifter Regweb medlemssystem, Medlem123 medlemsdrift, Likepersonslogg oppdragslogg og XReg verktøykasse for foreninger og organisasjoner. I tillegg leverer de skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. Klopp AS har et tett utviklingssamarbeid med Vipps og Mastercard. All utvikling, drift og support skjer internt, og alle data lagres på norske servere.",
             "url": "https://klopp.no/",
-            "sameAs": ["https://klopp.no/"],
-            "memberOf": { "@type": "Organization", "name": "NITO", "url": "https://www.nito.no/" },
+            "sameAs": [
+                "https://klopp.no/",
+                "https://www.proff.no/selskap/klopp-as/t%C3%B8nsberg/dataprogramvare-og-utvikling/IGH7ZSO009O",
+                "https://virksomhet.brreg.no/nb/oppslag/enheter/996385272",
+                "https://regweb.no/",
+                "https://medlem123.no/",
+                "https://likepersonslogg.com/",
+                "https://medlemssystem.no/om-klopp-as.html"
+            ],
+            "memberOf": {
+                "@type": "Organization",
+                "name": "NITO",
+                "url": "https://www.nito.no/"
+            },
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://medlemssystem.no/assets/img/Klopp_logo_ink_R_w200.png",
@@ -102,17 +114,57 @@
                 "height": 46
             },
             "slogan": "Solid og helnorsk IT-partner siden 2011",
-            "knowsAbout": ["Medlemssystem", "Kontingentinnkreving", "Vipps-innlogging", "Bufdir-rapportering", "Webutvikling", "AI-agenter", "Systemintegrasjon"],
+            "knowsAbout": [
+                "Medlemssystem",
+                "Kontingentinnkreving",
+                "Vipps-innlogging",
+                "Bufdir-rapportering",
+                "Webutvikling",
+                "AI-agenter",
+                "Systemintegrasjon"
+            ],
             "brand": [
-                { "@type": "Brand", "name": "Regweb", "url": "https://regweb.no/", "description": "Medlemssystem foreningen driver selv" },
-                { "@type": "Brand", "name": "Medlem123", "url": "https://medlem123.no/", "description": "Medlemssystemet driftes av Klopp AS for foreningen" },
-                { "@type": "Brand", "name": "Likepersonslogg", "url": "https://likepersonslogg.com/", "description": "Verktøy for registrering og rapportering av likepersonsarbeid" },
-                { "@type": "Brand", "name": "XReg", "url": "https://xreg.no/", "description": "Verktøykasse for foreninger og organisasjoner" }
+                {
+                    "@type": "Brand",
+                    "name": "Regweb",
+                    "url": "https://regweb.no/",
+                    "description": "Medlemssystem foreningen driver selv"
+                },
+                {
+                    "@type": "Brand",
+                    "name": "Medlem123",
+                    "url": "https://medlem123.no/",
+                    "description": "Medlemssystemet driftes av Klopp AS for foreningen"
+                },
+                {
+                    "@type": "Brand",
+                    "name": "Likepersonslogg",
+                    "url": "https://likepersonslogg.com/",
+                    "description": "Verktøy for registrering og rapportering av likepersonsarbeid"
+                },
+                {
+                    "@type": "Brand",
+                    "name": "XReg",
+                    "url": "https://xreg.no/",
+                    "description": "Verktøykasse for foreninger og organisasjoner"
+                }
             ],
             "additionalProperty": [
-                { "@type": "PropertyValue", "name": "Dun & Bradstreet-rating", "value": "AAA" },
-                { "@type": "PropertyValue", "name": "Experian-rating", "value": "Gull (926/1000)" },
-                { "@type": "PropertyValue", "name": "Gjeld (2026)", "value": "0 NOK" }
+                {
+                    "@type": "PropertyValue",
+                    "name": "Dun & Bradstreet-rating",
+                    "value": "AAA"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Experian-rating",
+                    "value": "Gull (926/1000)"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Gjeld (2026)",
+                    "value": "0 NOK"
+                }
             ],
             "foundingDate": "2011-01-14",
             "vatID": "NO996385272MVA",
@@ -345,5 +397,6 @@
         </footer>
 
         <script src="js/site.js"></script>
+        <script src="js/consent.js" defer></script>
     </body>
 </html>

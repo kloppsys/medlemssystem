@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI=' https://web3forms.com https://js.hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline' https://newassets.hcaptcha.com; img-src 'self' data: https://newassets.hcaptcha.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com; frame-src https://newassets.hcaptcha.com https://hcaptcha.com; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI=' https://web3forms.com https://js.hcaptcha.com https://newassets.hcaptcha.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://newassets.hcaptcha.com; img-src 'self' data: https://newassets.hcaptcha.com https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; frame-src https://newassets.hcaptcha.com https://hcaptcha.com https://td.doubleclick.net https://www.googletagmanager.com; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'" />
         <meta name="description" content="Ta kontakt med Klopp AS om Regweb, Medlem123 eller Likepersonslogg. Fyll ut skjemaet, ring 33 31 28 00, eller send e-post til post@klopp.no." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/kontakt.html" />
@@ -50,9 +50,9 @@
             "name": "Kontakt oss – Medlemssystem",
             "url": "https://medlemssystem.no/kontakt.html",
             "isPartOf": { "@id": "https://medlemssystem.no/#website" },
-            "about": { "@id": "https://medlemssystem.no/#organization" },
+            "about": { "@id": "https://klopp.no/#organization" },
             "mainEntity": {
-                "@id": "https://medlemssystem.no/#organization",
+                "@id": "https://klopp.no/#organization",
                 "@type": "Organization",
                 "name": "Klopp AS",
                 "contactPoint": {
@@ -97,7 +97,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://medlemssystem.no/#organization",
+            "@id": "https://klopp.no/#organization",
             "name": "Klopp AS",
             "description": "Klopp AS er et norsk IT-selskap i Tønsberg, etablert i 2011. Selskapet utvikler og drifter Regweb medlemssystem, Medlem123 medlemsdrift, Likepersonslogg oppdragslogg og XReg verktøykasse for foreninger og organisasjoner. I tillegg leverer de skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. Klopp AS har et tett utviklingssamarbeid med Vipps og Mastercard. All utvikling, drift og support skjer internt, og alle data lagres på norske servere.",
             "url": "https://klopp.no/",
@@ -117,7 +117,17 @@
                 "postalCode": "3125",
                 "addressLocality": "Tønsberg",
                 "addressCountry": "NO"
-            }
+            },
+            "taxID": "996385272",
+            "sameAs": [
+                "https://klopp.no/",
+                "https://www.proff.no/selskap/klopp-as/t%C3%B8nsberg/dataprogramvare-og-utvikling/IGH7ZSO009O",
+                "https://virksomhet.brreg.no/nb/oppslag/enheter/996385272",
+                "https://regweb.no/",
+                "https://medlem123.no/",
+                "https://likepersonslogg.com/",
+                "https://medlemssystem.no/om-klopp-as.html"
+            ]
         }
         </script>
         <style>
@@ -351,6 +361,7 @@
         </footer>
 
         <script src="js/site.js"></script>
+        <script src="js/consent.js" defer></script>
         <script src="js/kontakt.js"></script>
         <script src="https://web3forms.com/client/script.js" async defer></script>
     </body>

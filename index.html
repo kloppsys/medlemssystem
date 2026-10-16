@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cn6OH+Xyd951QqTbjhj//TGbvMdQYI3N5nUKv1m1MLI=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com; base-uri 'self'; form-action 'self'; object-src 'none'" />
         <meta name="description" content="Regweb, Medlem123 og Likepersonslogg fra Klopp AS: medlemssystem, kontingentinnkreving og Bufdir-rapport med Vipps-betaling, driftet i Norge." />
         <meta name="author" content="Klopp AS" />
         <link rel="canonical" href="https://medlemssystem.no/" />
@@ -49,7 +49,7 @@
             "@id": "https://medlemssystem.no/#website",
             "name": "Medlemssystem",
             "url": "https://medlemssystem.no/",
-            "publisher": { "@id": "https://medlemssystem.no/#organization" },
+            "publisher": { "@id": "https://klopp.no/#organization" },
             "inLanguage": "nb-NO"
         }
         </script>
@@ -61,7 +61,7 @@
             "name": "Medlemssystem og Likepersonslogg | Vipps, kontingent og Bufdir-rapport",
             "url": "https://medlemssystem.no/",
             "isPartOf": { "@id": "https://medlemssystem.no/#website" },
-            "about": { "@id": "https://medlemssystem.no/#organization" },
+            "about": { "@id": "https://klopp.no/#organization" },
             "inLanguage": "nb-NO"
         }
         </script>
@@ -69,11 +69,19 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://medlemssystem.no/#organization",
+            "@id": "https://klopp.no/#organization",
             "name": "Klopp AS",
             "description": "Klopp AS er et norsk IT-selskap i Tønsberg, etablert i 2011. Selskapet utvikler og drifter Regweb medlemssystem, Medlem123 medlemsdrift, Likepersonslogg oppdragslogg og XReg verktøykasse for foreninger og organisasjoner. I tillegg leverer de skreddersydde webapplikasjoner, AI-agenter og systemintegrasjoner til bedrifter og offentlig sektor. Klopp AS har et tett utviklingssamarbeid med Vipps og Mastercard. All utvikling, drift og support skjer internt, og alle data lagres på norske servere.",
             "url": "https://klopp.no/",
-            "sameAs": ["https://klopp.no/"],
+            "sameAs": [
+                "https://klopp.no/",
+                "https://www.proff.no/selskap/klopp-as/t%C3%B8nsberg/dataprogramvare-og-utvikling/IGH7ZSO009O",
+                "https://virksomhet.brreg.no/nb/oppslag/enheter/996385272",
+                "https://regweb.no/",
+                "https://medlem123.no/",
+                "https://likepersonslogg.com/",
+                "https://medlemssystem.no/om-klopp-as.html"
+            ],
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://medlemssystem.no/assets/img/Klopp_logo_ink_R_w200.png",
@@ -92,22 +100,38 @@
                 "addressLocality": "Tønsberg",
                 "addressCountry": "NO"
             },
-            "geo": { "@type": "GeoCoordinates", "latitude": 59.27723, "longitude": 10.40639 },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 59.27723,
+                "longitude": 10.40639
+            },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
                 "opens": "09:00",
                 "closes": "15:00"
             },
-            "areaServed": { "@type": "Country", "name": "Norway" },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Norway"
+            },
             "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
                 "telephone": "+4733312800",
                 "email": "post@klopp.no",
                 "areaServed": "NO",
-                "availableLanguage": ["Norwegian"]
-            }
+                "availableLanguage": [
+                    "Norwegian"
+                ]
+            },
+            "taxID": "996385272"
         }
         </script>
         <script type="application/ld+json">
@@ -123,7 +147,7 @@
             "screenshot": "https://medlemssystem.no/assets/img/products/regweb-visual.jpg",
             "countriesSupported": "NO",
             "inLanguage": "nb-NO",
-            "provider": { "@id": "https://medlemssystem.no/#organization" },
+            "provider": { "@id": "https://klopp.no/#organization" },
             "offers": [
                 {
                     "@type": "Offer",
@@ -166,7 +190,7 @@
             "screenshot": "https://medlemssystem.no/assets/img/products/medlem123-nettinnmelding.jpg",
             "countriesSupported": "NO",
             "inLanguage": "nb-NO",
-            "provider": { "@id": "https://medlemssystem.no/#organization" },
+            "provider": { "@id": "https://klopp.no/#organization" },
             "offers": [
                 {
                     "@type": "Offer",
@@ -210,7 +234,7 @@
             "screenshot": "https://medlemssystem.no/assets/img/products/likepersonslogg-visual.jpg",
             "countriesSupported": "NO",
             "inLanguage": "nb-NO",
-            "provider": { "@id": "https://medlemssystem.no/#organization" },
+            "provider": { "@id": "https://klopp.no/#organization" },
             "offers": [
                 {
                     "@type": "Offer",
@@ -334,7 +358,7 @@
                         "name": "Regweb",
                         "description": "Skybasert medlemssystem foreningen driver selv – medlemsregister, betaling og kommunikasjon.",
                         "url": "https://regweb.no/",
-                        "provider": { "@id": "https://medlemssystem.no/#organization" },
+                        "provider": { "@id": "https://klopp.no/#organization" },
                         "areaServed": { "@type": "Country", "name": "Norway" },
                         "offers": {
                             "@type": "Offer",
@@ -352,7 +376,7 @@
                         "name": "Medlem123",
                         "description": "Fullservice medlemsadministrasjon – Klopp AS drifter medlemsregister og kontingentinnkreving for foreningen.",
                         "url": "https://medlem123.no/",
-                        "provider": { "@id": "https://medlemssystem.no/#organization" },
+                        "provider": { "@id": "https://klopp.no/#organization" },
                         "areaServed": { "@type": "Country", "name": "Norway" },
                         "offers": {
                             "@type": "Offer",
@@ -370,7 +394,7 @@
                         "name": "Likepersonslogg",
                         "description": "Digitalt verktøy for registrering og rapportering av likepersonsarbeid (frivillig arbeid).",
                         "url": "https://likepersonslogg.com/",
-                        "provider": { "@id": "https://medlemssystem.no/#organization" },
+                        "provider": { "@id": "https://klopp.no/#organization" },
                         "areaServed": { "@type": "Country", "name": "Norway" },
                         "offers": {
                             "@type": "Offer",
@@ -394,7 +418,7 @@
             "@type": "Service",
             "@id": "https://medlemssystem.no/#kampanjer",
             "name": "Regweb, Likepersonslogg og Medlem123: kampanjer",
-            "provider": { "@id": "https://medlemssystem.no/#organization" },
+            "provider": { "@id": "https://klopp.no/#organization" },
             "areaServed": "NO",
             "offers": {
                 "@type": "AggregateOffer",
@@ -748,7 +772,7 @@
                             <div class="benefit-card-head"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 8v4M12 12l-6 4M12 12l6 4"/></svg></span><h4>Oversikt og roller</h4></div>
                             <ul class="benefit-list">
                                 <li><strong>Mange brukernivåer</strong><span><span class="point-badge">Foreningsadmin</span>, <span class="point-badge">Likepersonsleder admin</span>, <span class="point-badge">Likepersonsleder</span> og <span class="point-badge">Likeperson</span></span></li>
-                                <li><strong>Full oversikt, sentralt og lokalt</strong><span>Organisasjonen ser all logget aktivitet, og lokale ledere ser alt som er registrert lokalt – filtrert på periode med ett klikk</span></li>
+                                <li><strong>Full oversikt, sentralt og lokalt</strong><span>Organisasjonen ser all logget aktivitet, og lokale ledere ser alt som er registrert lokalt – filtrert på periode</span></li>
                                 <li><strong>Se hvem som er aktive</strong><span>Filtrer likepersoner med og uten aktivitet i en periode, og følg opp de som er stille</span></li>
                                 <li><strong>Omorganisering uten hodepine</strong><span>Flytt avdelinger eller slå dem sammen – og angre siste endring hvis noe ble feil</span></li>
                             </ul>
@@ -1049,5 +1073,6 @@
         </footer>
 
         <script src="js/site.js"></script>
+        <script src="js/consent.js" defer></script>
     </body>
 </html>
